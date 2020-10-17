@@ -42,10 +42,27 @@ A tool translate apk file to common android project and support so hook and incl
 - 借助il2cpp Scaffolding 和FakeCpp,使用jni对il2cpp游戏脚本进行二次开发
 
 
+
+
+
 ##### 5、遇到问题了？兄弟别走肯定能用，而且是你最佳的解决方案，咨询探讨
 - QQ:1404774249（加哦，咱需要知道问题去调优哦）
 - issues(在线解决) 
 ##### 6、给个star?免费的           
+
+
+## 实例
+一夜之间来了这么多的star好慌张，全是问怎么用的，请原谅我只会写代码不会写文档啊！！！  
+
+直接来个实例吧，因为是游戏ilcpp 游戏apk，里面包含了原游戏安装包，和生成的代码项目所以比较大，下载的话得时间稍微长一点，如果github实在下不下来的话，QQ我直接发送  
+[实例下载地址](https://github.com/Efaker/FakerAndroid-Demos/releases/tag/BasicDemo1)
+
+
+
+
+
+
+
         
         
         
