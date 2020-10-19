@@ -13,14 +13,13 @@ A tool translate apk file to common android project and support so hook and incl
 - 无限的可能性和扩展性,能干啥你说了算~(比如把抖音改成快手，把快手改成抖音，做一个抖音快手版再做一个快手抖音版，好屌哦)
 
 ### 运行环境
-- Windows IntelliJ IDEA (目前工具尚未打包可执行文件，需要基于源码运行，不是AndroidStudio，AndroidStudio会以Android项目识别)
-- IDEA lombok 插件
-
-### 入口程序
-- com.facker.toolchain.FakerMain
+- Java
+- il2cpp 游戏需要仅windows
 ### 使用方式
-- ```FakerTransfer.translate(apkFilePath);```
-- AndroidStudio 项目生成路径为Apk平级目录
+- cmd命令行 ```cd <FakerAndroid.jar平级目录>``` 
+- cmd命令行 ```java -jar FakerAndroid.jar <apkpath>``` (项目生成路径与apk文件平级) 或 ```java -jar FakerAndroid.jar <apkpath> -o <outdir>```
+- 例：```java -jar FakerAndroid.jar D:\apk\test.apk``` 或 ```java -jar FakerAndroid.jar D:\apk\test.apk -o D:\test```
+
 ### 生成的Android项目二次开发教程
 
 ##### 1、打开项目
