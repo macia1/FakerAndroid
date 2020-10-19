@@ -14,7 +14,7 @@ A tool translate apk file to common android project and support so hook and incl
 
 ### 运行环境
 - Java
-- il2cpp游戏Apk仅windows支持
+- il2cpp游戏Apk，非windows无法生成il2cpp c++脚手架
 ### 使用方式
 - 下载[FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases/tag/0.0.1)
 - cmd命令行 ```cd <FakerAndroid.jar平级目录>``` 
