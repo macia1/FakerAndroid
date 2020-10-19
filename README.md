@@ -14,12 +14,12 @@ A tool translate apk file to common android project and support so hook and incl
 
 ### 运行环境
 - Java
-- il2cpp游戏Apk，非windows无法生成il2cpp c++脚手架
+- il2cpp游戏Apk，非windows暂时无法生成il2cpp c++脚手架
 ### 使用方式
 - 下载[FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases/tag/0.0.1)
 - cmd命令行 ```cd <FakerAndroid.jar平级目录>``` 
-- cmd命令行 ```java -jar FakerAndroid.jar <apkpath>``` (项目生成路径与apk文件平级) 或 ```java -jar FakerAndroid.jar <apkpath> -o <outdir>```
-- 例：```java -jar FakerAndroid.jar D:\apk\test.apk``` 或 ```java -jar FakerAndroid.jar D:\apk\test.apk -o D:\test```
+- cmd命令行 ```java -jar FakerAndroid.jar fk <apkpath>``` (项目生成路径与apk文件平级) 或 ```java -jar FakerAndroid.jar fk <apkpath> -o <outdir>```
+- 例：```java -jar FakerAndroid.jar fk D:\apk\test.apk``` 或 ```java -jar FakerAndroid.jar fk D:\apk\test.apk -o D:\test```
 
 ### 生成的Android项目二次开发教程
 
