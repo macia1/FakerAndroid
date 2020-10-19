@@ -1,0 +1,18 @@
+brut/util/OSDetection.java
+ brut.util.OSDetection
+brut/util/ExtDataInput.java
+ brut.util.ExtDataInput
+brut/util/AaptManager.java
+ brut.util.AaptManager
+brut/util/DataInputDelegate.java
+ brut.util.DataInputDelegate
+brut/util/Duo.java
+ brut.util.Duo
+brut/util/BrutIO.java
+ brut.util.BrutIO
+brut/util/Jar.java
+ brut.util.Jar
+brut/util/OS.java
+ brut.util.OS
+ brut.util.OS$StreamCollector
+ brut.util.OS$StreamForwarder

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="brut.androlib.util.AaptVersionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-19T04:33:30" hostname="DESKTOP-FCPO06O" time="0.0">
+  <properties/>
+  <testcase name="testAapt2Iterations" classname="brut.androlib.util.AaptVersionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

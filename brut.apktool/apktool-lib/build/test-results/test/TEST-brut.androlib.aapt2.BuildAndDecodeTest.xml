@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="brut.androlib.aapt2.BuildAndDecodeTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2020-10-19T04:32:46" hostname="DESKTOP-FCPO06O" time="0.01">
+  <properties/>
+  <testcase name="buildAndDecodeTest" classname="brut.androlib.aapt2.BuildAndDecodeTest" time="0.0"/>
+  <testcase name="leadingDollarSignResourceNameTest" classname="brut.androlib.aapt2.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="xmlXsdFileTest" classname="brut.androlib.aapt2.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="xmlIdsEmptyTest" classname="brut.androlib.aapt2.BuildAndDecodeTest" time="0.0"/>
+  <testcase name="confirmZeroByteFileExtensionIsNotStored" classname="brut.androlib.aapt2.BuildAndDecodeTest" time="0.002"/>
+  <testcase name="valuesStringsTest" classname="brut.androlib.aapt2.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="confirmZeroByteFileIsStored" classname="brut.androlib.aapt2.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="valuesMaxLengthTest" classname="brut.androlib.aapt2.BuildAndDecodeTest" time="0.002"/>
+  <testcase name="navigationResourceTest" classname="brut.androlib.aapt2.BuildAndDecodeTest" time="0.0"/>
+  <testcase name="samsungQmgFilesHandledTest" classname="brut.androlib.aapt2.BuildAndDecodeTest" time="0.0"/>
+  <testcase name="confirmManifestStructureTest" classname="brut.androlib.aapt2.BuildAndDecodeTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[十月 19, 2020 12:32:45 下午 brut.androlib.aapt2.BuildAndDecodeTest beforeClass
+信息: Unpacking testapp...
+十月 19, 2020 12:32:45 下午 brut.androlib.aapt2.BuildAndDecodeTest beforeClass
+信息: Building testapp.apk...
+十月 19, 2020 12:32:45 下午 brut.androlib.Androlib build
+信息: Using Apktool 2.4.2-dirty
+十月 19, 2020 12:32:45 下午 brut.androlib.Androlib buildSources
+警告: Could not find sources
+十月 19, 2020 12:32:45 下午 brut.androlib.Androlib buildResourcesFull
+信息: Checking whether resources has changed...
+十月 19, 2020 12:32:45 下午 brut.androlib.Androlib buildResourcesFull
+信息: Building resources...
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: C:\Users\Yang\AppData\Local\Temp\BRUT171730082803873061.tmp\testapp-orig\res\drawable-xhdpi\ic_launcher_samsung.qmg: note: compiling file.
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: C:\Users\Yang\AppData\Local\Temp\BRUT171730082803873061.tmp\testapp-orig\res\drawable\$avd_hide_password__0.xml: note: compiling XML.
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: C:\Users\Yang\AppData\Local\Temp\BRUT171730082803873061.tmp\testapp-orig\res\navigation\nav_graph.xml: note: compiling XML.
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: C:\Users\Yang\AppData\Local\Temp\BRUT171730082803873061.tmp\testapp-orig\res\xml\ww_box_styles_schema.xsd: note: compiling XML.
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: note: including C:\Users\Yang\AppData\Local\apktool\framework\1.apk.
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: brut_util_Jar_53715662863577499482100994717878233070.tmp W 10-19 12:32:45 10224   792 ApkAssets.cpp:137] resources.arsc in APK 'C:\Users\Yang\AppData\Local\apktool\framework\1.apk' is compressed.
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: note: linking package 'brut.apktool.aapt1.testapp' using package ID 7f.
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: note: merging archive C:\Users\Yang\AppData\Local\Temp\BRUT171730082803873061.tmp\testapp-orig\build\resources.zip.
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: note: merging 'drawable/$avd_hide_password__0' from compiled file C:\Users\Yang\AppData\Local\Temp\BRUT171730082803873061.tmp\testapp-orig\res\drawable\$avd_hide_password__0.xml.
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: note: merging 'navigation/nav_graph' from compiled file C:\Users\Yang\AppData\Local\Temp\BRUT171730082803873061.tmp\testapp-orig\res\navigation\nav_graph.xml.
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: note: merging 'xml/ww_box_styles_schema' from compiled file C:\Users\Yang\AppData\Local\Temp\BRUT171730082803873061.tmp\testapp-orig\res\xml\ww_box_styles_schema.xsd.
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: note: merging 'drawable/ic_launcher_samsung' from compiled file C:\Users\Yang\AppData\Local\Temp\BRUT171730082803873061.tmp\testapp-orig\res\drawable-xhdpi\ic_launcher_samsung.qmg.
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: note: enabling pre-O feature split ID rewriting.
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: AndroidManifest.xml: note: writing to archive (keep_raw_values=false).
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: note: writing AndroidManifest.xml to archive.
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: note: linking C:\Users\Yang\AppData\Local\Temp\BRUT171730082803873061.tmp\testapp-orig\res\drawable\$avd_hide_password__0.xml (brut.apktool.aapt1.testapp:drawable/$avd_hide_password__0).
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: res/drawable/$avd_hide_password__0.xml: note: writing to archive (keep_raw_values=false).
+十月 19, 2020 12:32:45 下午 java.util.logging.LogManager$RootLogger log
+警告: note: writing res/drawable/$avd_hide_password__0.xml to archive.
+十月 19, 2020 12:32:46 下午 java.util.logging.LogManager$RootLogger log
+警告: note: writing res/drawable-xhdpi/ic_launcher_samsung.qmg to archive.
+十月 19, 2020 12:32:46 下午 java.util.logging.LogManager$RootLogger log
+警告: note: linking C:\Users\Yang\AppData\Local\Temp\BRUT171730082803873061.tmp\testapp-orig\res\navigation\nav_graph.xml (brut.apktool.aapt1.testapp:navigation/nav_graph).
+十月 19, 2020 12:32:46 下午 java.util.logging.LogManager$RootLogger log
+警告: res/navigation/nav_graph.xml: note: writing to archive (keep_raw_values=false).
+十月 19, 2020 12:32:46 下午 java.util.logging.LogManager$RootLogger log
+警告: note: writing res/navigation/nav_graph.xml to archive.
+十月 19, 2020 12:32:46 下午 java.util.logging.LogManager$RootLogger log
+警告: note: linking C:\Users\Yang\AppData\Local\Temp\BRUT171730082803873061.tmp\testapp-orig\res\xml\ww_box_styles_schema.xsd (brut.apktool.aapt1.testapp:xml/ww_box_styles_schema).
+十月 19, 2020 12:32:46 下午 java.util.logging.LogManager$RootLogger log
+警告: res/xml/ww_box_styles_schema.xsd: note: writing to archive (keep_raw_values=false).
+十月 19, 2020 12:32:46 下午 java.util.logging.LogManager$RootLogger log
+警告: note: writing res/xml/ww_box_styles_schema.xsd to archive.
+十月 19, 2020 12:32:46 下午 java.util.logging.LogManager$RootLogger log
+警告: note: writing resources.arsc to archive.
+十月 19, 2020 12:32:46 下午 brut.androlib.Androlib buildApk
+信息: Building apk file...
+十月 19, 2020 12:32:46 下午 brut.androlib.Androlib build
+信息: Built apk...
+十月 19, 2020 12:32:46 下午 brut.androlib.aapt2.BuildAndDecodeTest beforeClass
+信息: Decoding testapp.apk...
+十月 19, 2020 12:32:46 下午 brut.androlib.ApkDecoder decode
+信息: Using Apktool 2.4.2-dirty on testapp.apk
+十月 19, 2020 12:32:46 下午 brut.androlib.res.AndrolibResources loadMainPkg
+信息: Loading resource table...
+十月 19, 2020 12:32:46 下午 brut.androlib.res.AndrolibResources decodeManifestWithResources
+信息: Decoding AndroidManifest.xml with resources...
+十月 19, 2020 12:32:46 下午 brut.androlib.res.AndrolibResources loadFrameworkPkg
+信息: Loading resource table from file: C:\Users\Yang\AppData\Local\apktool\framework\1.apk
+十月 19, 2020 12:32:46 下午 brut.androlib.res.AndrolibResources adjustPackageManifest
+信息: Regular manifest package...
+十月 19, 2020 12:32:46 下午 brut.androlib.res.AndrolibResources decode
+信息: Decoding file-resources...
+十月 19, 2020 12:32:46 下午 brut.androlib.res.AndrolibResources decode
+信息: Decoding values */* XMLs...
+十月 19, 2020 12:32:46 下午 brut.androlib.Androlib decodeRawFiles
+信息: Copying assets and libs...
+十月 19, 2020 12:32:46 下午 brut.androlib.Androlib decodeUnknownFiles
+信息: Copying unknown files...
+十月 19, 2020 12:32:46 下午 brut.androlib.Androlib writeOriginalFiles
+信息: Copying original files...
+]]></system-err>
+</testsuite>

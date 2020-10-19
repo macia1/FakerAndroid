@@ -1,3 +1,26 @@
-/.idea/
-/.idea/
-/target/classes/com/facker/toolchain/
+# Gradle
+.gradle/
+bin/
+
+# Build
+**/build/
+
+# Eclipse
+**/nbproject/private/
+*.project
+*.classpath
+*.settings
+*.setting
+
+# Tmp Files
+*.kate-swp
+*~
+*.DS_Store
+
+# IntelliJ
+*.iml
+.idea/*
+**/out/
+
+# Patches
+*.patch

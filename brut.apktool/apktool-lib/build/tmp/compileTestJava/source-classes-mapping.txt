@@ -1,0 +1,81 @@
+brut/androlib/decode/DoubleExtensionUnknownFileTest.java
+ brut.androlib.decode.DoubleExtensionUnknownFileTest
+brut/androlib/decode/ParentDirectoryTraversalTest.java
+ brut.androlib.decode.ParentDirectoryTraversalTest
+brut/androlib/aapt1/SkipAssetTest.java
+ brut.androlib.aapt1.SkipAssetTest
+com/faker/android/Main.java
+ com.faker.android.Main
+brut/androlib/aapt2/DebuggableFalseChangeToTrueTest.java
+ brut.androlib.aapt2.DebuggableFalseChangeToTrueTest
+brut/androlib/aapt1/LargeIntsInManifestTest.java
+ brut.androlib.aapt1.LargeIntsInManifestTest
+brut/androlib/aapt1/ProviderAttributeTest.java
+ brut.androlib.aapt1.ProviderAttributeTest
+brut/androlib/decode/Empty9PatchTest.java
+ brut.androlib.decode.Empty9PatchTest
+brut/androlib/aapt2/DebuggableTrueAddedTest.java
+ brut.androlib.aapt2.DebuggableTrueAddedTest
+brut/androlib/decode/MissingDiv9PatchTest.java
+ brut.androlib.decode.MissingDiv9PatchTest
+brut/androlib/aapt1/BuildAndDecodeJarTest.java
+ brut.androlib.aapt1.BuildAndDecodeJarTest
+brut/androlib/aapt1/DefaultBaksmaliVariableTest.java
+ brut.androlib.aapt1.DefaultBaksmaliVariableTest
+brut/androlib/androlib/InvalidSdkBoundingTest.java
+ brut.androlib.androlib.InvalidSdkBoundingTest
+brut/androlib/decode/DecodeKotlinTest.java
+ brut.androlib.decode.DecodeKotlinTest
+brut/androlib/aapt1/AndroidOreoSparseTest.java
+ brut.androlib.aapt1.AndroidOreoSparseTest
+brut/androlib/aapt1/DebugTagRetainedTest.java
+ brut.androlib.aapt1.DebugTagRetainedTest
+brut/androlib/BaseTest.java
+ brut.androlib.BaseTest
+brut/androlib/decode/ForceManifestDecodeNoResourcesTest.java
+ brut.androlib.decode.ForceManifestDecodeNoResourcesTest
+brut/androlib/decode/AndResGuardTest.java
+ brut.androlib.decode.AndResGuardTest
+brut/androlib/aapt1/AndroidOreoNotSparseTest.java
+ brut.androlib.aapt1.AndroidOreoNotSparseTest
+brut/androlib/util/AaptVersionTest.java
+ brut.androlib.util.AaptVersionTest
+brut/androlib/aapt1/ReferenceVersionCodeTest.java
+ brut.androlib.aapt1.ReferenceVersionCodeTest
+brut/androlib/decode/VectorDrawableTest.java
+ brut.androlib.decode.VectorDrawableTest
+brut/androlib/decode/DecodeKotlinCoroutinesTest.java
+ brut.androlib.decode.DecodeKotlinCoroutinesTest
+brut/androlib/aapt2/BuildAndDecodeTest.java
+ brut.androlib.aapt2.BuildAndDecodeTest
+brut/androlib/TestUtils.java
+ brut.androlib.TestUtils
+ brut.androlib.TestUtils$ResValueElementQualifier
+brut/androlib/aapt1/SharedLibraryTest.java
+ brut.androlib.aapt1.SharedLibraryTest
+brut/androlib/aapt1/EmptyResourcesArscTest.java
+ brut.androlib.aapt1.EmptyResourcesArscTest
+brut/androlib/decode/ExternalEntityTest.java
+ brut.androlib.decode.ExternalEntityTest
+brut/androlib/decode/MissingVersionManifestTest.java
+ brut.androlib.decode.MissingVersionManifestTest
+brut/androlib/decode/DuplicateDexTest.java
+ brut.androlib.decode.DuplicateDexTest
+brut/androlib/util/UnknownDirectoryTraversalTest.java
+ brut.androlib.util.UnknownDirectoryTraversalTest
+brut/androlib/decode/DecodeArrayTest.java
+ brut.androlib.decode.DecodeArrayTest
+brut/androlib/encoders/PositionalEnumerationTest.java
+ brut.androlib.encoders.PositionalEnumerationTest
+brut/androlib/aapt1/BuildAndDecodeTest.java
+ brut.androlib.aapt1.BuildAndDecodeTest
+brut/androlib/decode/MinifiedArscTest.java
+ brut.androlib.decode.MinifiedArscTest
+brut/androlib/aapt2/DebuggableTrueRetainedTest.java
+ brut.androlib.aapt2.DebuggableTrueRetainedTest
+brut/androlib/aapt2/NonStandardPkgIdTest.java
+ brut.androlib.aapt2.NonStandardPkgIdTest
+brut/androlib/decode/OutsideOfDirectoryEntryTest.java
+ brut.androlib.decode.OutsideOfDirectoryEntryTest
+brut/androlib/aapt1/UnknownCompressionTest.java
+ brut.androlib.aapt1.UnknownCompressionTest

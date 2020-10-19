@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="brut.androlib.aapt1.BuildAndDecodeTest" tests="76" skipped="1" failures="0" errors="0" timestamp="2020-10-19T04:32:06" hostname="DESKTOP-FCPO06O" time="0.186">
+  <properties/>
+  <testcase name="buildAndDecodeTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.0"/>
+  <testcase name="valuesAnimsTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.014"/>
+  <testcase name="valuesArraysTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.006"/>
+  <testcase name="valuesColorsTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="valuesIdsTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="valuesAttrsTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.005"/>
+  <testcase name="xmlPluralsTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.003"/>
+  <testcase name="bug702Test" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.002"/>
+  <testcase name="crossTypeTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.002"/>
+  <testcase name="xmlXsdFileTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.006"/>
+  <testcase name="valuesBoolsTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.002"/>
+  <testcase name="valuesStylesTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.004"/>
+  <testcase name="xmlLiteralsTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.002"/>
+  <testcase name="xmlIdsEmptyTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="qualifiersTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="shortMncHtcTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="shortMncv2Test" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="valuesDimensTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.002"/>
+  <testcase name="longMncTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="drawableLdpiTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="multipleDexTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="singleDexTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="fileAssetTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.0"/>
+  <testcase name="anyDpiTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.002"/>
+  <testcase name="scriptBcp47Test" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="fontTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="drawableMdpiTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="rightToLeftTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="libsTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.002"/>
+  <testcase name="issue1508Test" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="issue1511Test" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.005"/>
+  <testcase name="variantBcp47Test" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="resRawTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="unicodeAssetTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.004">
+    <skipped/>
+  </testcase>
+  <testcase name="packed3CharsTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="robust9patchTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.006"/>
+  <testcase name="confirmZeroByteFileExtensionIsNotStored" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.004"/>
+  <testcase name="storedMp3FilesAreNotCompressedTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.0"/>
+  <testcase name="xmlUniformAutoTextTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="manifestTaggingNotSupressed" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="valuesDrawablesTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="threeLetterLangBcp47Test" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="valuesIntegersTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="xmlCustomAttrsNotAndroidTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.0"/>
+  <testcase name="drawableAnyDpiTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="androidOStringTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="drawableTvdpiTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="drawableQualifierXxhdpiTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.0"/>
+  <testcase name="valuesLayoutsTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="fourpartBcp47Test" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="valuesStringsTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.006"/>
+  <testcase name="xmlReferencesTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="drawableNumberedDpiTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="numericalRegionBcp47Test" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="twoLetterLangBcp47Test" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="drawableXhdpiTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.002"/>
+  <testcase name="RegionLocaleBcp47Test" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.022"/>
+  <testcase name="valuesExtraLongTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.007"/>
+  <testcase name="xmlSmallNumbersDontEscapeTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="drawableXxxhdpiTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="xmlCustomAttributeTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="shortendedMncTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="valuesReferencesTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="api26ConfigurationsTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.004"/>
+  <testcase name="drawableNoDpiTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.0"/>
+  <testcase name="twoLetterNotHandledAsBcpTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.0"/>
+  <testcase name="confirmZeroByteFileIsStored" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="unknownFolderTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.003"/>
+  <testcase name="xmlFillParentBecomesMatchTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="ninePatchImageColorTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="api23ConfigurationsTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.002"/>
+  <testcase name="confirmKotlinFolderPersistsTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.0"/>
+  <testcase name="xmlReferenceAttributeTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.0"/>
+  <testcase name="drawableXxhdpiTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.001"/>
+  <testcase name="valuesExtraLongExactLengthTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.013"/>
+  <testcase name="valuesArraysCastingTest" classname="brut.androlib.aapt1.BuildAndDecodeTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[十月 19, 2020 12:32:03 下午 brut.androlib.aapt1.BuildAndDecodeTest beforeClass
+信息: Unpacking testapp...
+十月 19, 2020 12:32:03 下午 brut.androlib.aapt1.BuildAndDecodeTest beforeClass
+信息: Building testapp.apk...
+十月 19, 2020 12:32:03 下午 brut.androlib.Androlib build
+信息: Using Apktool 2.4.2-dirty
+十月 19, 2020 12:32:03 下午 brut.androlib.Androlib buildSourcesSmali
+信息: Checking whether sources has changed...
+十月 19, 2020 12:32:03 下午 brut.androlib.Androlib buildSourcesSmali
+信息: Smaling smali folder into classes.dex...
+十月 19, 2020 12:32:03 下午 brut.androlib.Androlib buildSourcesSmali
+信息: Checking whether sources has changed...
+十月 19, 2020 12:32:03 下午 brut.androlib.Androlib buildSourcesSmali
+信息: Smaling smali_classes2 folder into classes2.dex...
+十月 19, 2020 12:32:03 下午 brut.androlib.Androlib buildResourcesFull
+信息: Checking whether resources has changed...
+十月 19, 2020 12:32:03 下午 brut.androlib.Androlib buildResourcesFull
+信息: Building resources...
+十月 19, 2020 12:32:04 下午 java.util.logging.LogManager$RootLogger log
+警告: warning: string 'long_string1' has no default translation.
+十月 19, 2020 12:32:04 下午 java.util.logging.LogManager$RootLogger log
+警告: warning: string 'long_string2' has no default translation.
+十月 19, 2020 12:32:04 下午 java.util.logging.LogManager$RootLogger log
+警告: warning: string 'long_string3' has no default translation.
+十月 19, 2020 12:32:04 下午 java.util.logging.LogManager$RootLogger log
+警告: warning: string 'long_string4' has no default translation.
+十月 19, 2020 12:32:04 下午 java.util.logging.LogManager$RootLogger log
+警告: warning: string 'long_string5' has no default translation.
+十月 19, 2020 12:32:04 下午 java.util.logging.LogManager$RootLogger log
+警告: warning: string 'long_string6' has no default translation.
+十月 19, 2020 12:32:04 下午 java.util.logging.LogManager$RootLogger log
+警告: warning: string 'test2' has no default translation.
+十月 19, 2020 12:32:04 下午 java.util.logging.LogManager$RootLogger log
+警告: warning: string 'test3' has no default translation.
+十月 19, 2020 12:32:04 下午 java.util.logging.LogManager$RootLogger log
+警告: warning: string 'test4' has no default translation.
+十月 19, 2020 12:32:04 下午 java.util.logging.LogManager$RootLogger log
+警告: warning: string 'test5' has no default translation.
+十月 19, 2020 12:32:04 下午 java.util.logging.LogManager$RootLogger log
+警告: warning: string 'test_formatting1' has no default translation.
+十月 19, 2020 12:32:04 下午 java.util.logging.LogManager$RootLogger log
+警告: warning: string 'test_formatting2' has no default translation.
+十月 19, 2020 12:32:04 下午 brut.androlib.Androlib buildLibrary
+信息: Copying libs... (/lib)
+十月 19, 2020 12:32:04 下午 brut.androlib.Androlib buildLibrary
+信息: Copying libs... (/libs)
+十月 19, 2020 12:32:04 下午 brut.androlib.Androlib buildLibrary
+信息: Copying libs... (/kotlin)
+十月 19, 2020 12:32:04 下午 brut.androlib.Androlib buildApk
+信息: Building apk file...
+十月 19, 2020 12:32:04 下午 brut.androlib.Androlib buildUnknownFiles
+信息: Copying unknown files/dir...
+十月 19, 2020 12:32:04 下午 brut.androlib.Androlib build
+信息: Built apk...
+十月 19, 2020 12:32:04 下午 brut.androlib.aapt1.BuildAndDecodeTest beforeClass
+信息: Decoding testapp.apk...
+十月 19, 2020 12:32:04 下午 brut.androlib.ApkDecoder decode
+信息: Using Apktool 2.4.2-dirty on testapp.apk
+十月 19, 2020 12:32:04 下午 brut.androlib.res.AndrolibResources loadMainPkg
+信息: Loading resource table...
+十月 19, 2020 12:32:04 下午 brut.androlib.res.AndrolibResources decodeManifestWithResources
+信息: Decoding AndroidManifest.xml with resources...
+十月 19, 2020 12:32:04 下午 brut.androlib.res.AndrolibResources loadFrameworkPkg
+信息: Loading resource table from file: C:\Users\Yang\AppData\Local\apktool\framework\1.apk
+十月 19, 2020 12:32:06 下午 brut.androlib.res.AndrolibResources adjustPackageManifest
+信息: Regular manifest package...
+十月 19, 2020 12:32:06 下午 brut.androlib.res.AndrolibResources decode
+信息: Decoding file-resources...
+十月 19, 2020 12:32:06 下午 brut.androlib.res.AndrolibResources decode
+信息: Decoding values */* XMLs...
+十月 19, 2020 12:32:06 下午 brut.androlib.Androlib decodeSourcesSmali
+信息: Baksmaling classes.dex...
+十月 19, 2020 12:32:06 下午 brut.androlib.Androlib decodeSourcesSmali
+信息: Baksmaling classes2.dex...
+十月 19, 2020 12:32:06 下午 brut.androlib.Androlib decodeRawFiles
+信息: Copying assets and libs...
+十月 19, 2020 12:32:06 下午 brut.androlib.Androlib decodeUnknownFiles
+信息: Copying unknown files...
+十月 19, 2020 12:32:06 下午 brut.androlib.Androlib writeOriginalFiles
+信息: Copying original files...
+]]></system-err>
+</testsuite>

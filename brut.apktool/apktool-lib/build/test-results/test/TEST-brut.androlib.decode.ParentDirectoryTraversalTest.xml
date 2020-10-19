@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="brut.androlib.decode.ParentDirectoryTraversalTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-19T04:33:26" hostname="DESKTOP-FCPO06O" time="1.128">
+  <properties/>
+  <testcase name="checkIfDrawableFileDecodesProperly" classname="brut.androlib.decode.ParentDirectoryTraversalTest" time="1.128"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[十月 19, 2020 12:33:26 下午 brut.androlib.ApkDecoder decode
+信息: Using Apktool 2.4.2-dirty on issue1498.apk
+十月 19, 2020 12:33:26 下午 brut.androlib.Androlib decodeResourcesRaw
+信息: Copying raw resources...
+十月 19, 2020 12:33:26 下午 brut.androlib.Androlib decodeSourcesSmali
+信息: Baksmaling classes.dex...
+十月 19, 2020 12:33:27 下午 brut.androlib.Androlib decodeRawFiles
+信息: Copying assets and libs...
+十月 19, 2020 12:33:27 下午 brut.androlib.Androlib decodeUnknownFiles
+信息: Copying unknown files...
+十月 19, 2020 12:33:27 下午 brut.androlib.Androlib writeOriginalFiles
+信息: Copying original files...
+]]></system-err>
+</testsuite>

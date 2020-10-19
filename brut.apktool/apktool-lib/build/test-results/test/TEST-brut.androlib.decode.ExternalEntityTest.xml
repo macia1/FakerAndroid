@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="brut.androlib.decode.ExternalEntityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-19T04:33:19" hostname="DESKTOP-FCPO06O" time="0.001">
+  <properties/>
+  <testcase name="doctypeTest" classname="brut.androlib.decode.ExternalEntityTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[十月 19, 2020 12:33:18 下午 brut.androlib.decode.ExternalEntityTest beforeClass
+信息: Building doctype.apk...
+十月 19, 2020 12:33:18 下午 brut.androlib.Androlib build
+信息: Using Apktool 2.4.2-dirty
+十月 19, 2020 12:33:18 下午 brut.androlib.Androlib buildSources
+警告: Could not find sources
+[Fatal Error] :2:10: 将功能 "http://apache.org/xml/features/disallow-doctype-decl" 设置为“真”时, 不允许使用 DOCTYPE。
+十月 19, 2020 12:33:18 下午 brut.androlib.Androlib buildManifest
+信息: Checking whether resources has changed...
+十月 19, 2020 12:33:18 下午 brut.androlib.Androlib buildManifest
+信息: Building AndroidManifest.xml...
+十月 19, 2020 12:33:18 下午 brut.androlib.Androlib buildApk
+信息: Building apk file...
+十月 19, 2020 12:33:18 下午 brut.androlib.Androlib build
+信息: Built apk...
+十月 19, 2020 12:33:18 下午 brut.androlib.decode.ExternalEntityTest beforeClass
+信息: Decoding doctype.apk...
+十月 19, 2020 12:33:18 下午 brut.androlib.ApkDecoder decode
+信息: Using Apktool 2.4.2-dirty on doctype.apk
+十月 19, 2020 12:33:18 下午 brut.androlib.res.AndrolibResources decodeManifest
+信息: Decoding AndroidManifest.xml with only framework resources...
+十月 19, 2020 12:33:18 下午 brut.androlib.res.AndrolibResources loadFrameworkPkg
+信息: Loading resource table from file: C:\Users\Yang\AppData\Local\apktool\framework\1.apk
+十月 19, 2020 12:33:19 下午 brut.androlib.Androlib decodeRawFiles
+信息: Copying assets and libs...
+十月 19, 2020 12:33:19 下午 brut.androlib.Androlib decodeUnknownFiles
+信息: Copying unknown files...
+十月 19, 2020 12:33:19 下午 brut.androlib.Androlib writeOriginalFiles
+信息: Copying original files...
+]]></system-err>
+</testsuite>

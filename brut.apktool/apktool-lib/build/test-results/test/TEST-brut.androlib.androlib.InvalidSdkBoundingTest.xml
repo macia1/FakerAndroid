@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="brut.androlib.androlib.InvalidSdkBoundingTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-10-19T04:32:53" hostname="DESKTOP-FCPO06O" time="0.0">
+  <properties/>
+  <testcase name="checkForSdkDevelopmentInsaneTestValue" classname="brut.androlib.androlib.InvalidSdkBoundingTest" time="0.0"/>
+  <testcase name="checkIfMissingMaxPasses" classname="brut.androlib.androlib.InvalidSdkBoundingTest" time="0.0"/>
+  <testcase name="checkIfMissingMinPasses" classname="brut.androlib.androlib.InvalidSdkBoundingTest" time="0.0"/>
+  <testcase name="checkIfMissingBothPasses" classname="brut.androlib.androlib.InvalidSdkBoundingTest" time="0.0"/>
+  <testcase name="checkIfInvalidValuesPass" classname="brut.androlib.androlib.InvalidSdkBoundingTest" time="0.0"/>
+  <testcase name="checkForShortHandSdkTag" classname="brut.androlib.androlib.InvalidSdkBoundingTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

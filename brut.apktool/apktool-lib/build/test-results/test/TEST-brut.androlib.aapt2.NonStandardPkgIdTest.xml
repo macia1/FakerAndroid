@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="brut.androlib.aapt2.NonStandardPkgIdTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-10-19T04:32:53" hostname="DESKTOP-FCPO06O" time="0.001">
+  <properties/>
+  <testcase name="buildAndDecodeTest" classname="brut.androlib.aapt2.NonStandardPkgIdTest" time="0.0"/>
+  <testcase name="valuesStringsTest" classname="brut.androlib.aapt2.NonStandardPkgIdTest" time="0.0"/>
+  <testcase name="confirmManifestStructureTest" classname="brut.androlib.aapt2.NonStandardPkgIdTest" time="0.0"/>
+  <testcase name="confirmResourcesAreFromPkgId8" classname="brut.androlib.aapt2.NonStandardPkgIdTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[十月 19, 2020 12:32:51 下午 brut.androlib.aapt2.NonStandardPkgIdTest beforeClass
+信息: Unpacking pkgid8...
+十月 19, 2020 12:32:51 下午 brut.androlib.aapt2.NonStandardPkgIdTest beforeClass
+信息: Building pkgid8.apk...
+十月 19, 2020 12:32:51 下午 brut.androlib.Androlib build
+信息: Using Apktool 2.4.2-dirty
+十月 19, 2020 12:32:51 下午 brut.androlib.Androlib buildSources
+警告: Could not find sources
+十月 19, 2020 12:32:51 下午 brut.androlib.Androlib buildResourcesFull
+信息: Checking whether resources has changed...
+十月 19, 2020 12:32:51 下午 brut.androlib.Androlib buildResourcesFull
+信息: Building resources...
+十月 19, 2020 12:32:52 下午 java.util.logging.LogManager$RootLogger log
+警告: note: including C:\Users\Yang\AppData\Local\apktool\framework\1.apk.
+十月 19, 2020 12:32:52 下午 java.util.logging.LogManager$RootLogger log
+警告: brut_util_Jar_53715662863577499482100994717878233070.tmp W 10-19 12:32:52 14720 11356 ApkAssets.cpp:137] resources.arsc in APK 'C:\Users\Yang\AppData\Local\apktool\framework\1.apk' is compressed.
+十月 19, 2020 12:32:52 下午 java.util.logging.LogManager$RootLogger log
+警告: note: linking package 'brut.apktool.aapt2.pkgid8' using package ID 80.
+十月 19, 2020 12:32:52 下午 java.util.logging.LogManager$RootLogger log
+警告: note: merging archive C:\Users\Yang\AppData\Local\Temp\BRUT3290012635229492293.tmp\pkgid8-orig\build\resources.zip.
+十月 19, 2020 12:32:52 下午 java.util.logging.LogManager$RootLogger log
+警告: note: enabling pre-O feature split ID rewriting.
+十月 19, 2020 12:32:52 下午 java.util.logging.LogManager$RootLogger log
+警告: AndroidManifest.xml: note: writing to archive (keep_raw_values=false).
+十月 19, 2020 12:32:52 下午 java.util.logging.LogManager$RootLogger log
+警告: note: writing AndroidManifest.xml to archive.
+十月 19, 2020 12:32:52 下午 java.util.logging.LogManager$RootLogger log
+警告: note: writing resources.arsc to archive.
+十月 19, 2020 12:32:52 下午 brut.androlib.Androlib buildApk
+信息: Building apk file...
+十月 19, 2020 12:32:52 下午 brut.androlib.Androlib build
+信息: Built apk...
+十月 19, 2020 12:32:52 下午 brut.androlib.aapt2.NonStandardPkgIdTest beforeClass
+信息: Decoding pkgid8.apk...
+十月 19, 2020 12:32:52 下午 brut.androlib.ApkDecoder decode
+信息: Using Apktool 2.4.2-dirty on pkgid8.apk
+十月 19, 2020 12:32:52 下午 brut.androlib.res.AndrolibResources loadMainPkg
+信息: Loading resource table...
+十月 19, 2020 12:32:52 下午 brut.androlib.res.AndrolibResources decodeManifestWithResources
+信息: Decoding AndroidManifest.xml with resources...
+十月 19, 2020 12:32:52 下午 brut.androlib.res.AndrolibResources loadFrameworkPkg
+信息: Loading resource table from file: C:\Users\Yang\AppData\Local\apktool\framework\1.apk
+十月 19, 2020 12:32:53 下午 brut.androlib.res.AndrolibResources adjustPackageManifest
+信息: Regular manifest package...
+十月 19, 2020 12:32:53 下午 brut.androlib.res.AndrolibResources decode
+信息: Decoding file-resources...
+十月 19, 2020 12:32:53 下午 brut.androlib.res.AndrolibResources decode
+信息: Decoding values */* XMLs...
+十月 19, 2020 12:32:53 下午 brut.androlib.Androlib decodeRawFiles
+信息: Copying assets and libs...
+十月 19, 2020 12:32:53 下午 brut.androlib.Androlib decodeUnknownFiles
+信息: Copying unknown files...
+十月 19, 2020 12:32:53 下午 brut.androlib.Androlib writeOriginalFiles
+信息: Copying original files...
+]]></system-err>
+</testsuite>

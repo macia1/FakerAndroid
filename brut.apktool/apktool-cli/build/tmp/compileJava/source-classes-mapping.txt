@@ -1,0 +1,5 @@
+brut/apktool/Main.java
+ brut.apktool.Main
+ brut.apktool.Main$1
+ brut.apktool.Main$2
+ brut.apktool.Main$Verbosity
