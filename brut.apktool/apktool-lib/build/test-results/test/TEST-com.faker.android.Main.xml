@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.faker.android.Main" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-19T04:33:30" hostname="DESKTOP-FCPO06O" time="0.0">
-  <properties/>
-  <testcase name="test1" classname="com.faker.android.Main" time="0.0"/>
-  <system-out><![CDATA[-----------123
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
