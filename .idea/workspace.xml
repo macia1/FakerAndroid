@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="03edc19d-851e-4e2b-ae16-84f0811c93c2" name="Default Changelist" comment="del unuseful code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FakerAndroid.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FakerAndroid.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/facker/toolchain/FakerMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/facker/toolchain/FakerMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/facker/toolchain/FakerMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/facker/toolchain/base/beta/PathUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/facker/toolchain/base/mod/Constant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/facker/toolchain/base/mod/FuckApk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/facker/toolchain/base/mod/StaticInjector.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/facker/toolchain/base/packer/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/facker/toolchain/utils/ApkUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/facker/toolchain/utils/ManifestEditor.java" beforeDir="false" />
-    </list>
+    <list default="true" id="7c4d2180-e035-4b6d-85e9-09eae6380c17" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +28,49 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FakerAndroid" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FakerAndroid" type="f1a62948:ProjectNode" />
+                <item name="brut.apktool" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FakerAndroid" type="f1a62948:ProjectNode" />
+                <item name="brut.apktool" type="2d1252cf:ModuleNode" />
+                <item name="FakerAndroid-cli" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FakerAndroid" type="f1a62948:ProjectNode" />
+                <item name="brut.apktool" type="2d1252cf:ModuleNode" />
+                <item name="FakerAndroid-cli" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FakerAndroid" type="f1a62948:ProjectNode" />
+                <item name="brut.apktool" type="2d1252cf:ModuleNode" />
+                <item name="FakerAndroid-cli" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="shadow" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -635,10 +665,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602682876904" />
-    <state x="567" y="120" key="CommitChangelistDialog2" timestamp="1602909878905">
+    <state x="567" y="120" key="CommitChangelistDialog2" timestamp="1603094119536">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="567" y="120" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602909878905" />
+    <state x="567" y="120" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1603094119536" />
     <state x="240" y="94" key="DiffContextDialog" timestamp="1602664450701">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -647,22 +677,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602817208895" />
-    <state width="1877" height="309" key="GridCell.Tab.0.bottom" timestamp="1602905228392">
+    <state width="1877" height="325" key="GridCell.Tab.0.bottom" timestamp="1603094085914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="309" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602905228392" />
-    <state width="1877" height="309" key="GridCell.Tab.0.center" timestamp="1602905228392">
+    <state width="1877" height="325" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603094085914" />
+    <state width="1877" height="325" key="GridCell.Tab.0.center" timestamp="1603094085913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="309" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602905228392" />
-    <state width="1877" height="309" key="GridCell.Tab.0.left" timestamp="1602905228392">
+    <state width="1877" height="325" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603094085913" />
+    <state width="1877" height="325" key="GridCell.Tab.0.left" timestamp="1603094085913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="309" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602905228392" />
-    <state width="1877" height="309" key="GridCell.Tab.0.right" timestamp="1602905228392">
+    <state width="1877" height="325" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603094085913" />
+    <state width="1877" height="325" key="GridCell.Tab.0.right" timestamp="1603094085913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="309" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602905228392" />
+    <state width="1877" height="325" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603094085913" />
     <state x="600" y="224" key="NewModule_or_Project.wizard" timestamp="1602495512760">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -691,10 +721,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="647" y="275" width="626" height="490" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602757364034" />
-    <state x="666" y="322" key="git4idea.merge.GitPullDialog" timestamp="1602490668749">
+    <state x="666" y="322" key="git4idea.merge.GitPullDialog" timestamp="1603094107367">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="666" y="322" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602490668749" />
+    <state x="666" y="322" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603094107367" />
     <state x="334" y="124" key="new project wizard" timestamp="1602821709024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
