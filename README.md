@@ -48,8 +48,8 @@ A tool translate apk file to common android project and support so hook and incl
 
 
 ##### 5、遇到问题了？兄弟别走肯定能用，而且是你最佳的解决方案，咨询探讨
-- QQ:1404774249（加哦，咱需要知道问题去调优哦）
-- issues(在线解决) 
+- QQ:1404774249
+- ([issues在线解决](https://github.com/Efaker/FakerAndroid/issues)) 
 ##### 6、给个star?免费的           
 
 
