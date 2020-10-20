@@ -32,6 +32,7 @@ public class ApkTool {
             decoder.setBaksmaliDebugMode(false);
             decoder.setOutDir(ouputDir);
             decoder.setForceDelete(true);
+            decoder.setDecodeSources(ApkDecoder.DECODE_SOURCES_SMALI_ONLY_MAIN_CLASSES);
             decoder.setApkFile(targetApkPath);
             decoder.decode();
             return true;
