@@ -161,7 +161,12 @@ public class Importer extends IImporter {
         if(jniLibsARM64V8A.exists()){
             PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/arm64-v8a",jniLibsARM64V8A.getAbsolutePath());
         }
-        if(!jniLibsARMV7A.exists()&&!jniLibsARM64V8A.exists()){
+
+        File armeabi = new File(targetjniLibs,"armeabi");
+        if(armeabi.exists()){
+            PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/armeabi-v7a",armeabi.getAbsolutePath());
+        }
+        if(!jniLibsARMV7A.exists()&&!jniLibsARM64V8A.exists()&&!armeabi.exists()){
             PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/armeabi-v7a",jniLibsARMV7A.getAbsolutePath());
             PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/arm64-v8a",jniLibsARM64V8A.getAbsolutePath());
         }

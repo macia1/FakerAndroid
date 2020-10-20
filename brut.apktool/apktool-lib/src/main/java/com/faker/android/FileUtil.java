@@ -6,6 +6,9 @@ import java.util.zip.CheckedInputStream;
 public class FileUtil {
 
     public static void autoReplaceStr(File file, String oldstr, String newStr) throws IOException {
+        if(oldstr==null||newStr==null){
+            return;
+        }
         Long fileLength = file.length();
         byte[] fileContext = new byte[fileLength.intValue()];
         FileInputStream in = null;
