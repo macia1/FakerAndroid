@@ -20,6 +20,7 @@ import java.io.*;
 import java.net.URLDecoder;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class FileDirectory extends AbstractDirectory {
     private File mDir;
@@ -94,6 +95,11 @@ public class FileDirectory extends AbstractDirectory {
     @Override
     protected void removeFileLocal(String name) {
         new File(generatePath(name)).delete();
+    }
+
+    @Override
+    public Set<String> getFiles() {
+        return super.getFiles();
     }
 
     private String generatePath(String name) {

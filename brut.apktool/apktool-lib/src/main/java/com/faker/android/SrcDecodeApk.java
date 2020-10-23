@@ -154,6 +154,11 @@ public class SrcDecodeApk {
         return  file;
     }
 
+    public File getGradle() {
+        File file = new File(getProjectDir(),"gradle");
+        return  file;
+    }
+
     public File getJava(){
         File file = new File(getDecodeDir(),"java");
         return  file;

@@ -37,11 +37,16 @@ public class SourceCode {
         }
         return sourceRoot+"/cpp";
     }
+
+    public String getGradle(){
+        return sourceRoot+"/gradle";
+    }
+
     public String getJava(boolean isIl2cpp){
         if(isIl2cpp){
             return sourceRoot+"/il2cpp-java";
         }
-        return sourceRoot+"/java";
+        return sourceRoot+"/app-java";
     }
 
     public String getJniLibs(){

@@ -53,8 +53,12 @@ public class Importer extends IImporter {
         if(new File(xSrcTarget.getCpp(),"Il2cpp-Scaffolding-ARM").exists()||new File(xSrcTarget.getCpp(),"Il2cpp-Scaffolding-ARM64").exists()){
             isIl2cpp = true;
         }
+
+        PatchManger.copyDirFromJar(sourceCode.getGradle(),xSrcTarget.getGradle().getAbsolutePath());
+
         //拷贝cpp
         PatchManger.copyDirFromJar(sourceCode.getCpp(isIl2cpp),xSrcTarget.getCpp().getAbsolutePath());
+
 
         //拷贝Java
         PatchManger.copyDirFromJar(sourceCode.getJava(isIl2cpp),xSrcTarget.getJava().getAbsolutePath());
@@ -71,7 +75,8 @@ public class Importer extends IImporter {
             FileUtil.autoReplaceStr(gameBuildGrandle,"{pkg}",manifestEditor.getPackagenName());
 
             File fileSmail = xSrcTarget.getSmalis();
-            deleteR(manifestEditor.getPackagenName(),fileSmail);
+
+            //deleteR(manifestEditor.getPackagenName(),fileSmail);
 
             if(isIl2cpp){
                 File MainA = new File(xSrcTarget.getJava(),"com\\faker\\android\\FakerUnityActivity.java");
@@ -80,8 +85,8 @@ public class Importer extends IImporter {
                 File MainA = new File(xSrcTarget.getJava(),"com\\faker\\android\\FakerActivity.java");
                 FileUtil.autoReplaceStr(MainA,"{R}",manifestEditor.getPackagenName()+".R");
             }
-            File MainW = new File(xSrcTarget.getJava(),"com\\faker\\android\\WebViewActivity.java");
-            FileUtil.autoReplaceStr(MainW,"{R}",manifestEditor.getPackagenName()+".R");
+//            File MainW = new File(xSrcTarget.getJava(),"com\\faker\\android\\WebViewActivity.java");
+//            FileUtil.autoReplaceStr(MainW,"{R}",manifestEditor.getPackagenName()+".R");
 
         } catch (DocumentException e) {
             e.printStackTrace();
@@ -126,6 +131,16 @@ public class Importer extends IImporter {
             System.out.println("abi arme64-v8a il2cpp scaffolding have generated.");
         }
 
+        File file1 = new File(xSrcTarget.getDecodeDir(),"kotlin");
+        delete(file1);
+        File file2 = new File(xSrcTarget.getDecodeDir(),"META-INF");
+        delete(file2);
+
+        File file3 = new File(xSrcTarget.getDecodeDir(),"original");
+        delete(file3);
+
+        File file4 = new File(xSrcTarget.getDecodeDir(),"unknown");
+        delete(file4);
         return true;
     }
 
@@ -268,18 +283,6 @@ public class Importer extends IImporter {
 
             PatchManger.copyDirFromJar(sourceCode.getScaffolding_cpp(),scaffolding.getAbsolutePath());
 
-            File file1 = new File(xSrcTarget.getDecodeDir(),"kotlin");
-            delete(file1);
-            File file2 = new File(xSrcTarget.getDecodeDir(),"META-INF");
-            delete(file2);
-
-            File file3 = new File(xSrcTarget.getDecodeDir(),"original");
-            delete(file3);
-
-            File file4 = new File(xSrcTarget.getDecodeDir(),"unknown");
-            delete(file4);
-
-
         }
     }
 
@@ -301,19 +304,10 @@ public class Importer extends IImporter {
         if (file.isDirectory()) {
             File[] files = file.listFiles();
             for (File f : files) {
-                if(f.getName().startsWith("mipmap")){
-                      continue;
-                }
-                if(f.getName().equals("xml")){
-                    continue;
-                }
-
                 delete(f);
              }
         }
-        if(!file.getName().equals("strings.xml")&&!file.getName().equals("integers.xml")&&!file.getName().equals("public.xml")){
-            file.delete();
-        }
+        file.delete();
     }
 
     public static void exportCppScaffolding (XSrcTarget xSrcTarget) {
