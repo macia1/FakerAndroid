@@ -26,6 +26,11 @@ android {
         versionCode {versionCode}
         versionName '{versionName}'
     }
+    packagingOptions {
+        pickFirst 'lib/armeabi-v7a/*'
+        pickFirst 'lib/arm64-v8a/*'
+        pickFirst 'lib/armeabi/*'
+    }
 
     aaptOptions {
         noCompress = ['.unity3d', '.ress', '.resource', '.obb']
