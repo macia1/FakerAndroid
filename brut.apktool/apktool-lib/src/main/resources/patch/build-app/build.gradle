@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.faker.android'
 
 dependencies {
-    //compileOnly files('../javaScaffoding/libs/unity-classes.jar');
+    compileOnly files('../javaScaffoding/libs/unity-classes.jar');
     //compileOnly files('../javaScaffoding/build/intermediates/packaged-classes/release/classes.jar');
 }
 

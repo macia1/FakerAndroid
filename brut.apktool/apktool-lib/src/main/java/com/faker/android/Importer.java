@@ -79,10 +79,10 @@ public class Importer extends IImporter {
             //deleteR(manifestEditor.getPackagenName(),fileSmail);
 
             if(isIl2cpp){
-                File MainA = new File(xSrcTarget.getJava(),"com\\faker\\android\\FakerUnityActivity.java");
+                File MainA = new File(xSrcTarget.getJava(),"com/faker/android/FakerUnityActivity.java");
                 FileUtil.autoReplaceStr(MainA,"{R}",manifestEditor.getPackagenName()+".R");
             }else {
-                File MainA = new File(xSrcTarget.getJava(),"com\\faker\\android\\FakerActivity.java");
+                File MainA = new File(xSrcTarget.getJava(),"com/faker/android/FakerActivity.java");
                 FileUtil.autoReplaceStr(MainA,"{R}",manifestEditor.getPackagenName()+".R");
             }
 //            File MainW = new File(xSrcTarget.getJava(),"com\\faker\\android\\WebViewActivity.java");
@@ -194,7 +194,7 @@ public class Importer extends IImporter {
         try {
             ManifestEditor manifestEditor = new ManifestEditor(xSrcTarget.getManifestFile());
             String applicationName = manifestEditor.getApplicationName();
-            File file  = new File(xSrcTarget.getJava(),"com\\faker\\android\\FakerApp.java");
+            File file  = new File(xSrcTarget.getJava(),"com/faker/android/FakerApp.java");
             if(!TextUtil.isEmpty(applicationName)){
                 FileUtil.autoReplaceStr(file,"{APPLICATION_NAME}",applicationName);
             }else {
@@ -293,7 +293,7 @@ public class Importer extends IImporter {
                 deleteR(pkg,f);
             }
         }
-        String path = pkg.replace(".","\\");
+        String path = pkg.replace(".","/");
         String filePath = file.getAbsolutePath();
         if(filePath.contains(path)&&(file.getName().startsWith("R$")||file.getName().equals("R.smali"))){
             file.delete();

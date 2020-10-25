@@ -57,14 +57,17 @@ public class SrcDecodeApk {
         File file = new File(getJavaScaffoding(),"libs");
         return file;
     }
-
+    public File getgetJavaScaffodingMain(){
+        File file = new File(getJavaScaffoding(),"src");
+        return file;
+    }
     public File getJavaScaffodingMain(){
-        File file = new File(getJavaScaffoding(),"src\\main");
+        File file = new File(getgetJavaScaffodingMain(),"main");
         return file;
     }
 
     public File getJavaScaffodingJava(){
-        File file = new File(getJavaScaffoding(),"src\\main\\java");
+        File file = new File(getJavaScaffodingMain(),"java");
         return file;
     }
     public File getGameDir(){
@@ -75,9 +78,12 @@ public class SrcDecodeApk {
         File file = new File(getGameDir(),"build.gradle");
         return file;
     }
+    public File getAppSrc(){
+        File file = new File(getGameDir(),"src");
+        return file;
+    }
     public File getDecodeDir() {
-
-        File decodeDir = new File(getGameDir(),"src\\main");
+        File decodeDir = new File(getAppSrc(),"main");
         if(!decodeDir.exists()){
             decodeDir.mkdirs();
         }
