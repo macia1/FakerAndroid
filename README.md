@@ -28,7 +28,7 @@ A tool translate apk file to common android project and support so hook and incl
 
 ##### 1、打开项目
 - Android studio直接打开工具生成的Android项目
-- 保持跟目录com.android.tools.build:gradle:3.4.0依赖固定，请勿升级或修改该版本号，且配置NDk版本为21
+- 保持跟目录build.gradle中com.android.tools.build:gradle:3.4.0依赖固定，请勿升级或修改该版本号，且项目配置NDk版本为21
 - 存在已知缺陷，res下的部分资源文件编译不过，需要手动修复一下，部分Manifest标签无法编译需要手动修复
 
 ##### 2、调试运行项目
