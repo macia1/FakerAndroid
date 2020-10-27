@@ -8,7 +8,7 @@ allprojects {
         }
 
         dependencies {
-            classpath 'com.android.tools.build:gradle:4.0.1'
+            classpath 'com.android.tools.build:gradle:3.4.0'
             classpath 'com.faker.android:gradle:1.0.2'
         }
     }
