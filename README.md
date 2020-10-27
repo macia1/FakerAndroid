@@ -38,9 +38,9 @@ A tool translate apk file to common android project and support so hook and incl
   With the help of FakeCpp use jni hook the so method
 - il2cpp unity script development  
   With the help of il2cpp Scaffolding and FakeCpp,use jni have a modification of il2cpp game script
-##### 4、issues
+##### 4、Issues
 - [issues](https://github.com/Efaker/FakerAndroid/issues)
-##### 5、give me a star?free!           
+##### 5、Give me a star?free!           
 
 ## Demo
 - [Demo Download](https://github.com/Efaker/FakerAndroid-Demos/releases/tag/BasicDemo1)
