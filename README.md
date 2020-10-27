@@ -26,7 +26,7 @@ A tool translate apk file to common android project and support so hook and incl
 - keep the root dir build.gradle file depends com.android.tools.build:gradle:3.4.0,don't upgrate or modify it
 - Set project ndk base version 21 best
 - A little modification will be needed by yourself when the res or AndroidManifest.xml can't pass the compiler 
-##### 2、Debug or Run the project
+##### 2、Debug or run the project
 - With a testing machine conected
 - Run（Note：reason of dex cache,when there have a smali file modification you should make a uninstall before run it）
 ##### 3、Advanced
