@@ -1,4 +1,4 @@
-# FakerAndroid
+# FakerAndroid[中文文档](https://github.com/Efaker/FakerAndroid/blob/main/CHINESE.md)
 A tool translate apk file to common android project and support so hook and include il2cpp c++ scaffolding when apk is a il2cpp game apk
 
 ## Summary
