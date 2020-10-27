@@ -13,8 +13,7 @@ A tool translate apk file to common android project and support so hook and incl
 - 提供Java层代码覆盖及继承替换的脚手架
 - 提供so函数Hook Api
 - 对于il2cpp的游戏apk直接生成il2cpp c++脚手架
-- 无限的可能性和扩展性,能干啥你说了算~(比如把抖音改成快手，把快手改成抖音，做一个抖音快手版再做一个快手抖音版，好屌哦)
-
+- 无限的可能性和扩展性,能干啥你说了算~
 ### 运行环境
 - Java
 - il2cpp游戏Apk，非windows暂时无法生成il2cpp c++脚手架
