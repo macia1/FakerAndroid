@@ -35,13 +35,13 @@ A tool translate apk file to common android project and support so hook and incl
 - 连接测试机机
 - Run项目（提醒：DEX缓存原因，修改smali文件后调试运行需要先卸载手机调试包,另外il2cpp game apk 第一次编译脚手架会比较慢）
 ##### 3、进阶
-- 类调用 
+- 类调用  
   借助javaScaffoding 在主模块（app/src/main/java)编写java代码对smali代码进行调用  
-- 类替换    
+- 类替换      
   在主模块（app/src/main/java）直接编写Java类，类名与要替换的类的smali文件路径对应
-- So Hook
+- So Hook  
   借助FakeCpp 使用jni对so函数进行hook替换
-- il2cpp unity游戏脚本二次开发
+- il2cpp unity游戏脚本二次开发  
   借助il2cpp Scaffolding 和FakeCpp,使用jni对原il2cpp游戏脚本进行Hook调用
 
 ##### 4、遇到问题了？兄弟别走肯定能用，而且是你最佳的解决方案，咨询探讨
