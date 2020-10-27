@@ -17,7 +17,7 @@ A tool translate apk file to common android project and support so hook and incl
 ### Usage
 - Download [FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases/tag/0.0.1)(2020/10/27/15:12:00)
 - cmd ```cd <FakerAndroid.jar base dir>``` 
-- cmd ```java -jar FakerAndroid.jar fk <apkpath>``` (project will be generate in the same dir of the orininal apk) or ```java -jar FakerAndroid.jar fk <apkpath> -o <outdir>```
+- cmd ```java -jar FakerAndroid.jar fk <apkpath>``` (project will be generated in the same dir of the orininal apk) or ```java -jar FakerAndroid.jar fk <apkpath> -o <outdir>```
 - Demo```java -jar FakerAndroid.jar fk D:\apk\test.apk``` or ```java -jar FakerAndroid.jar fk D:\apk\test.apk -o D:\test```
 ### Secondary development course
 
