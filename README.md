@@ -31,13 +31,13 @@ A tool translate apk file to common android project and support so hook and incl
 - Run（Note：reason of dex cache,when there have a smali file modification you should make a uninstall before run it）
 ##### 3、Advanced
 - Original java class call  
-  With the help of javaScaffoding in app moudle(app/src/main/java) write your java to call orinal class  
+  With the help of javaScaffoding write your java to call original class in app moudle(app/src/main/java) 
 - Original java class replacement      
-  In moudle app（app/src/main/java）write java code,keep class name and package name corresponding to the original class   
+  Write java code in moudle app（app/src/main/java）,keep the class name and package name corresponding same as the original class
 - So Hook  
-  With the help of FakeCpp use jni hook the so method
+  With the help of fakeCpp api use jni hook the so method
 - Il2cpp unity script development  
-  With the help of il2cpp Scaffolding and FakeCpp,use jni have a modification of il2cpp game script
+  With the help of il2cpp Scaffolding and fakeCpp api,use jni have a modification of il2cpp game script
 ##### 4、Issues
 - [Issues](https://github.com/Efaker/FakerAndroid/issues)
 ##### 5、Give me a star?free!           
