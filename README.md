@@ -31,7 +31,7 @@ A tool translate apk file to common android project and support so hook and incl
 - Run（Note：reason of dex cache,when there have a smali file modification you should make a uninstallation of before installation before run it ）
 ##### 3、Advanced
 - Original java class call  
-  With the help of javaScaffoding write your java to call original class in app moudle(app/src/main/java) 
+  With the help of javaScaffoding write your java code to call original class in app moudle(app/src/main/java) 
 - Original java class replacement      
   Write java code in moudle app（app/src/main/java）,keep the class name and package name corresponding same as the original class
 - So Hook  
