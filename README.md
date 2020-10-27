@@ -9,7 +9,7 @@ A tool translate apk file to common android project and support so hook and incl
 - Original java class usage or cover it by compileable java code
 - Hook Api offered for hooking .so method 
 - When apk is a il2cpp game il2cpp c++ scaffoding generated
-- Back compilation voluntary when there is a modification of smali files
+- Back compilation voluntary when there is a modification of smali files(AndroidStudio project file tree model)
 - Unlimited possibilities and expansibility. You has the final say
 ### Environment
 - Java
