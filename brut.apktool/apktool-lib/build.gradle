@@ -31,6 +31,7 @@ processResources {
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation("junit:junit:4.10") {
         exclude(module: 'hamcrest-core')
     }

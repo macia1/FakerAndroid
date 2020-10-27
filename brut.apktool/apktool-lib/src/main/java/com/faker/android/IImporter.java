@@ -18,6 +18,8 @@ public abstract class IImporter {
 
 	abstract boolean makeJavaScaffolding(SourceCode sourceCode,XSrcTarget xSrcTarget) throws IOException;
 
+	abstract boolean makeJavaScaffoldingLib(SourceCode sourceCode,XSrcTarget xSrcTarget) throws IOException;
+
 	abstract boolean mergeFaker(SourceCode sourceCode,XSrcTarget xSrcTarget) throws IOException;
 
 	abstract boolean modManifest(SourceCode sourceCode,XSrcTarget xSrcTarget) throws IOException;
@@ -47,6 +49,9 @@ public abstract class IImporter {
 		if(!makeJavaScaffolding(sourceCode,xSrcTarget)){
 			return;
 		}
+		if(!makeJavaScaffoldingLib(sourceCode,xSrcTarget)){
+			return;
+		}
 		if(!mergeFaker(sourceCode,xSrcTarget)){
 			return;
 		}
@@ -56,6 +61,8 @@ public abstract class IImporter {
 		if(!fixRes(sourceCode,xSrcTarget)){
 			return;
 		}
+
+
 		System.out.println("your have faked a android project from a apk file the path is "+xSrcTarget.getProjectDir());
 	}
 }

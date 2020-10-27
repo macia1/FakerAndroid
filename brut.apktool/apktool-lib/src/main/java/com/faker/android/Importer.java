@@ -2,8 +2,15 @@ package com.faker.android;
 
 import brut.androlib.meta.MetaInfo;
 import brut.common.BrutException;
+import com.googlecode.d2j.dex.Dex2jar;
+import com.googlecode.d2j.reader.BaseDexFileReader;
+import com.googlecode.d2j.reader.MultiDexFileReader;
+import com.googlecode.dex2jar.tools.BaksmaliBaseDexExceptionHandler;
+import com.luhuiguo.chinese.ChineseUtils;
+import com.luhuiguo.chinese.pinyin.PinyinFormat;
 import org.dom4j.DocumentException;
 import java.io.*;
+import java.nio.file.Files;
 
 public class Importer extends IImporter {
 
@@ -146,6 +153,7 @@ public class Importer extends IImporter {
 
     @Override
     boolean makeJavaScaffolding(SourceCode sourceCode, XSrcTarget xSrcTarget) throws IOException {
+        System.out.println("java scaffolding is generateding...");
         File file = xSrcTarget.getJavaScaffoding();
         if(!file.exists()){
             file.mkdir();
@@ -158,11 +166,29 @@ public class Importer extends IImporter {
         if(!xSrcTargetJavaScaffodingLibs.exists()){
             xSrcTargetJavaScaffodingLibs.mkdir();
         }
-        PatchManger.copyDirFromJar(sourceCode.getJavaScaffodingLibs(),xSrcTargetJavaScaffodingLibs.getAbsolutePath());
+        //PatchManger.copyDirFromJar(sourceCode.getJavaScaffodingLibs(),xSrcTargetJavaScaffodingLibs.getAbsolutePath());
         PatchManger.copyDirFromJar(sourceCode.getJavaScaffodingJava(),fileJavaScaffodingJava.getAbsolutePath());
         PatchManger.copyDirFromJar(sourceCode.ManifestjavaScaffoding(),xSrcTarget.getJavaScaffodingMain().getAbsolutePath());
-        System.out.println("java scaffolding is generated.");
         return true;
+    }
+
+    @Override
+    boolean makeJavaScaffoldingLib(SourceCode sourceCode, XSrcTarget xSrcTarget) throws IOException {
+        try {
+            File apkPath = new File(xSrcTarget.getOriginalApkFile().getAbsolutePath());
+            File outPath = new File(xSrcTarget.getJavaScaffodingLibs(), ChineseUtils.toPinyin(xSrcTarget.getOriginalApkFile().getName().replace(".apk",""), PinyinFormat.TONELESS_PINYIN_FORMAT).replace(" ","-")+".jar");
+
+            BaseDexFileReader reader = MultiDexFileReader.open(Files.readAllBytes(apkPath.toPath()));
+            BaksmaliBaseDexExceptionHandler handler = false ? null : new BaksmaliBaseDexExceptionHandler();
+            Dex2jar.from(reader).withExceptionHandler(handler).reUseReg(false).topoLogicalSort()
+                .skipDebug(false).optimizeSynchronized(false).printIR(false)
+                .noCode(false).skipExceptions(false).to(outPath.toPath());
+            System.out.println("java scaffolding has been generated surcess...");
+        }catch (Exception e){
+            System.err.println("javascaffoding lib genertion failed");
+        }
+
+        return false;
     }
 
     @Override
