@@ -16,7 +16,7 @@ A tool translate apk file to common android project and support so hook and incl
 - Il2cpp Game Apk unable to generate il2cpp C++ scaffold for non windows
 ### Usage
 - Download[FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases/tag/0.0.1)(2020/10/27/15:12:00)
-- cmd ```cd <FakerAndroid.jar平级目录>``` 
+- cmd ```cd <FakerAndroid.jar base dir>``` 
 - cmd ```java -jar FakerAndroid.jar fk <apkpath>``` (project will be generate in the same dir of the orininal apk) or ```java -jar FakerAndroid.jar fk <apkpath> -o <outdir>```
 - Demo```java -jar FakerAndroid.jar fk D:\apk\test.apk``` or ```java -jar FakerAndroid.jar fk D:\apk\test.apk -o D:\test```
 ### Secondary development course
@@ -39,7 +39,7 @@ A tool translate apk file to common android project and support so hook and incl
 - il2cpp unity script development  
   With the help of il2cpp Scaffolding and FakeCpp,use jni have a modification of il2cpp game script
 ##### 4、issues
-- [issues在线解决](https://github.com/Efaker/FakerAndroid/issues)
+- [issues](https://github.com/Efaker/FakerAndroid/issues)
 ##### 5、give me a star?free!           
 
 ## Demo
