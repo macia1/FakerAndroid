@@ -13,7 +13,7 @@ A tool translate apk file to common android project and support so hook and incl
 - Unlimited possibilities and expansibility. You has the final say
 ### Environment
 - Java
-- Il2cpp Game Apk unable to generate il2cpp C++ scaffold for non windows
+- Il2cpp Game Apk unable to generate il2cpp C++ scaffolding for non windows
 ### Usage
 - Download [FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases/tag/0.0.1)(2020/10/27/15:12:00)
 - cmd ```cd <FakerAndroid.jar base dir>``` 
