@@ -183,12 +183,12 @@ public class Importer extends IImporter {
             Dex2jar.from(reader).withExceptionHandler(handler).reUseReg(false).topoLogicalSort()
                 .skipDebug(false).optimizeSynchronized(false).printIR(false)
                 .noCode(false).skipExceptions(false).to(outPath.toPath());
-            System.out.println("java scaffolding has been generated surcess...");
+            System.out.println("java scaffolding has been generated success...");
         }catch (Exception e){
             System.err.println("javascaffoding lib genertion failed");
         }
 
-        return false;
+        return true;
     }
 
     @Override
