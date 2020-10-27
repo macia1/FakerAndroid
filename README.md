@@ -2,7 +2,7 @@
 A tool translate apk file to common android project and support so hook and include il2cpp c++ scaffolding when apk is a il2cpp game apk
 
 ## Summary
-- The APK file can be directly converted into Android project tools for secondary development, supporting so hook. For the game of il2cpp, APK directly generates il2cpp C + + scaffolding
+- The APK file can be directly converted into Android project tools for secondary development, supporting so hook. For the game of il2cpp, APK directly generates il2cpp C++ scaffolding
 - What's more to say about transforming the painful reverse environment into a comfortable development environment, saying goodbye to assembly and binary~ 
 ## Feature
 - Stantard AndroidStudio android project generated
