@@ -22,7 +22,7 @@ A tool translate apk file to common android project and support so hook and incl
 ### Secondary development course
 
 ##### 1、Open the project
-- By Android studio File->open-><generated project root>
+- By Android studio File->open->'<generated project root>'
 - keep the root dir build.gradle file depends com.android.tools.build:gradle:3.4.0,don't upgrate or modify it
 - Set project ndk base version 21 best
 - A little modification will be needed by yourself when the res or AndroidManifest.xml can't pass the compiler 
