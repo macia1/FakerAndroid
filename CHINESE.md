@@ -2,8 +2,6 @@
 # FakerAndroid
 A tool translate apk file to common android project and support so hook and include il2cpp c++ scaffolding when apk is a il2cpp game apk
 
-### .............竣工通行.............
-
 ## 简介
 - 直接将Apk文件转换为可以进行二次开发的Android项目的工具,支持so hook,对于il2cpp的游戏apk直接生成il2cpp c++脚手架
 - 将痛苦的逆向环境，转化为舒服的开发环境，告别汇编，告别二进制，还有啥好说的~~ 
@@ -13,7 +11,7 @@ A tool translate apk file to common android project and support so hook and incl
 - 提供Java层代码覆盖及继承替换的脚手架
 - 提供so函数Hook Api
 - 对于il2cpp的游戏apk直接生成il2cpp c++脚手架
-- 无限的可能性和扩展性,能干啥你说了算~(比如把抖音改成快手，把快手改成抖音，做一个抖音快手版再做一个快手抖音版，好屌哦)
+- 无限的可能性和扩展性,能干啥你说了算~
 
 ### 运行环境
 - Java
@@ -50,9 +48,8 @@ A tool translate apk file to common android project and support so hook and incl
 ##### 5、给个star?免费的           
 
 
-## 实例（已经过时）
+## 实例
 - 一夜之间来了这么多的star好慌张，全是问怎么用的，请原谅我只会写代码不会写文档啊！！！  
-
 - 因为是il2cpp 游戏apk，里面包含了原游戏安装包和生成的代码项目所以比较大，下载的话得时间稍微长一点，如果github实在下不下来的话，直接QQ我索要
 - [实例下载地址](https://github.com/Efaker/FakerAndroid-Demos/releases/tag/BasicDemo1)
 
