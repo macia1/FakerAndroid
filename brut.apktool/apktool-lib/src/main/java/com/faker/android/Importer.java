@@ -4,6 +4,7 @@ import brut.androlib.meta.MetaInfo;
 import brut.common.BrutException;
 import com.googlecode.d2j.dex.Dex2jar;
 import com.googlecode.d2j.reader.BaseDexFileReader;
+import com.googlecode.d2j.reader.DexFileReader;
 import com.googlecode.d2j.reader.MultiDexFileReader;
 import com.googlecode.dex2jar.tools.BaksmaliBaseDexExceptionHandler;
 import com.luhuiguo.chinese.ChineseUtils;
@@ -11,6 +12,9 @@ import com.luhuiguo.chinese.pinyin.PinyinFormat;
 import org.dom4j.DocumentException;
 import java.io.*;
 import java.nio.file.Files;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class Importer extends IImporter {
 
@@ -176,14 +180,26 @@ public class Importer extends IImporter {
     boolean makeJavaScaffoldingLib(SourceCode sourceCode, XSrcTarget xSrcTarget) throws IOException {
         try {
             File apkPath = new File(xSrcTarget.getOriginalApkFile().getAbsolutePath());
-            File outPath = new File(xSrcTarget.getJavaScaffodingLibs(), ChineseUtils.toPinyin(xSrcTarget.getOriginalApkFile().getName().replace(".apk",""), PinyinFormat.TONELESS_PINYIN_FORMAT).replace(" ","-")+".jar");
+            File basePath = xSrcTarget.getJavaScaffodingLibs();
+            String baseName = ChineseUtils.toPinyin(xSrcTarget.getOriginalApkFile().getName().replace(".apk",""), PinyinFormat.TONELESS_PINYIN_FORMAT).replace(" ","-");
 
-            BaseDexFileReader reader = MultiDexFileReader.open(Files.readAllBytes(apkPath.toPath()));
+//          BaseDexFileReader reader = MultiDexFileReader.open(Files.readAllBytes(apkPath.toPath()));
+
+            TreeMap<String, DexFileReader> fileReaderTreeMap =  FakerMultiDexFileReader.open(Files.readAllBytes(apkPath.toPath()));
+
             BaksmaliBaseDexExceptionHandler handler = false ? null : new BaksmaliBaseDexExceptionHandler();
-            Dex2jar.from(reader).withExceptionHandler(handler).reUseReg(false).topoLogicalSort()
-                .skipDebug(false).optimizeSynchronized(false).printIR(false)
-                .noCode(false).skipExceptions(false).to(outPath.toPath());
-            System.out.println("java scaffolding has been generated success...");
+            Iterator it = fileReaderTreeMap.entrySet().iterator();
+            while (it.hasNext()){
+                Map.Entry<String, DexFileReader>  entry = (Map.Entry) it.next();
+                String name = entry.getKey();
+                File outPath = new File(basePath,baseName+"-"+name+".jar");
+                DexFileReader dexFileReader = entry.getValue();
+                Dex2jar.from(dexFileReader).withExceptionHandler(handler).reUseReg(false).topoLogicalSort()
+                        .skipDebug(false).optimizeSynchronized(false).printIR(false)
+                        .noCode(false).skipExceptions(false).to(outPath.toPath());
+                System.out.println("java scaffolding lib jar "+outPath.getName()+" has been generated success...");
+            }
+
         }catch (Exception e){
             System.err.println("javascaffoding lib genertion failed");
         }

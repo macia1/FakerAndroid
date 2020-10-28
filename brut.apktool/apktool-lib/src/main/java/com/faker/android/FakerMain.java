@@ -11,7 +11,9 @@ import java.nio.file.Files;
 public class FakerMain {
     ///TODO 来个中文注释吧
     //static String apkFilePath = "C:\\Users\\Yang\\Desktop\\apk\\_vivo_ad-release.apk";
-    static String apkFilePath = "C:\\Users\\Yang\\Desktop\\apk\\牛仔很忙.apk";
+    //static String apkFilePath = "C:\\Users\\Yang\\Desktop\\apk\\牛仔很忙.apk";
+    static String apkFilePath = "C:\\Users\\Yang\\Desktop\\apk\\kwai-android-generic-gifmakerrelease-8.1.10.16599_x32_44c55a.apk";
+
 
     public static void main(String[] args) {
         System.out.println(apkFilePath);

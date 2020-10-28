@@ -20,7 +20,6 @@ A tool translate apk file to common android project and support so hook and incl
 - cmd ```java -jar FakerAndroid.jar fk <apkpath>``` (project will be generated in the same dir of the orininal apk) or ```java -jar FakerAndroid.jar fk <apkpath> -o <outdir>```
 - Demo```java -jar FakerAndroid.jar fk D:\apk\test.apk``` or ```java -jar FakerAndroid.jar fk D:\apk\test.apk -o D:\test```
 ### Secondary development course
-
 ##### 1、Open the project
 - By Android studio File->open->```<generated project root>```
 - keep the root dir build.gradle file depends com.android.tools.build:gradle:3.4.0,don't upgrate or modify it
@@ -41,7 +40,6 @@ A tool translate apk file to common android project and support so hook and incl
 ##### 4、Issues
 - [issues](https://github.com/Efaker/FakerAndroid/issues)
 ##### 5、Give me a star?free!           
-
 ## Demo
 - [Demo Download](https://github.com/Efaker/FakerAndroid-Demos/releases/tag/BasicDemo1)
 
