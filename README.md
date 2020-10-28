@@ -2,7 +2,7 @@
 A tool translate apk file to standard android project and support so hook and include il2cpp c++ scaffolding when apk is a il2cpp game apk
 
 ## Summary
-- The APK file can be directly converted into Android project for secondary development, supporting so hook. For the game of il2cpp, APK directly generates il2cpp C++ scaffolding
+- The Apk file can be directly converted into Android project for secondary development, supporting so hook. For the game of il2cpp, APK directly generates il2cpp C++ scaffolding
 - What's more to say about transforming the painful reverse environment into a comfortable development environment, saying goodbye to assembly and binary~ 
 ## Feature
 - Stantard AndroidStudio android project generated
@@ -15,7 +15,7 @@ A tool translate apk file to standard android project and support so hook and in
 - Java
 - Il2cpp Game Apk unable to generate il2cpp C++ scaffolding for non windows
 ### Usage
-- Download [FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases/tag/0.0.1)(2020/10/27/15:12:00)
+- Download [FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases/tag/0.0.1)(2020/10/28/17:14:00)
 - cmd ```cd <FakerAndroid.jar base dir>``` 
 - cmd ```java -jar FakerAndroid.jar fk <apkpath>``` (project will be generated in the same dir of the orininal apk) or ```java -jar FakerAndroid.jar fk <apkpath> -o <outdir>```
 - Demo```java -jar FakerAndroid.jar fk D:\apk\test.apk``` or ```java -jar FakerAndroid.jar fk D:\apk\test.apk -o D:\test```
