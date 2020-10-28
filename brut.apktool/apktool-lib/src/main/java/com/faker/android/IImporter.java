@@ -63,6 +63,6 @@ public abstract class IImporter {
 		}
 
 
-		System.out.println("your have faked a android project from a apk file the path is "+xSrcTarget.getProjectDir());
+		System.out.println("you have faked a android project from a apk file the path is "+xSrcTarget.getProjectDir());
 	}
 }

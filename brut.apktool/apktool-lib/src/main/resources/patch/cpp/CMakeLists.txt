@@ -7,19 +7,19 @@ cmake_minimum_required(VERSION 3.5)
 include_directories(src/main/cpp/include)
 file(GLOB native_srcc "${CMAKE_SOURCE_DIR}/*.cpp")
 add_library(
-        swap #最终在build中生成的so名字
+        swap
         SHARED
         IMPORTED)
 set_target_properties(
-        swap #最终在build中生成的so名字
+        swap
         PROPERTIES IMPORTED_LOCATION
         ../../../../src/main/jniLibs/${ANDROID_ABI}/libswap.so) #so
 add_library(
-        faker #最终在build中生成的so名字
+        faker
         SHARED
         IMPORTED)
 set_target_properties(
-        faker #最终在build中生成的so名字
+        faker
         PROPERTIES IMPORTED_LOCATION
         ../../../../src/main/jniLibs/${ANDROID_ABI}/libfaker.so) #so
 

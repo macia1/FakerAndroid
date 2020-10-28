@@ -99,7 +99,7 @@ public class ApkDecoder {
             outDir.mkdirs();
 
             //LOGGER.info("Using Apktool " + Androlib.getVersion() + " on " + mApkFile.getName());
-            LOGGER.info("Using FakerAndroid on " + mApkFile.getName());
+//            LOGGER.info("Using FakerAndroid on " + mApkFile.getName());
             if (hasResources()) {
                 switch (mDecodeResources) {
                     case DECODE_RESOURCES_NONE:

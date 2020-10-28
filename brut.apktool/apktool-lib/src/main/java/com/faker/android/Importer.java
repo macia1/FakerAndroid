@@ -114,8 +114,12 @@ public class Importer extends IImporter {
         String minSdkVersion = metaInfo.sdkInfo.get("minSdkVersion");
         //FileUtil.autoReplaceStr(gameBuildGrandle,"{minSdkVersion}",minSdkVersion);
         String targetSdkVersion =metaInfo.sdkInfo.get("targetSdkVersion");
-        FileUtil.autoReplaceStr(gameBuildGrandle,"{targetSdkVersion}",targetSdkVersion);
 
+        if(TextUtil.isEmpty(targetSdkVersion)){
+            FileUtil.autoReplaceStr(gameBuildGrandle,"{targetSdkVersion}","26");
+        }else {
+            FileUtil.autoReplaceStr(gameBuildGrandle,"{targetSdkVersion}",targetSdkVersion);
+        }
         PatchManger.copyDirFromJar(sourceCode.getBuildProject(),xSrcTarget.getProjectDir().getAbsolutePath());
 
         PatchManger.copyDirFromJar(sourceCode.getBuildJavaScffoing(),xSrcTarget.getJavaScaffoding().getAbsolutePath());
@@ -126,9 +130,8 @@ public class Importer extends IImporter {
     @Override
     boolean makeCppScaffolding (XSrcTarget xSrcTarget) throws IOException {
 
-        System.out.println("cheking or making il2cpp scaffolding...");
+        System.out.println("checking or making il2cpp scaffolding...");
         exportCppScaffolding(xSrcTarget);
-
 
         File scaffolding_ARM = new File(xSrcTarget.getCpp(),"Il2cpp-Scaffolding-ARM");
         formatScaffolding(scaffolding_ARM);
@@ -223,11 +226,13 @@ public class Importer extends IImporter {
         if(armeabi.exists()){
             PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/armeabi-v7a",armeabi.getAbsolutePath());
         }
+        if(armeabi.exists()&&!jniLibsARMV7A.exists()){
+            armeabi.renameTo(jniLibsARMV7A);
+        }
         if(!jniLibsARMV7A.exists()&&!jniLibsARM64V8A.exists()&&!armeabi.exists()){
             PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/armeabi-v7a",jniLibsARMV7A.getAbsolutePath());
             PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/arm64-v8a",jniLibsARM64V8A.getAbsolutePath());
         }
-
         return true;
     }
 

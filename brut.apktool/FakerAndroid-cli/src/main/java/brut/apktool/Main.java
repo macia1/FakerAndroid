@@ -28,6 +28,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.logging.*;
 
+
 /**
  * @author Ryszard Wiśniewski <brut.alll@gmail.com>
  * @author Connor Tumbleson <connor.tumbleson@gmail.com>
@@ -106,8 +107,20 @@ public class Main {
     }
 
     private static void cmdFakeProject(CommandLine cli) {
+        System.out.println("You are using FakerAndroid(Doc or help github https://github.com/Efaker/FakerAndroid) to fake a stantard Android project...");
         int paraCount = cli.getArgList().size();
         String apkName = cli.getArgList().get(paraCount - 1);
+        File fileApk = new File(apkName);
+
+        if(!fileApk.exists()){
+            System.out.println("please enter a exists apk path");
+            return;
+        }
+//      System.out.println("Using FakerAndroid on " + mApkFile.getName());
+        if(!apkName.endsWith(".apk")){
+            System.out.println("please enter a valid apk path");
+            return;
+        }
         String outDir = null;
         if(cli.hasOption("o") || cli.hasOption("output")){
             outDir =  cli.getOptionValue("o");
