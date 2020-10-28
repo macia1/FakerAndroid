@@ -47,7 +47,7 @@ A tool translate apk file to common android project and support so hook and incl
 - [issues在线解决](https://github.com/Efaker/FakerAndroid/issues)
 ##### 5、给个star?免费的           
 
-##### 5、兼容性
+##### 6、兼容性
 1、目前某些大型的apk资做过资源文件混淆的会有问题！  
 2、加固Apk需要先脱壳后才能,暴漏java api  
 3、有自校验的Apk,须项目运行起来后自行检查破解  
