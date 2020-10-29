@@ -40,7 +40,6 @@ A tool translate apk file to standard android project and support so hook and in
   With the help of il2cpp Scaffolding and fakeCpp api,use jni have a modification of il2cpp game script
 ##### 4、Issues
 - [Issues](https://github.com/Efaker/FakerAndroid/issues)
-- QQ:1404774249
 ##### 5、Give me a star?free!           
 ## Demo
 - [Demo Download](https://github.com/Efaker/FakerAndroid-Demos/releases/tag/BasicDemo1)
