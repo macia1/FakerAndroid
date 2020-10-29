@@ -1,6 +1,5 @@
 # FakerAndroid ([中文文档](https://github.com/Efaker/FakerAndroid/blob/main/CHINESE.md))
 A tool translate apk file to standard android project and support so hook and include il2cpp c++ scaffolding when apk is a il2cpp game apk  
-直接将Apk转换为可二次开发的标准AndroidStudio项目的工具，提供so hook api 对于unity il2cpp游戏Apk同时会生成il2cpp脚手架
 ## Summary
 - The Apk file can be directly converted into Android project for secondary development, supporting so hook. For the game of il2cpp, APK directly generates il2cpp C++ scaffolding
 - What's more to say about transforming the painful reverse environment into a comfortable development environment, saying goodbye to assembly and binary~ 
