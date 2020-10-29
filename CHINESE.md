@@ -13,6 +13,7 @@ A tool translate apk file to common android project and support so hook and incl
 - 对于il2cpp的游戏apk直接生成il2cpp c++脚手架
 - Java层标准的对原有Java api的AndroidStudio编码提示
 - Debug知道直接定位为到Java伪代码
+- 对于il2cpp的游戏apk,标准的Jni对原有il2cpp脚本的编码提示
 - 无限的可能性和扩展性,能干啥你说了算~
 
 ### 运行环境
