@@ -108,6 +108,7 @@ public class Main {
 
     private static void cmdFakeProject(CommandLine cli) {
         System.out.println("You are using FakerAndroid(Doc or help github https://github.com/Efaker/FakerAndroid) to fake a stantard Android project...");
+//        System.out.println("你正在使用 FakerAndroid (文档或帮助 吾爱破解 https://www.52pojie.cn/) 来生成一个标准的AndroidStudio 工程");
         int paraCount = cli.getArgList().size();
         String apkName = cli.getArgList().get(paraCount - 1);
         File fileApk = new File(apkName);
@@ -575,6 +576,7 @@ public class Main {
                          "with smali v" + ApktoolProperties.get("smaliVersion") +
                          "and baksmali v" + ApktoolProperties.get("baksmaliVersion") + "\n");
         System.out.println("FakerAndroid Github (https://github.com/Efaker/FakerAndroid)\n");
+//        System.out.println("FakerAndroid 吾爱破解 (https://www.52pojie.cn/)\n");
         //formatter.printHelp("FakerAndroid " + verbosityHelp(), normalOptions);
         formatter.printHelp("FakerAndroid " + verbosityHelp() + "fk <file_apk>", fkOptions);
         formatter.printHelp("FakerAndroid " + verbosityHelp() + "d[ecode] [options] <file_apk>", DecodeOptions);
