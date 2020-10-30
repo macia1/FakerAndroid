@@ -35,7 +35,7 @@ A tool translate apk file to common android project and support so hook and incl
 
 ##### 2、调试运行项目
 - 连接测试机机
-- Run项目（提醒：DEX缓存原因，修改smali文件后调试运行需要先卸载手机调试包,另外il2cpp game apk 第一次编译脚手架会比较慢）
+- Run项目（提醒：DEX缓存原因，修改smali文件后调试运行需要先卸载手机调试包,另外il2cpp game apk 第一次编译脚手架会比较慢,另外暂时不支持x86）
 ##### 3、进阶
 - 类调用  
   借助javaScaffoding 在主模块（app/src/main/java)编写java代码对smali代码进行调用  
