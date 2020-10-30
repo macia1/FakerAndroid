@@ -11,6 +11,10 @@ A tool translate apk file to common android project and support so hook and incl
 - 提供Java层代码覆盖及继承替换的脚手架
 - 提供so函数Hook Api
 - 对于il2cpp的游戏apk直接生成il2cpp c++脚手架
+- Java层标准的对原有Java api的AndroidStudio编码提示
+- smali文件修改后运行或打包时自动回编译（AndroidStudio project 文件树模式下可以直接找到smali文件，支持对smali修改）
+- Debug知道直接定位为到Java伪代码
+- 对于il2cpp的游戏apk,标准的Jni对原有il2cpp脚本的编码提示
 - 无限的可能性和扩展性,能干啥你说了算~
 
 ### 运行环境
@@ -44,7 +48,7 @@ A tool translate apk file to common android project and support so hook and incl
 
 ##### 4、遇到问题了？兄弟别走肯定能用，而且是你最佳的解决方案，咨询探讨
 - QQ:1404774249
-- [issues在线解决](https://github.com/Efaker/FakerAndroid/issues)
+- [问题反馈](https://github.com/Efaker/FakerAndroid/issues)
 ##### 5、给个star?免费的           
 
 ##### 6、兼容性
@@ -52,6 +56,7 @@ A tool translate apk file to common android project and support so hook and incl
 2、加固Apk需要先脱壳后才能,暴漏java api  
 3、有自校验的Apk,须项目运行起来后自行检查破解  
 4、Defalut Activity Not found，请先将AndroidManifest.xml中Application节点下非启动Activity标签注释掉后做一次运行，再还原试试  
+5、暂时不支持x86，pc模拟器是x86
 ## 实例
 - 一夜之间来了这么多的star好慌张，全是问怎么用的，请原谅我只会写代码不会写文档啊！！！  
 - 因为是il2cpp 游戏apk，里面包含了原游戏安装包和生成的代码项目所以比较大，下载的话得时间稍微长一点，如果github实在下不下来的话，直接QQ我索要
