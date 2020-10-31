@@ -1,5 +1,10 @@
+
+### Whe you happen a problem give me a feedback([Issues](https://github.com/Efaker/FakerAndroid/issues)) please i want to optimize it by you issue,thank you!  
+### 遇到问题了的要反馈啊（[Issues](https://github.com/Efaker/FakerAndroid/issues)），不然我也不知道发生什么了，也不知道从何着手去优化！非常感谢！
+
+
 # FakerAndroid ([中文文档](https://github.com/Efaker/FakerAndroid/blob/main/CHINESE.md))
-A tool translate apk file to standard android project and support so hook and include il2cpp c++ scaffolding when apk is a il2cpp game apk  
+A tool translate a apk file to stantard android project include so hook api and il2cpp c++ scaffolding when apk is a unity il2cpp game.
 ## Summary
 - The Apk file can be directly converted into Android project for secondary development, supporting so hook. For the game of il2cpp, APK directly generates il2cpp C++ scaffolding
 - What's more to say about transforming the painful reverse environment into a comfortable development environment, saying goodbye to assembly and binary~ 
@@ -16,7 +21,7 @@ A tool translate apk file to standard android project and support so hook and in
 - Java
 - Il2cpp Game Apk unable to generate il2cpp C++ scaffolding for non windows
 ### Usage
-- Download [FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases/tag/0.0.1)(2020/10/28/17:14:00)
+- Download [FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases/tag/0.0.1)(2020/10/30/13:36:00)
 - cmd ```cd <FakerAndroid.jar base dir>``` 
 - cmd ```java -jar FakerAndroid.jar fk <apkpath>``` (project will be generated in the same dir of the orininal apk) or ```java -jar FakerAndroid.jar fk <apkpath> -o <outdir>```
 - Demo```java -jar FakerAndroid.jar fk D:\apk\test.apk``` or ```java -jar FakerAndroid.jar fk D:\apk\test.apk -o D:\test```
@@ -28,7 +33,7 @@ A tool translate apk file to standard android project and support so hook and in
 - A little modification will be needed by yourself when the res or AndroidManifest.xml can't pass the compiler 
 ##### 2、Debug or run the project
 - With a testing machine conected
-- Run（Note：reason of dex cache,when there have a smali file modification you should make a uninstallation of before installation before run it ）
+- Run（Note：reason of dex cache,when there have a smali file modification you should make a uninstallation of before installation before run it and x86 is unsupport now ）
 ##### 3、Advanced
 - Original java class call  
   With the help of javaScaffoding write your java code to call original class in app moudle(app/src/main/java) 

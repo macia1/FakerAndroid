@@ -21,7 +21,7 @@ A tool translate apk file to common android project and support so hook and incl
 - Java
 - il2cpp游戏Apk，非windows暂时无法生成il2cpp c++脚手架
 ### 使用方式
-- 下载[FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases/tag/0.0.1)(2020/10/28/17:15:00)
+- 下载[FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases/tag/0.0.1)(2020/10/30/13:37:00)
 - cmd命令行 ```cd <FakerAndroid.jar平级目录>``` 
 - cmd命令行 ```java -jar FakerAndroid.jar fk <apkpath>``` (项目生成路径与apk文件平级) 或 ```java -jar FakerAndroid.jar fk <apkpath> -o <outdir>```
 - 例：```java -jar FakerAndroid.jar fk D:\apk\test.apk``` 或 ```java -jar FakerAndroid.jar fk D:\apk\test.apk -o D:\test```
@@ -35,7 +35,7 @@ A tool translate apk file to common android project and support so hook and incl
 
 ##### 2、调试运行项目
 - 连接测试机机
-- Run项目（提醒：DEX缓存原因，修改smali文件后调试运行需要先卸载手机调试包,另外il2cpp game apk 第一次编译脚手架会比较慢）
+- Run项目（提醒：DEX缓存原因，修改smali文件后调试运行需要先卸载手机调试包,另外il2cpp game apk 第一次编译脚手架会比较慢,另外暂时不支持x86）
 ##### 3、进阶
 - 类调用  
   借助javaScaffoding 在主模块（app/src/main/java)编写java代码对smali代码进行调用  
