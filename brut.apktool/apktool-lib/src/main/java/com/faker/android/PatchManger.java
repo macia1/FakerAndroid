@@ -59,8 +59,8 @@ public class PatchManger {
             JarEntry entry = entrys.nextElement();
             if (entry.getName().startsWith(jarURLConnection.getEntryName()) && !entry.getName().endsWith("/")) {
                 String target = ("/"+entry.getName()).replace(folderPath,"");
-                String pathTarget = target.replace("/","\\");
-                File file  = new File(targetFolderPath,pathTarget);
+//                String pathTarget = target.replace("/","\\");
+                File file  = new File(targetFolderPath,target);
                 String toPath = file.getAbsolutePath();
                 loadRecourseFromJar("/" + entry.getName(),toPath,clazz);
             }
