@@ -26,8 +26,7 @@ A tool translate apk file to common android project and support so hook and incl
 - cmd命令行 ```java -jar FakerAndroid.jar fk <apkpath>``` (项目生成路径与apk文件平级) 或 ```java -jar FakerAndroid.jar fk <apkpath> -o <outdir>```
 - 例：```java -jar FakerAndroid.jar fk D:\apk\test.apk``` 或 ```java -jar FakerAndroid.jar fk D:\apk\test.apk -o D:\test```
 
-### 生成的Android项目二次开发教程([图文教程](https://blog.csdn.net/easy6798/article/details/109404325))
-
+### 生成的Android项目二次开发教程(<a href="https://blog.csdn.net/easy6798/article/details/109404325" target="_blank">图文教程</a>)
 ##### 1、打开项目
 - Android studio直接打开工具生成的Android项目
 - 保持跟目录build.gradle中com.android.tools.build:gradle:3.4.0依赖固定，请勿升级或修改该版本号，且项目配置NDk版本为21
