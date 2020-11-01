@@ -15,7 +15,6 @@ A tool translate a apk file to stantard android project include so hook api and 
 - When apk is a il2cpp game il2cpp c++ scaffoding generated
 - Back compilation voluntary when there is a modification of smali files(AndroidStudio project file tree model)
 - Code hints base original java api
-- Debug in code base original java api
 - Unlimited possibilities and expansibility. You has the final say
 ### Environment
 - Java
