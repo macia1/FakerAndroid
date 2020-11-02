@@ -1,8 +1,7 @@
 
 ### Whe you happen a problem give me a feedback([Issues](https://github.com/Efaker/FakerAndroid/issues)) please i want to optimize it by you issue,thank you!  
 ### 遇到问题了的要反馈啊（[Issues](https://github.com/Efaker/FakerAndroid/issues)），不然我也不知道发生什么了，也不知道从何着手去优化！非常感谢！
-
-
+### -----------------------持续优化中，不定期发布新版本------------------------
 # FakerAndroid ([中文文档](https://github.com/Efaker/FakerAndroid/blob/main/CHINESE.md))
 A tool translate a apk file to stantard android project include so hook api and il2cpp c++ scaffolding when apk is a unity il2cpp game.
 ## Summary
