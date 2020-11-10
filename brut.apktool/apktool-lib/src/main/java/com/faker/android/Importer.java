@@ -2,10 +2,7 @@ package com.faker.android;
 
 import brut.androlib.meta.MetaInfo;
 import brut.common.BrutException;
-import com.googlecode.d2j.dex.Dex2jar;
-import com.googlecode.d2j.reader.BaseDexFileReader;
 import com.googlecode.d2j.reader.DexFileReader;
-import com.googlecode.d2j.reader.MultiDexFileReader;
 import com.googlecode.dex2jar.tools.BaksmaliBaseDexExceptionHandler;
 import com.luhuiguo.chinese.ChineseUtils;
 import com.luhuiguo.chinese.pinyin.PinyinFormat;
@@ -29,8 +26,8 @@ public class Importer extends IImporter {
     @Override
     boolean orlderXTarget(XSrcTarget xSrcTarget) throws IOException {
         //so
-        File libDir = xSrcTarget.getLibDir();
-        libDir.renameTo(xSrcTarget.getjniLibs());
+//        File libDir = xSrcTarget.getLibDir();
+//        libDir.renameTo(xSrcTarget.getjniLibs());
 
         //java
         File javaDir = xSrcTarget.getJava();
@@ -44,15 +41,33 @@ public class Importer extends IImporter {
         File cpp = xSrcTarget.getCpp();
         cpp.mkdir();
 
+        //resources
+        File resources = xSrcTarget.getResources();
+        resources.mkdir();
+
+
+        //TODO  source the smali dir by apk tool generate but apk tool dex generate leave a cover misstake waiting me to fix
+        // if dex2 has a class dex1 already have  android system use the  dex1 class to perform
         //smali
-        File smalis = xSrcTarget.getSmalis();
-        smalis.mkdirs();
-        File files[] = xSrcTarget.getDecodeDir().listFiles();
-        for (File f:files) {
-            if(f.isDirectory()&&f.getName().startsWith("smali")){
-                f.renameTo(new File(smalis,f.getName()));
-            }
-        }
+//        File smalis = xSrcTarget.getSmalis();
+//        smalis.mkdirs();
+//        File files[] = xSrcTarget.getDecodeDir().listFiles();
+//        for (File f:files) {
+//            if(f.isDirectory()&&f.getName().startsWith("smali")&&!f.getName().equals("smali")){
+//                //f.renameTo(new File(smalis,f.getName()));
+//                File smaliFiles[] = f.listFiles();
+//                for (File file :smaliFiles){
+//                    File ms = new File(smalis,file.getName());
+//                    System.out.println("ms "+ms.getAbsolutePath());
+//                    if(ms.exists()) {//TODO smali路径优先
+//                       continue;
+//                    }
+//                    file.renameTo(ms);
+//                }
+//            }
+//        }
+
+
         return true;
     }
 
@@ -122,14 +137,13 @@ public class Importer extends IImporter {
         }
         PatchManger.copyDirFromJar(sourceCode.getBuildProject(),xSrcTarget.getProjectDir().getAbsolutePath());
 
-        PatchManger.copyDirFromJar(sourceCode.getBuildJavaScffoing(),xSrcTarget.getJavaScaffoding().getAbsolutePath());
+        //PatchManger.copyDirFromJar(sourceCode.getBuildJavaScffoing(),xSrcTarget.getJavaScaffoding().getAbsolutePath());
 
         return true;
     }
 
     @Override
     boolean makeCppScaffolding (XSrcTarget xSrcTarget) throws IOException {
-
         System.out.println("checking or making il2cpp scaffolding...");
         exportCppScaffolding(xSrcTarget);
 
@@ -145,37 +159,37 @@ public class Importer extends IImporter {
             System.out.println("abi arme64-v8a il2cpp scaffolding have generated.");
         }
 
-        File file1 = new File(xSrcTarget.getDecodeDir(),"kotlin");
-        delete(file1);
-        File file2 = new File(xSrcTarget.getDecodeDir(),"META-INF");
-        delete(file2);
-
-        File file3 = new File(xSrcTarget.getDecodeDir(),"original");
-        delete(file3);
-
-        File file4 = new File(xSrcTarget.getDecodeDir(),"unknown");
-        delete(file4);
+//        File file1 = new File(xSrcTarget.getDecodeDir(),"kotlin");
+//        delete(file1);
+//        File file2 = new File(xSrcTarget.getDecodeDir(),"META-INF");
+//        delete(file2);
+//
+//        File file3 = new File(xSrcTarget.getDecodeDir(),"original");
+//        delete(file3);
+//
+//        File file4 = new File(xSrcTarget.getDecodeDir(),"unknown");
+//        delete(file4);
         return true;
     }
 
     @Override
     boolean makeJavaScaffolding(SourceCode sourceCode, XSrcTarget xSrcTarget) throws IOException {
         System.out.println("java scaffolding is generateding...");
-        File file = xSrcTarget.getJavaScaffoding();
-        if(!file.exists()){
-            file.mkdir();
-        }
-        File fileJavaScaffodingJava = xSrcTarget.getJavaScaffodingJava();
-        if(!fileJavaScaffodingJava.exists()){
-            fileJavaScaffodingJava.mkdirs();
-        }
-        File xSrcTargetJavaScaffodingLibs = xSrcTarget.getJavaScaffodingLibs();
-        if(!xSrcTargetJavaScaffodingLibs.exists()){
-            xSrcTargetJavaScaffodingLibs.mkdir();
-        }
+//        File file = xSrcTarget.getJavaScaffoding();
+//        if(!file.exists()){
+//            file.mkdir();
+//        }
+//        File fileJavaScaffodingJava = xSrcTarget.getJavaScaffodingJava();
+//        if(!fileJavaScaffodingJava.exists()){
+//            fileJavaScaffodingJava.mkdirs();
+//        }
+//        File xSrcTargetJavaScaffodingLibs = xSrcTarget.getJavaScaffodingLibs();
+//        if(!xSrcTargetJavaScaffodingLibs.exists()){
+//            xSrcTargetJavaScaffodingLibs.mkdir();
+//        }
         //PatchManger.copyDirFromJar(sourceCode.getJavaScaffodingLibs(),xSrcTargetJavaScaffodingLibs.getAbsolutePath());
-        PatchManger.copyDirFromJar(sourceCode.getJavaScaffodingJava(),fileJavaScaffodingJava.getAbsolutePath());
-        PatchManger.copyDirFromJar(sourceCode.ManifestjavaScaffoding(),xSrcTarget.getJavaScaffodingMain().getAbsolutePath());
+        //PatchManger.copyDirFromJar(sourceCode.getJavaScaffodingJava(),fileJavaScaffodingJava.getAbsolutePath());
+        //PatchManger.copyDirFromJar(sourceCode.ManifestjavaScaffoding(),xSrcTarget.getJavaScaffodingMain().getAbsolutePath());
         return true;
     }
 
@@ -183,7 +197,7 @@ public class Importer extends IImporter {
     boolean makeJavaScaffoldingLib(SourceCode sourceCode, XSrcTarget xSrcTarget) throws IOException {
         try {
             File apkPath = new File(xSrcTarget.getOriginalApkFile().getAbsolutePath());
-            File basePath = xSrcTarget.getJavaScaffodingLibs();
+            File basePath = xSrcTarget.getJavaScaffoding();
             String baseName = ChineseUtils.toPinyin(xSrcTarget.getOriginalApkFile().getName().replace(".apk",""), PinyinFormat.TONELESS_PINYIN_FORMAT).replace(" ","-");
 
 //          BaseDexFileReader reader = MultiDexFileReader.open(Files.readAllBytes(apkPath.toPath()));
@@ -192,16 +206,19 @@ public class Importer extends IImporter {
 
             BaksmaliBaseDexExceptionHandler handler = false ? null : new BaksmaliBaseDexExceptionHandler();
             Iterator it = fileReaderTreeMap.entrySet().iterator();
+            File outPath = new File(basePath,"classes.all.dex.jar");
+            if(outPath.exists()){
+                outPath.delete();
+            }
             while (it.hasNext()){
                 Map.Entry<String, DexFileReader>  entry = (Map.Entry) it.next();
-                String name = entry.getKey();
-                File outPath = new File(basePath,baseName+"-"+name+".jar");
+
                 DexFileReader dexFileReader = entry.getValue();
-                Dex2jar.from(dexFileReader).withExceptionHandler(handler).reUseReg(false).topoLogicalSort()
+                MDex2jar.from(dexFileReader).withExceptionHandler(handler).reUseReg(false).topoLogicalSort()
                         .skipDebug(false).optimizeSynchronized(false).printIR(false)
                         .noCode(false).skipExceptions(false).to(outPath.toPath());
-                System.out.println("java scaffolding lib jar "+outPath.getName()+" has been generated success...");
             }
+            System.out.println("java scaffolding lib jar "+outPath.getName()+" has been generated success...");
 
         }catch (Exception e){
             System.err.println("javascaffoding lib genertion failed");
@@ -359,7 +376,6 @@ public class Importer extends IImporter {
 
     public static void exportCppScaffolding (XSrcTarget xSrcTarget) {
 
-
         File fileScaffoldingHelper =  new File(xSrcTarget.getCpp(),"ScaffoldingHelper");
         fileScaffoldingHelper.mkdir();
         File il2cppBinary = null;
@@ -383,7 +399,7 @@ public class Importer extends IImporter {
             br = new BufferedReader(new InputStreamReader(p.getInputStream()));
             brError = new BufferedReader(new InputStreamReader(p.getErrorStream()));
             while ((line = br.readLine()) != null  || (line = brError.readLine()) != null) {
-                //System.out.println(line);
+                System.out.println(line);
             }
         } catch (Exception e) {
             e.printStackTrace();

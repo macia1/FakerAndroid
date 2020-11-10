@@ -50,7 +50,7 @@ public class SrcDecodeApk {
     }
 
     public File getJavaScaffoding(){
-        File file = new File(getProjectDir(),"javaScaffoding");
+        File file = new File(getGameDir(),"javaScaffoding");
         return file;
     }
     public File getJavaScaffodingLibs(){
@@ -135,7 +135,7 @@ public class SrcDecodeApk {
     }
 
     public File getSmalis(){
-        File file = new File(getDecodeDir(),"smalis");
+        File file = new File(getDecodeDir(),"smali");
         return file;
     }
 
@@ -157,6 +157,11 @@ public class SrcDecodeApk {
     }
     public File getCpp() {
         File file = new File(getDecodeDir(),"cpp");
+        return  file;
+    }
+
+    public File getResources() {
+        File file = new File(getDecodeDir(),"resources");
         return  file;
     }
 

@@ -71,27 +71,38 @@ public class Androlib {
         return mAndRes.getResTable(apkFile, loadMainPkg);
     }
 
-    public void decodeSourcesRaw(ExtFile apkFile, File outDir, String filename)
+    public void decodeSourcesRaw(ExtFile apkFile, File outDir, String filename,int toolModel)
             throws AndrolibException {
         try {
             LOGGER.info("Copying raw " + filename + " file...");
-            apkFile.getDirectory().copyToDir(outDir, filename);
+            if(toolModel==ApkDecoder.DECODE_TOOL_MODEL_FAKER_ANDROID){
+                apkFile.getDirectory().copyToDir(new File(outDir,"resources"),filename);
+            }else {
+                apkFile.getDirectory().copyToDir(outDir, filename);
+            }
         } catch (DirectoryException ex) {
             throw new AndrolibException(ex);
         }
     }
 
-    public void decodeSourcesSmali(File apkFile, File outDir, String filename, boolean bakdeb, int api)
+    public void decodeSourcesSmali(File apkFile, File outDir, String filename, boolean bakdeb, int api,int toolModel)
             throws AndrolibException {
         try {
+
+            //TODO ALL File in one smali dir mod by faker android but but when the second class same with the first dex first  will be cover
             File smaliDir;
             if (filename.equalsIgnoreCase("classes.dex")) {
                 smaliDir = new File(outDir, SMALI_DIRNAME);
             } else {
                 smaliDir = new File(outDir, SMALI_DIRNAME + "_" + filename.substring(0, filename.indexOf(".")));
             }
-            OS.rmdir(smaliDir);
-            smaliDir.mkdirs();
+            if(toolModel==ApkDecoder.DECODE_TOOL_MODEL_FAKER_ANDROID){
+                smaliDir = new File(outDir, SMALI_DIRNAME);
+            }
+//            OS.rmdir(smaliDir);
+            if(!smaliDir.exists()) {//cover all in to dir
+                smaliDir.mkdirs();
+            }
             LOGGER.info("Baksmaling " + filename + "...");
             SmaliDecoder.decode(apkFile, smaliDir, filename, bakdeb, api);
         } catch (BrutException ex) {
@@ -134,7 +145,7 @@ public class Androlib {
         mAndRes.decodeManifestWithResources(resTable, apkFile, outDir);
     }
 
-    public void decodeRawFiles(ExtFile apkFile, File outDir, short decodeAssetMode)
+    public void decodeRawFiles(ExtFile apkFile, File outDir, short decodeAssetMode,int toolModel)
             throws AndrolibException {
         LOGGER.info("Copying assets and libs...");
         try {
@@ -145,14 +156,33 @@ public class Androlib {
                     in.copyToDir(outDir, "assets");
                 }
             }
-            if (in.containsDir("lib")) {
-                in.copyToDir(outDir, "lib");
+            if (in.containsDir("lib")) {//TODO rename the lib name
+                if(toolModel==ApkDecoder.DECODE_TOOL_MODEL_FAKER_ANDROID){
+                    in.copyToDir(outDir, "lib");
+                    File libfile  = new File(outDir,"lib");
+                    File renameFile = new File(outDir,"jniLibs");
+                    libfile.renameTo(renameFile);
+                }else {
+                    in.copyToDir(outDir, "lib");
+                }
             }
             if (in.containsDir("libs")) {
-                in.copyToDir(outDir, "libs");
+                if(toolModel==ApkDecoder.DECODE_TOOL_MODEL_FAKER_ANDROID){
+                    File ds = new File(outDir,"resources");
+                    in.copyToDir(ds, "libs");
+                }else {
+                    in.copyToDir(outDir, "libs");
+                }
+
             }
             if (in.containsDir("kotlin")) {
-                in.copyToDir(outDir, "kotlin");
+                if(toolModel==ApkDecoder.DECODE_TOOL_MODEL_FAKER_ANDROID){
+                    File ds = new File(outDir,"resources");
+                    in.copyToDir(ds, "kotlin");
+                }else {
+                    in.copyToDir(outDir, "kotlin");
+                }
+
             }
         } catch (DirectoryException ex) {
             throw new AndrolibException(ex);
@@ -193,10 +223,14 @@ public class Androlib {
         return false;
     }
 
-    public void decodeUnknownFiles(ExtFile apkFile, File outDir, ResTable resTable)
+    public void decodeUnknownFiles(ExtFile apkFile, File outDir, ResTable resTable,int toolModel)
             throws AndrolibException {
         LOGGER.info("Copying unknown files...");
         File unknownOut = new File(outDir, UNK_DIRNAME);
+        if(toolModel==ApkDecoder.DECODE_TOOL_MODEL_FAKER_ANDROID){
+            unknownOut = new File(outDir,"resources");
+        }
+
         try {
             Directory unk = apkFile.getDirectory();
 
@@ -204,7 +238,6 @@ public class Androlib {
             Set<String> files = unk.getFiles(true);
             for (String file : files) {
                 if (!isAPKFileNames(file) && !file.endsWith(".dex")) {
-
                     // copy file out of archive into special "unknown" folder
                     unk.copyToDir(unknownOut, file);
                     // lets record the name of the file, and its compression type
@@ -217,18 +250,24 @@ public class Androlib {
         }
     }
 
-    public void writeOriginalFiles(ExtFile apkFile, File outDir)
+    public void writeOriginalFiles(ExtFile apkFile, File outDir,int toolModel)
             throws AndrolibException {
         LOGGER.info("Copying original files...");
         File originalDir = new File(outDir, "original");
+        if(toolModel==ApkDecoder.DECODE_TOOL_MODEL_FAKER_ANDROID){
+            originalDir = new File(outDir,"resources");
+        }
         if (!originalDir.exists()) {
             originalDir.mkdirs();
         }
-
         try {
             Directory in = apkFile.getDirectory();
             if (in.containsFile("AndroidManifest.xml")) {
-                in.copyToDir(originalDir, "AndroidManifest.xml");
+                if(toolModel==ApkDecoder.DECODE_TOOL_MODEL_FAKER_ANDROID){
+
+                }else {
+                    in.copyToDir(originalDir, "AndroidManifest.xml");
+                }
             }
             if (in.containsDir("META-INF")) {
                 in.copyToDir(originalDir, "META-INF");

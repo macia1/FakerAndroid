@@ -137,37 +137,37 @@ public class ApkDecoder {
                     }
                 }
             }
-
+//
             if (hasSources()) {
                 switch (mDecodeSources) {
                     case DECODE_SOURCES_NONE:
-                        mAndrolib.decodeSourcesRaw(mApkFile, outDir, "classes.dex");
+                        mAndrolib.decodeSourcesRaw(mApkFile, outDir, "classes.dex",toolModel);
                         break;
                     case DECODE_SOURCES_SMALI:
                     case DECODE_SOURCES_SMALI_ONLY_MAIN_CLASSES:
-                        mAndrolib.decodeSourcesSmali(mApkFile, outDir, "classes.dex", mBakDeb, mApi);
+                        mAndrolib.decodeSourcesSmali(mApkFile, outDir, "classes.dex", mBakDeb, mApi,toolModel);
                         break;
                 }
             }
-
+//
             if (hasMultipleSources()) {
                 // foreach unknown dex file in root, lets disassemble it
-                Set<String> files = mApkFile.getDirectory().getFiles(true);
+                Set<String> files = mApkFile.getDirectory().getFiles(false);
                 for (String file : files) {
                     if (file.endsWith(".dex")) {
                         if (! file.equalsIgnoreCase("classes.dex")) {
                             switch(mDecodeSources) {
                                 case DECODE_SOURCES_NONE:
-                                    mAndrolib.decodeSourcesRaw(mApkFile, outDir, file);
+                                    mAndrolib.decodeSourcesRaw(mApkFile, outDir, file,toolModel);
                                     break;
                                 case DECODE_SOURCES_SMALI:
-                                    mAndrolib.decodeSourcesSmali(mApkFile, outDir, file, mBakDeb, mApi);
+                                    mAndrolib.decodeSourcesSmali(mApkFile, outDir, file, mBakDeb, mApi,toolModel);
                                     break;
                                 case DECODE_SOURCES_SMALI_ONLY_MAIN_CLASSES:
                                     if (file.startsWith("classes") && file.endsWith(".dex")) {
-                                        mAndrolib.decodeSourcesSmali(mApkFile, outDir, file, mBakDeb, mApi);
+                                        mAndrolib.decodeSourcesSmali(mApkFile, outDir, file, mBakDeb, mApi,toolModel);
                                     } else {
-                                        mAndrolib.decodeSourcesRaw(mApkFile, outDir, file);
+                                        mAndrolib.decodeSourcesRaw(mApkFile, outDir, file,toolModel);
                                     }
                                     break;
                             }
@@ -176,11 +176,11 @@ public class ApkDecoder {
                 }
             }
 
-            mAndrolib.decodeRawFiles(mApkFile, outDir, mDecodeAssets);
-            mAndrolib.decodeUnknownFiles(mApkFile, outDir, mResTable);
+            mAndrolib.decodeRawFiles(mApkFile, outDir, mDecodeAssets,toolModel);
+            mAndrolib.decodeUnknownFiles(mApkFile, outDir, mResTable,toolModel);
             mUncompressedFiles = new ArrayList<String>();
             mAndrolib.recordUncompressedFiles(mApkFile, mUncompressedFiles);
-            mAndrolib.writeOriginalFiles(mApkFile, outDir);
+            mAndrolib.writeOriginalFiles(mApkFile, outDir,toolModel);
             writeMetaFile();
         } catch (Exception ex) {
             throw ex;
@@ -198,6 +198,9 @@ public class ApkDecoder {
         mDecodeSources = mode;
     }
 
+    public void setDecodeToolModel(int mode) throws AndrolibException {
+        toolModel = mode;
+    }
     public void setDecodeResources(short mode) throws AndrolibException {
         if (mode != DECODE_RESOURCES_NONE && mode != DECODE_RESOURCES_FULL) {
             throw new AndrolibException("Invalid decode resources mode");
@@ -334,6 +337,13 @@ public class ApkDecoder {
 
     public final static short DECODE_ASSETS_NONE = 0x0000;
     public final static short DECODE_ASSETS_FULL = 0x0001;
+
+    public final static int DECODE_TOOL_MODEL_DEFAULT = 1;//apktool默认文件结构
+    public final static int DECODE_TOOL_MODEL_FAKER_ANDROID = 2;//apktool默认文件结构
+
+
+
+
 
     private File getOutDir() throws AndrolibException {
         if (mOutDir == null) {
@@ -475,4 +485,8 @@ public class ApkDecoder {
     private Collection<String> mUncompressedFiles;
     private boolean mAnalysisMode = false;
     private int mApi = 15;
+
+
+    private int toolModel = DECODE_TOOL_MODEL_DEFAULT;
+
 }
