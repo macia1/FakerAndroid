@@ -159,6 +159,10 @@ public class SrcDecodeApk {
         File file = new File(getDecodeDir(),"cpp");
         return  file;
     }
+    public File getCppLibs() {
+        File file = new File(getCpp(),"libs");
+        return  file;
+    }
 
     public File getResources() {
         File file = new File(getDecodeDir(),"resources");

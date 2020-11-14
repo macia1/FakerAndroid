@@ -8,7 +8,6 @@ dependencies {
 android {
     compileSdkVersion 29
     buildToolsVersion '29.0.3'
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -18,16 +17,16 @@ android {
         minSdkVersion 23
         targetSdkVersion {targetSdkVersion}
         applicationId '{pkg}'
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11"
+            }
+        }
         ndk {
             abiFilters 'armeabi-v7a'
         }
         versionCode {versionCode}
         versionName '{versionName}'
-    }
-    packagingOptions {
-        pickFirst 'lib/armeabi-v7a/*'
-        pickFirst 'lib/arm64-v8a/*'
-        pickFirst 'lib/armeabi/*'
     }
 
     aaptOptions {
@@ -63,17 +62,6 @@ android {
 
     packagingOptions {
         doNotStrip '*/armeabi-v7a/*.so'
-    }
-
-    bundle {
-        language {
-            enableSplit = false
-        }
-        density {
-            enableSplit = false
-        }
-        abi {
-            enableSplit = true
-        }
+        doNotStrip '*/arm64-v8a/*.so'
     }
 }

@@ -38,6 +38,12 @@ public class SourceCode {
         return sourceRoot+"/cpp";
     }
 
+    public String getCppLibs(){
+        return sourceRoot+"/cpplibs";
+    }
+
+
+
     public String getGradle(){
         return sourceRoot+"/gradle";
     }

@@ -86,6 +86,8 @@ public class Importer extends IImporter {
         PatchManger.copyDirFromJar(sourceCode.getCpp(isIl2cpp),xSrcTarget.getCpp().getAbsolutePath());
 
 
+        PatchManger.copyDirFromJar(sourceCode.getCppLibs(),xSrcTarget.getCppLibs().getAbsolutePath());
+
         //拷贝Java
         PatchManger.copyDirFromJar(sourceCode.getJava(isIl2cpp),xSrcTarget.getJava().getAbsolutePath());
 
@@ -103,7 +105,6 @@ public class Importer extends IImporter {
             File fileSmail = xSrcTarget.getSmalis();
 
             //deleteR(manifestEditor.getPackagenName(),fileSmail);
-
             if(isIl2cpp){
                 File MainA = new File(xSrcTarget.getJava(),"com/faker/android/FakerUnityActivity.java");
                 FileUtil.autoReplaceStr(MainA,"{R}",manifestEditor.getPackagenName()+".R");
@@ -229,27 +230,27 @@ public class Importer extends IImporter {
 
     @Override
     boolean mergeFaker(SourceCode sourceCode, XSrcTarget xSrcTarget) throws IOException {
-        File targetjniLibs = xSrcTarget.getjniLibs();
-        File jniLibsARMV7A = new File(targetjniLibs,"armeabi-v7a");
-        if(jniLibsARMV7A.exists()){
-            PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/armeabi-v7a",jniLibsARMV7A.getAbsolutePath());
-        }
-        File jniLibsARM64V8A = new File(targetjniLibs,"arm64-v8a");
-        if(jniLibsARM64V8A.exists()){
-            PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/arm64-v8a",jniLibsARM64V8A.getAbsolutePath());
-        }
-
-        File armeabi = new File(targetjniLibs,"armeabi");
-        if(armeabi.exists()){
-            PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/armeabi-v7a",armeabi.getAbsolutePath());
-        }
-        if(armeabi.exists()&&!jniLibsARMV7A.exists()){
-            armeabi.renameTo(jniLibsARMV7A);
-        }
-        if(!jniLibsARMV7A.exists()&&!jniLibsARM64V8A.exists()&&!armeabi.exists()){
-            PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/armeabi-v7a",jniLibsARMV7A.getAbsolutePath());
-            PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/arm64-v8a",jniLibsARM64V8A.getAbsolutePath());
-        }
+//        File targetjniLibs = xSrcTarget.getjniLibs();
+//        File jniLibsARMV7A = new File(targetjniLibs,"armeabi-v7a");
+//        if(jniLibsARMV7A.exists()){
+//            PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/armeabi-v7a",jniLibsARMV7A.getAbsolutePath());
+//        }
+//        File jniLibsARM64V8A = new File(targetjniLibs,"arm64-v8a");
+//        if(jniLibsARM64V8A.exists()){
+//            PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/arm64-v8a",jniLibsARM64V8A.getAbsolutePath());
+//        }
+//
+//        File armeabi = new File(targetjniLibs,"armeabi");
+//        if(armeabi.exists()){
+//            PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/armeabi-v7a",armeabi.getAbsolutePath());
+//        }
+//        if(armeabi.exists()&&!jniLibsARMV7A.exists()){
+//            armeabi.renameTo(jniLibsARMV7A);
+//        }
+//        if(!jniLibsARMV7A.exists()&&!jniLibsARM64V8A.exists()&&!armeabi.exists()){
+//            PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/armeabi-v7a",jniLibsARMV7A.getAbsolutePath());
+//            PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/arm64-v8a",jniLibsARM64V8A.getAbsolutePath());
+//        }
         return true;
     }
 
@@ -262,7 +263,7 @@ public class Importer extends IImporter {
             if(!TextUtil.isEmpty(applicationName)){
                 FileUtil.autoReplaceStr(file,"{APPLICATION_NAME}",applicationName);
             }else {
-                FileUtil.autoReplaceStr(file,"{APPLICATION_NAME}","");
+                FileUtil.autoReplaceStr(file,"{APPLICATION_NAME}","Application");
             }
             manifestEditor.modApplication("com.faker.android.FakerApp");//
             manifestEditor.save();

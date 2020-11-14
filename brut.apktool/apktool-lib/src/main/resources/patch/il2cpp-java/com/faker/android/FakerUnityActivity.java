@@ -10,7 +10,10 @@ import android.view.KeyEvent;
 import android.view.Window;
 import android.widget.ImageView;
 import {R};
-
+/**
+ * TODO NOTE:this is a demo act if you want run it you should replace the manifest,if the app's main act extends com.unity3d.player.UnityPlayerActivity
+ * TODO NOTE: you can extend the original act
+ */
 public class FakerUnityActivity extends com.unity3d.player.UnityPlayerActivity {
     public native String init();
     static final int HANDLER_MSG_CALLJAVA = 1000;
@@ -31,15 +34,11 @@ public class FakerUnityActivity extends com.unity3d.player.UnityPlayerActivity {
     protected void onCreate(Bundle savedInstanceState){
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        //FakeInt
         init();
-        //Init playerprefs if you need
-        JavaPatch.coverPlayerprefs(this,"init.xml");
         imageView = new ImageView(this);
         imageView.setImageResource(R.drawable.splash);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         mUnityPlayer.addViewToPlayer(imageView,false);
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -51,7 +50,6 @@ public class FakerUnityActivity extends com.unity3d.player.UnityPlayerActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event)   {
         if(keyCode==KeyEvent.KEYCODE_BACK) {
-            return JavaPatch.onKeyDown(this,keyCode,event);
         }
         return mUnityPlayer.injectEvent(event);
     }
@@ -65,17 +63,5 @@ public class FakerUnityActivity extends com.unity3d.player.UnityPlayerActivity {
 
     private void callJava(String msg){
         Logger.log(msg);
-        if(JavaPatch.Constant.MSG_TRIGGER_LOCAL_PRIVACY.equals(msg)){
-        }
-        if(JavaPatch.Constant.MSG_TRIGGER_LOCAL_TERMS.equals(msg)){
-        }
-        if(JavaPatch.Constant.MSG_TRIGGER_LOCAL_MORE_GAME.equals(msg)){
-        }
-        if(JavaPatch.Constant.MSG_TRIGGER_LOCAL_TATE.equals(msg)){
-        }
-        if(msg.startsWith(JavaPatch.Constant.MSG_TRIGGER_TAG_COMMON_PREFIX)){
-        }
-        if(msg.startsWith(JavaPatch.Constant.MSG_TRIGGER_TAG_REWARD_PREFIX)){
-        }
     }
 }
