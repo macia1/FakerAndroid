@@ -87,7 +87,7 @@ Java_com_faker_android_FakerApp_fakeApp(JNIEnv *env, jobject thiz, jobject appli
 extern "C"
 JNIEXPORT void JNICALL
 Java_com_faker_android_FakerApp_fakeDex(JNIEnv *env, jobject thiz, jobject base) {
-    fakeDex(env,base,"target.dfk");//安装DEX
+    fakeDex(env,base,"dex");//安装DEX
 }
 
 extern "C"
