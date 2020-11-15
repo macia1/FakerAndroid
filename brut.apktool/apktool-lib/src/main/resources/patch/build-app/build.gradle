@@ -23,7 +23,7 @@ android {
             }
         }
         ndk {
-            abiFilters 'armeabi-v7a'
+            abiFilters {abi} // you can make one only for dev to improve building speed
         }
         versionCode {versionCode}
         versionName '{versionName}'
