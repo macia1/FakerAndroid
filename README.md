@@ -1,4 +1,3 @@
-# A new version has published 
 # FakerAndroid ([FakerAndroid.jar1.0.0 ](https://github.com/Efaker/FakerAndroid/releases))
 
 # FakerAndroid ([中文文档](https://github.com/Efaker/FakerAndroid/blob/main/CHINESE.md))
