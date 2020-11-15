@@ -29,60 +29,79 @@ JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved) {
     return JNI_VERSION_1_6;
 }
 
+/**
+ * this a util cover c# string to c string
+ * @param str
+ * @return
+ */
 const char* coverIl2cppString2Char(Il2CppString *str){
     MonoString *monoString = reinterpret_cast<MonoString *>(str);
     const char *s = monoString->toChars();
     return s;
 }
-static jobject tmpAct;
 
+static jobject callBack;
 /**
  * in your replace_call method you can call this method to call java
  * @param event
  */
 void callJava(const char *event) {
+    if(callBack==NULL) {
+        return;
+    }
     JNIEnv* env;
     global_jvm->GetEnv(reinterpret_cast<void **>(&env), JNI_VERSION_1_4);
-    jclass jclass1 = env->FindClass("com/faker/android/FakerUnityActivity");
-    jmethodID jmethodID1 = env->GetMethodID(jclass1, "onCall", "(Ljava/lang/String;)V");
-    jstring enventStr = env->NewStringUTF(event);
-    env->CallVoidMethod(tmpAct, jmethodID1, enventStr);
-    env->DeleteLocalRef(enventStr);
+    jclass clazz = env->GetObjectClass(callBack);
+    jmethodID onCall = env->GetMethodID(clazz, "onJniCall", "(Ljava/lang/String;)V");
+    jstring envent = env->NewStringUTF(event);
+    env->CallVoidMethod(callBack, onCall, envent);
+    env->DeleteLocalRef(envent);
 }
 
 
 /**
- * note unity thread
+ * this is a demo hook reclac call method
  * @param klass
  * @return
  */
-bool HookedBehaviour_get_isActiveAndEnabled(Behaviour *klass) {
-    LOGI("class %p---- HookedBehaviour_get_isActiveAndEnabled GameObject Mame: %s",klass,"");
-    bool  b = Behaviour_get_isActiveAndEnabled(klass, NULL);
-    if(!b){
-        return b;
-    }
-    GameObject *gameObject = NULL;//Component_get_gameObject(reinterpret_cast<Component *>(klass), NULL);
-    if(gameObject==nullptr){
-        return b;
-    }
-    String *name = Object_1_get_name(reinterpret_cast<Object_1 *>(gameObject), NULL);
-
-    if(name== nullptr){
-        return b;
-    }
-    const char *s = coverIl2cppString2Char(reinterpret_cast<Il2CppString *>(name));
-
-    LOGI("class %p---- HookedBehaviour_get_isActiveAndEnabled GameObject Mame: %s",klass,s);
-    if(strcmp(s,"Share")==0){
-    }
-    return b;
-}
+//bool HookedBehaviour_get_isActiveAndEnabled(Behaviour *klass) {
+//    bool  b = Behaviour_get_isActiveAndEnabled(klass, NULL);
+//    if(!b){
+//        return b;
+//    }
+//    GameObject *gameObject = Component_get_gameObject(reinterpret_cast<Component *>(klass), NULL);
+//    if(gameObject==nullptr){
+//        return b;
+//    }
+//    LOGI("class %p---- HookedBehaviour_get_isActiveAndEnabled GameObject Mame: %s",klass,"");
+//    String *name = Object_1_get_name(reinterpret_cast<Object_1 *>(gameObject), NULL);
+//
+//    if(name== nullptr){
+//        return b;
+//    }
+//    const char *s = coverIl2cppString2Char(reinterpret_cast<Il2CppString *>(name));
+//
+//    LOGI("class %p---- HookedBehaviour_get_isActiveAndEnabled GameObject Mame: %s",klass,s);
+//    if(strcmp(s,"Share")==0){
+//
+//    }
+//    return b;
+//}
 
 extern "C"
 JNIEXPORT void JNICALL
 Java_com_faker_android_FakerApp_fakeApp(JNIEnv *env, jobject thiz, jobject application) {
     fakeApp(env,application);
+
+    /**
+     * you can do yor hook work here
+     * below  is demo code demo code hook libil2cpp.so
+     */
+    long base = baseIamgeAddr("libil2cpp.so");
+    LOGE("baseIamgeAddr : %d",base);
+    init_il2cpp(base);
+    //fakeCpp((void *) Behaviour_get_isActiveAndEnabled, (void *)HookedBehaviour_get_isActiveAndEnabled ,reinterpret_cast<void **>(&Behaviour_get_isActiveAndEnabled));
+
 }
 extern "C"
 JNIEXPORT void JNICALL
@@ -91,13 +110,12 @@ Java_com_faker_android_FakerApp_fakeDex(JNIEnv *env, jobject thiz, jobject base)
 }
 
 extern "C"
-JNIEXPORT jstring JNICALL
-Java_com_faker_android_FakerUnityActivity_init(JNIEnv *env, jobject thiz) {//替换函数
-    tmpAct = env->NewGlobalRef(thiz);
-    long base = baseIamgeAddr("libil2cpp.so");
-    LOGE("baseIamgeAddr : %d",base);
-    init_il2cpp(base);
-   // fakeCpp((void *) Behaviour_get_isActiveAndEnabled, (void *)HookedBehaviour_get_isActiveAndEnabled ,reinterpret_cast<void **>(&Behaviour_get_isActiveAndEnabled));
-    std::string fackOk = "Fack_cpp_Success";
-    return env->NewStringUTF(fackOk.c_str());
+JNIEXPORT void JNICALL
+Java_com_faker_android_FakerUnityActivity_registerCallBack(JNIEnv *env, jobject thiz,jobject object) {
+    /**
+     * init the callback global for other c++ method to call
+     */
+    callBack = env->NewGlobalRef(object);//
+
+
 }

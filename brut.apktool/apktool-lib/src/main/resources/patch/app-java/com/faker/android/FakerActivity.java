@@ -10,8 +10,13 @@ import android.os.Message;
 import android.view.Window;
 import android.widget.ImageView;
 import {R};
-public class FakerActivity extends Activity {
-    public native String init();
+/**
+ * TODO NOTE:this is a demo act if you want run it you should mode the manifest and extends the original main act best
+ * TODO NOTE:if the original act is a final class you cna mod smali to change it public then run it run you got the public javascaffoding api to extends it
+ * TODO NOTE: you can extend the original main act
+ */
+public class FakerActivity extends Activity implements JniBridge {
+    public native void registerCallBack(Object object);
     static final int HANDLER_MSG_CALLJAVA = 1000;
     final Handler handler = new Handler(Looper.getMainLooper()) {
         @Override
@@ -25,15 +30,15 @@ public class FakerActivity extends Activity {
             super.handleMessage(msg);
         }
     };
-    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        init();
+        registerCallBack(this);
+
     }
-    //Called By Faker
-    public void onCall(String msg) {// unity player isnot main thread transfer method to main thread
+    @Override
+    public void onJniCall(String msg) {// unity player isnot main thread transfer method to main thread
         Message message = new Message();
         message.what =HANDLER_MSG_CALLJAVA;
         message.obj = msg;

@@ -11,11 +11,12 @@ import android.view.Window;
 import android.widget.ImageView;
 import {R};
 /**
- * TODO NOTE:this is a demo act if you want run it you should replace the manifest,if the app's main act extends com.unity3d.player.UnityPlayerActivity
- * TODO NOTE: you can extend the original act
+ * TODO NOTE:this is a demo act if you want run it you should mode the manifest,if the app's main act extends com.unity3d.player.UnityPlayerActivity
+ * else you can make this to main
+ * TODO NOTE: you can extend the original main act
  */
-public class FakerUnityActivity extends com.unity3d.player.UnityPlayerActivity {
-    public native String init();
+public class FakerUnityActivity extends com.unity3d.player.UnityPlayerActivity implements JniBridge {
+    public native void registerCallBack(Object object);
     static final int HANDLER_MSG_CALLJAVA = 1000;
     final Handler handler = new Handler(Looper.getMainLooper()) {
         @Override
@@ -34,7 +35,7 @@ public class FakerUnityActivity extends com.unity3d.player.UnityPlayerActivity {
     protected void onCreate(Bundle savedInstanceState){
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        init();
+        registerCallBack(this);
         imageView = new ImageView(this);
         imageView.setImageResource(R.drawable.splash);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
@@ -53,8 +54,9 @@ public class FakerUnityActivity extends com.unity3d.player.UnityPlayerActivity {
         }
         return mUnityPlayer.injectEvent(event);
     }
-    //Called By Faker
-    public void onCall(String msg) {// unity player isnot main thread transfer method to main thread
+
+    @Override
+    public void onJniCall(String msg) {// unity player isnot main thread transfer method to main thread
         Message message = new Message();
         message.what =HANDLER_MSG_CALLJAVA;
         message.obj = msg;

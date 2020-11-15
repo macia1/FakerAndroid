@@ -3,15 +3,7 @@
  */
 package com.faker.android;
 import android.app.Application;
-import android.app.Instrumentation;
 import android.content.Context;
-import android.content.pm.ApplicationInfo;
-import android.os.Build;
-import android.text.TextUtils;
-import android.util.ArrayMap;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
 
 public class FakerApp extends {APPLICATION_NAME} {
 
