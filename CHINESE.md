@@ -21,13 +21,12 @@ A tool translate apk file to common android project and support so hook and incl
 - Java
 - il2cpp游戏Apk，非windows暂时无法生成il2cpp c++脚手架
 ### 使用方式
-- 下载[FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases/tag/0.0.1)(2020/10/30/13:37:00)
+- 下载[FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases/tag/0.0.1)(2020/10/31/23:08:00)
 - cmd命令行 ```cd <FakerAndroid.jar平级目录>``` 
 - cmd命令行 ```java -jar FakerAndroid.jar fk <apkpath>``` (项目生成路径与apk文件平级) 或 ```java -jar FakerAndroid.jar fk <apkpath> -o <outdir>```
 - 例：```java -jar FakerAndroid.jar fk D:\apk\test.apk``` 或 ```java -jar FakerAndroid.jar fk D:\apk\test.apk -o D:\test```
 
-### 生成的Android项目二次开发教程
-
+### 生成的Android项目二次开发教程(<a href="https://blog.csdn.net/easy6798/article/details/109404325" target="_blank">图文教程</a>)
 ##### 1、打开项目
 - Android studio直接打开工具生成的Android项目
 - 保持跟目录build.gradle中com.android.tools.build:gradle:3.4.0依赖固定，请勿升级或修改该版本号，且项目配置NDk版本为21
@@ -61,6 +60,7 @@ A tool translate apk file to common android project and support so hook and incl
 - 一夜之间来了这么多的star好慌张，全是问怎么用的，请原谅我只会写代码不会写文档啊！！！  
 - 因为是il2cpp 游戏apk，里面包含了原游戏安装包和生成的代码项目所以比较大，下载的话得时间稍微长一点，如果github实在下不下来的话，直接QQ我索要
 - [实例下载地址](https://github.com/Efaker/FakerAndroid-Demos/releases/tag/BasicDemo1)
+
 
 
 

@@ -1,8 +1,7 @@
 
-### Whe you happen a problem give me a feedback([Issues](https://github.com/Efaker/FakerAndroid/issues)) please i want to optimize it by you issue,thank you!  
+### Whe you happen a problem give me a feedback([Issues](https://github.com/Efaker/FakerAndroid/issues)) please i want to optimize it by your issue,thank you!  
 ### 遇到问题了的要反馈啊（[Issues](https://github.com/Efaker/FakerAndroid/issues)），不然我也不知道发生什么了，也不知道从何着手去优化！非常感谢！
-
-
+### -----------------------没走神，持续优化中，不定期发布新版本，重大版本正在路上------------------------
 # FakerAndroid ([中文文档](https://github.com/Efaker/FakerAndroid/blob/main/CHINESE.md))
 A tool translate a apk file to stantard android project include so hook api and il2cpp c++ scaffolding when apk is a unity il2cpp game.
 ## Summary
@@ -15,13 +14,12 @@ A tool translate a apk file to stantard android project include so hook api and 
 - When apk is a il2cpp game il2cpp c++ scaffoding generated
 - Back compilation voluntary when there is a modification of smali files(AndroidStudio project file tree model)
 - Code hints base original java api
-- Debug in code base original java api
 - Unlimited possibilities and expansibility. You has the final say
 ### Environment
 - Java
 - Il2cpp Game Apk unable to generate il2cpp C++ scaffolding for non windows
 ### Usage
-- Download [FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases/tag/0.0.1)(2020/10/30/13:36:00)
+- Download [FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases/tag/0.0.1)(2020/10/31/23:08:00)
 - cmd ```cd <FakerAndroid.jar base dir>``` 
 - cmd ```java -jar FakerAndroid.jar fk <apkpath>``` (project will be generated in the same dir of the orininal apk) or ```java -jar FakerAndroid.jar fk <apkpath> -o <outdir>```
 - Demo```java -jar FakerAndroid.jar fk D:\apk\test.apk``` or ```java -jar FakerAndroid.jar fk D:\apk\test.apk -o D:\test```
