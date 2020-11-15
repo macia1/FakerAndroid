@@ -230,27 +230,26 @@ public class Importer extends IImporter {
 
     @Override
     boolean mergeFaker(SourceCode sourceCode, XSrcTarget xSrcTarget) throws IOException {
-//        File targetjniLibs = xSrcTarget.getjniLibs();
-//        File jniLibsARMV7A = new File(targetjniLibs,"armeabi-v7a");
-//        if(jniLibsARMV7A.exists()){
-//            PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/armeabi-v7a",jniLibsARMV7A.getAbsolutePath());
-//        }
-//        File jniLibsARM64V8A = new File(targetjniLibs,"arm64-v8a");
-//        if(jniLibsARM64V8A.exists()){
-//            PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/arm64-v8a",jniLibsARM64V8A.getAbsolutePath());
-//        }
-//
-//        File armeabi = new File(targetjniLibs,"armeabi");
-//        if(armeabi.exists()){
-//            PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/armeabi-v7a",armeabi.getAbsolutePath());
-//        }
-//        if(armeabi.exists()&&!jniLibsARMV7A.exists()){
-//            armeabi.renameTo(jniLibsARMV7A);
-//        }
-//        if(!jniLibsARMV7A.exists()&&!jniLibsARM64V8A.exists()&&!armeabi.exists()){
-//            PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/armeabi-v7a",jniLibsARMV7A.getAbsolutePath());
-//            PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/arm64-v8a",jniLibsARM64V8A.getAbsolutePath());
-//        }
+        File targetjniLibs = xSrcTarget.getjniLibs();
+        File jniLibsARMV7A = new File(targetjniLibs,"armeabi-v7a");
+        if(jniLibsARMV7A.exists()){
+            //PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/armeabi-v7a",jniLibsARMV7A.getAbsolutePath());
+        }
+        File jniLibsARM64V8A = new File(targetjniLibs,"arm64-v8a");
+        if(jniLibsARM64V8A.exists()){
+            //PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/arm64-v8a",jniLibsARM64V8A.getAbsolutePath());
+        }
+
+        File armeabi = new File(targetjniLibs,"armeabi");
+        if(armeabi.exists()){
+            //PatchManger.copyDirFromJar(sourceCode.getJniLibs()+"/armeabi-v7a",armeabi.getAbsolutePath());
+        }
+        if(armeabi.exists()&&!jniLibsARMV7A.exists()){
+            armeabi.renameTo(jniLibsARMV7A);
+        }
+        if(!jniLibsARMV7A.exists()&&!jniLibsARM64V8A.exists()&&!armeabi.exists()){
+            //armeabi.renameTo(jniLibsARMV7A);
+        }
         return true;
     }
 
