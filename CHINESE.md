@@ -20,7 +20,7 @@ A tool translate apk file to common android project and support so hook and incl
 ### 运行环境
 - Java
 - il2cpp游戏Apk，非windows暂时无法生成il2cpp c++脚手架
-- 目前来说Decode环节还是主要依赖了Apktool,请确保Apktool decode是可以通过的，FakerAndroid 保留了Apktool命令，例： ```java -jar FakerAndroid.jar d -f <apkpath> -o <outPath>```
+- 目前来说Decode环节还是主要依赖了Apktool,请确保Apktool decode是可以通过的，FakerAndroid 保留了Apktool本来命令  例： ```java -jar FakerAndroid.jar d -f <apkpath> -o <outPath>```
 ### 使用方式
 - 下载[FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases)(2020/11/15/16:53:00)
 - cmd命令行 ```cd <FakerAndroid.jar平级目录>``` 
