@@ -15,7 +15,7 @@ A tool translate a apk file to stantard android project include so hook api and 
 - Java
 - Il2cpp Game Apk unable to generate il2cpp C++ scaffolding for non windows
 ### Usage
-- Download [FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases/tag/0.0.1)(2020/10/31/23:08:00)
+- Download [FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases)(2020/11/15/16:52:00)
 - cmd ```cd <FakerAndroid.jar base dir>``` 
 - cmd ```java -jar FakerAndroid.jar fk <apkpath>``` (project will be generated in the same dir of the orininal apk) or ```java -jar FakerAndroid.jar fk <apkpath> -o <outdir>```
 - Demo```java -jar FakerAndroid.jar fk D:\apk\test.apk``` or ```java -jar FakerAndroid.jar fk D:\apk\test.apk -o D:\test```
