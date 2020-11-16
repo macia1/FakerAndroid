@@ -47,7 +47,7 @@ A tool translate apk file to common android project and support so hook and incl
 - il2cpp unity游戏脚本二次开发  
   借助il2cpp Scaffolding 和FakeCpp,使用jni对原il2cpp游戏脚本进行Hook调用
 ##### 4、正在路上
-Dex折叠，对不希望暴漏的java代码做dex折叠,防止静态分析，应用商店过检
+Dex折叠，对不希望暴漏的java代码做dex折叠,防止静态分析用于应用商店过检
 resources.arsc decode 兼容，目前混淆某些大型 apk Res decoder有问题
 ##### 4、遇到问题了？兄弟别走肯定能用，而且是你最佳的解决方案，咨询探讨
 - QQ群:901157034
