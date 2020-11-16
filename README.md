@@ -40,11 +40,14 @@ A tool translate a apk file to stantard android project include so hook api and 
   With the help of fakeCpp api use jni hook the so method
 - Il2cpp unity script development  
   With the help of il2cpp Scaffolding and fakeCpp api,use jni have a modification of il2cpp game script
-##### 4、Issues
+##### 4、Feature on the way
+  dex collspace  
+  resources.arsc decode format compat 
+##### 5、Issues
 - [Issues](https://github.com/Efaker/FakerAndroid/issues)
 - discus QQ Group:901157034
 - custom version QQ 1404774249
-##### 5、Give me a star?free!           
+##### 6、Give me a star?free!           
 ## Demo
 - [Demo Download](https://github.com/Efaker/FakerAndroid-Demos/releases/tag/BasicDemo1)
 
