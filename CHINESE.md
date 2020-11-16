@@ -49,6 +49,7 @@ A tool translate apk file to common android project and support so hook and incl
 
 ##### 4、遇到问题了？兄弟别走肯定能用，而且是你最佳的解决方案，咨询探讨
 - QQ群:901157034
+- 版本定制:QQ 1404774249
 - [问题反馈](https://github.com/Efaker/FakerAndroid/issues)
 ##### 5、给个star?免费的           
 
