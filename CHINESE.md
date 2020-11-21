@@ -2,7 +2,7 @@
 # FakerAndroid
 A tool translate apk file to common android project and support so hook and include il2cpp c++ scaffolding when apk is a il2cpp game apk
 
-# 求大拿提供Res混淆decode失败解决方案ing 
+# 求大拿提供Res混淆decode失败解决方案ing... 
 
 ## 简介
 - 直接将Apk文件转换为可以进行二次开发的Android项目的工具,支持so hook,对于il2cpp的游戏apk直接生成il2cpp c++脚手架
