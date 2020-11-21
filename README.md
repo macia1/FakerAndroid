@@ -36,7 +36,7 @@ A tool translate a apk file to stantard android project include so hook api and 
   With the help of javaScaffoding write your java code to call original class in app moudle(app/src/main/java) 
 - Original java class replacement      
   Write java code in moudle app（app/src/main/java）,keep the class name and package name corresponding same as the original class
-- Smali increament building
+- Smali increament building  
   when there is a smali files mod,there is a least files builing 
 - So Hook  
   With the help of fakeCpp api use jni hook the so method
