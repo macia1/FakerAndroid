@@ -22,12 +22,13 @@ A tool translate apk file to common android project and support so hook and incl
 - il2cpp游戏Apk，非windows暂时无法生成il2cpp c++脚手架
 - 目前来说decode环节还是主要依赖了Apktool,请确保Apktool decode是可以通过的，FakerAndroid 保留了Apktool本来命令  
 例： ```java -jar FakerAndroid.jar d -f <apkpath> -o <outPath>```
+- 对于加壳的apk请自行脱壳后使用,理论上Apktool正常decode、encode的Apk都可以一马平川的直接运行
 ### 使用方式
 - 下载[FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases)(2020/11/15/16:53:00)
 - cmd命令行 ```cd <FakerAndroid.jar平级目录>``` 
 - cmd命令行 ```java -jar FakerAndroid.jar fk <apkpath>``` (项目生成路径与apk文件平级) 或 ```java -jar FakerAndroid.jar fk <apkpath> -o <outdir>```
 - 例：```java -jar FakerAndroid.jar fk D:\apk\test.apk``` 或 ```java -jar FakerAndroid.jar fk D:\apk\test.apk -o D:\test```
-- 对于加壳的apk请自行脱壳后使用,理论上Apktool正常decode、encode的Apk都可以一马平川的直接运行
+
 ### 生成的Android项目二次开发教程(<a href="https://blog.csdn.net/easy6798/article/details/109404325" target="_blank">图文教程</a>)
 ##### 1、打开项目
 - Android studio直接打开工具生成的Android项目
