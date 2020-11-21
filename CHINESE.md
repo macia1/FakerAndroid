@@ -58,13 +58,13 @@ A tool translate apk file to common android project and support so hook and incl
 ##### 4、正在路上
 resources.arsc decode 兼容，目前混淆某些大型 apk Res decoder有问题  
 各种不想情况兼容
-##### 4、遇到问题了？兄弟别走肯定能用，而且是你最佳的解决方案，咨询探讨
+##### 5、遇到问题了？兄弟别走肯定能用，而且是你最佳的解决方案，咨询探讨
 - QQ群:901157034
 - 版本定制:QQ 1404774249
 - [问题反馈](https://github.com/Efaker/FakerAndroid/issues)
-##### 5、给个star?免费的           
+##### 6、给个star?免费的           
 
-##### 6、兼容性
+##### 7、兼容性
 1、目前某些大型的apk资做过资源文件混淆的会有问题！  
 2、加固Apk需要先脱壳后才能,暴漏java api  
 3、有自校验的Apk,须项目运行起来后自行检查破解  
