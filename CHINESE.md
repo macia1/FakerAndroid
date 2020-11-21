@@ -42,6 +42,8 @@ A tool translate apk file to common android project and support so hook and incl
   借助javaScaffoding 在主模块（app/src/main/java)编写java代码对smali代码进行调用  
 - 类替换      
   在主模块（app/src/main/java）直接编写Java类，类名与要替换的类的smali文件路径对应
+- Smali 增量编译
+  你可以使用传统的smali修改方式对smali代码进行修改，且编译方式为最小文件数增量编译，smali文件修改后javascaffoding会同步，比如遇到final或private的java元素无法掉用时可以先修改smali(执行一次编译后javaScaffoding会同步)
 - So Hook  
   借助FakeCpp 使用jni对so函数进行hook替换
 - il2cpp unity游戏脚本二次开发  
