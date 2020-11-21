@@ -56,7 +56,7 @@ A tool translate apk file to common android project and support so hook and incl
   
   
 ##### 4、正在路上
-resources.arsc decode 兼容，目前混淆某些大型 apk Res decoder有问题
+resources.arsc decode 兼容，目前混淆某些大型 apk Res decoder有问题  
 各种不想情况兼容
 ##### 4、遇到问题了？兄弟别走肯定能用，而且是你最佳的解决方案，咨询探讨
 - QQ群:901157034
