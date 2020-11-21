@@ -29,7 +29,7 @@ android {
         versionName '{versionName}'
     }
 
-    aaptOptions {
+    aaptOptions {//TODO NOTE when you happen a asset file access problem you can try add pattern here
         noCompress = ['.unity3d', '.ress', '.resource', '.obb']
         ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~"
     }
