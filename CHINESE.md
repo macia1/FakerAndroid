@@ -46,7 +46,7 @@ A tool translate apk file to common android project and support so hook and incl
   借助FakeCpp 使用jni对so函数进行hook替换
 - il2cpp unity游戏脚本二次开发  
   借助il2cpp Scaffolding 和FakeCpp,使用jni对原il2cpp游戏脚本进行Hook调用
-- Dex折叠
+- Dex折叠  
   build.gradle 配置sensitiveOptions用于隐藏敏感的dex代码，以规避静态分析
   
   
