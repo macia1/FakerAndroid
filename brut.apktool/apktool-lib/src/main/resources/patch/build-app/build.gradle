@@ -46,6 +46,7 @@ android {
 
     buildTypes {
         debug {
+            debuggable true
             minifyEnabled false
             useProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt')
@@ -53,13 +54,27 @@ android {
             jniDebuggable true
         }
         release {
+            debuggable false
             minifyEnabled false
             useProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt')
             signingConfig signingConfigs.debug
         }
     }
+    //TODO NOTE This is a FakerAndroid feature for hiding sensitive code avoid static dex analysis like passing a appstore checker
+    sensitiveOptions {//when build type debuggable is false this feature working only and with this feature working building speed will slow down ,you can make it working when building a release apk
 
+        //collapseToAssetFile 'dex' //keep this string same as c++ fakeDex method last param
+
+        /**cofing packages or classe with no ext but this cant include application class or application ref classes **/
+        //collapsePackage 'com.google'
+        //collapsePackage 'com.vungle'
+        //collapsePackage 'com.inmobi'
+        //collapsePackage 'com.adcolony'
+        //collapsePackage 'com.applovin'
+        //collapsePackage 'com.chartboost'
+
+    }
     packagingOptions {
         doNotStrip '*/armeabi-v7a/*.so'
         doNotStrip '*/arm64-v8a/*.so'
