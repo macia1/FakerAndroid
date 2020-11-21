@@ -16,6 +16,7 @@ A tool translate a apk file to stantard android project include so hook api and 
 ### Environment
 - Java
 - Il2cpp Game Apk unable to generate il2cpp C++ scaffolding for non windows
+- This is a Apktool base project now, make sure apktool decode can pass
 ### Usage
 - Download [FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases)(2020/11/15/16:52:00)
 - cmd ```cd <FakerAndroid.jar base dir>``` 
@@ -39,9 +40,14 @@ A tool translate a apk file to stantard android project include so hook api and 
   With the help of fakeCpp api use jni hook the so method
 - Il2cpp unity script development  
   With the help of il2cpp Scaffolding and fakeCpp api,use jni have a modification of il2cpp game script
-##### 4、Issues
+##### 4、Feature on the way
+  dex collspace  
+  resources.arsc decode format compat 
+##### 5、Issues
 - [Issues](https://github.com/Efaker/FakerAndroid/issues)
-##### 5、Give me a star?free!           
+- discus QQ Group:901157034
+- custom version QQ 1404774249
+##### 6、Give me a star?free!           
 ## Demo
 - [Demo Download](https://github.com/Efaker/FakerAndroid-Demos/releases/tag/BasicDemo1)
 

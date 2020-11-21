@@ -12,7 +12,7 @@ A tool translate apk file to common android project and support so hook and incl
 - 提供so函数Hook Api
 - 对于il2cpp的游戏apk直接生成il2cpp c++脚手架
 - Java层标准的对原有Java api的AndroidStudio编码提示
-- smali文件修改后运行或打包时自动回编译（AndroidStudio project 文件树模式下可以直接找到smali文件，支持对smali修改）
+- smali文件修改后运行或打包时自动回编译（AndroidStudio project 文件树模式下可以直接找到smali文件，支持对smali修改，增量编译）
 - Debug知道直接定位为到Java伪代码
 - 对于il2cpp的游戏apk,标准的Jni对原有il2cpp脚本的编码提示
 - 无限的可能性和扩展性,能干啥你说了算~
@@ -20,6 +20,8 @@ A tool translate apk file to common android project and support so hook and incl
 ### 运行环境
 - Java
 - il2cpp游戏Apk，非windows暂时无法生成il2cpp c++脚手架
+- 目前来说decode环节还是主要依赖了Apktool,请确保Apktool decode是可以通过的，FakerAndroid 保留了Apktool本来命令  
+例： ```java -jar FakerAndroid.jar d -f <apkpath> -o <outPath>```
 ### 使用方式
 - 下载[FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases)(2020/11/15/16:53:00)
 - cmd命令行 ```cd <FakerAndroid.jar平级目录>``` 
@@ -34,7 +36,7 @@ A tool translate apk file to common android project and support so hook and incl
 
 ##### 2、调试运行项目
 - 连接测试机机
-- Run项目（提醒：DEX缓存原因，修改smali文件后调试运行需要先卸载手机调试包,另外il2cpp game apk 第一次编译脚手架会比较慢,另外暂时不支持x86）
+- Run项目
 ##### 3、进阶
 - 类调用  
   借助javaScaffoding 在主模块（app/src/main/java)编写java代码对smali代码进行调用  
@@ -44,9 +46,12 @@ A tool translate apk file to common android project and support so hook and incl
   借助FakeCpp 使用jni对so函数进行hook替换
 - il2cpp unity游戏脚本二次开发  
   借助il2cpp Scaffolding 和FakeCpp,使用jni对原il2cpp游戏脚本进行Hook调用
-
+##### 4、正在路上
+Dex折叠，对不希望暴漏的java代码做dex折叠,防止静态分析用于应用商店过检  
+resources.arsc decode 兼容，目前混淆某些大型 apk Res decoder有问题
 ##### 4、遇到问题了？兄弟别走肯定能用，而且是你最佳的解决方案，咨询探讨
-- QQ:1404774249
+- QQ群:901157034
+- 版本定制:QQ 1404774249
 - [问题反馈](https://github.com/Efaker/FakerAndroid/issues)
 ##### 5、给个star?免费的           
 
