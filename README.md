@@ -30,7 +30,7 @@ A tool translate a apk file to stantard android project include so hook api and 
 - A little modification will be needed by yourself when the res or AndroidManifest.xml can't pass the compiler 
 ##### 2、Debug or run the project
 - With a testing machine conected
-- Run（Note：reason of dex cache,when there have a smali file modification you should make a uninstallation of before installation before run it and x86 is unsupport now ）
+- Run（Note： x86 is unsupport now ）
 ##### 3、Advanced
 - Original java class call  
   With the help of javaScaffoding write your java code to call original class in app moudle(app/src/main/java) 
