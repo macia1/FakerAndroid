@@ -49,7 +49,7 @@ A tool translate a apk file to stantard android project include so hook api and 
 - discus QQ Group:901157034
 - custom version QQ 1404774249
 ##### 6、Give me a star?free!           
-## Demo
+## Demo （out-of-date new version later）
 - [Demo Download](https://github.com/Efaker/FakerAndroid-Demos/releases/tag/BasicDemo1)
 
 
