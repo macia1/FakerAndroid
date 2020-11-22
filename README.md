@@ -1,4 +1,4 @@
-# FakerAndroid ([FakerAndroid.jar1.0.0 ](https://github.com/Efaker/FakerAndroid/releases))
+# FakerAndroid ([FakerAndroid.jar1.0.1 ](https://github.com/Efaker/FakerAndroid/releases))
 
 # FakerAndroid ([中文文档](https://github.com/Efaker/FakerAndroid/blob/main/CHINESE.md))
 A tool translate a apk file to stantard android project include so hook api and il2cpp c++ scaffolding when apk is a unity il2cpp game.
@@ -30,25 +30,26 @@ A tool translate a apk file to stantard android project include so hook api and 
 - A little modification will be needed by yourself when the res or AndroidManifest.xml can't pass the compiler 
 ##### 2、Debug or run the project
 - With a testing machine conected
-- Run（Note：reason of dex cache,when there have a smali file modification you should make a uninstallation of before installation before run it and x86 is unsupport now ）
+- Run（Note： x86 is unsupport now ）
 ##### 3、Advanced
 - Original java class call  
   With the help of javaScaffoding write your java code to call original class in app moudle(app/src/main/java) 
 - Original java class replacement      
   Write java code in moudle app（app/src/main/java）,keep the class name and package name corresponding same as the original class
+- Smali increament building  
+  when there is a smali files mod,there is a least files builing 
 - So Hook  
   With the help of fakeCpp api use jni hook the so method
 - Il2cpp unity script development  
   With the help of il2cpp Scaffolding and fakeCpp api,use jni have a modification of il2cpp game script
 ##### 4、Feature on the way
-  dex collspace  
   resources.arsc decode format compat 
 ##### 5、Issues
 - [Issues](https://github.com/Efaker/FakerAndroid/issues)
 - discus QQ Group:901157034
 - custom version QQ 1404774249
 ##### 6、Give me a star?free!           
-## Demo
+## Demo （out-of-date new version later）
 - [Demo Download](https://github.com/Efaker/FakerAndroid-Demos/releases/tag/BasicDemo1)
 
 
