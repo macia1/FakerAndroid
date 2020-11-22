@@ -112,7 +112,7 @@ public class Main {
         if(cli.hasOption("o") || cli.hasOption("output")){
             outDir =  cli.getOptionValue("o");
         }
-        FakerTransfer.translate(apkName,outDir);
+        FakerTransfer.translate(apkName,outDir,null);
     }
 
     private static void cmdDecode(CommandLine cli) throws AndrolibException {

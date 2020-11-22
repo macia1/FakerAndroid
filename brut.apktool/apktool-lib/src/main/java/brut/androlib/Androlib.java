@@ -22,6 +22,7 @@ import brut.androlib.res.AndrolibResources;
 import brut.androlib.res.data.ResPackage;
 import brut.androlib.res.data.ResTable;
 import brut.androlib.res.data.ResUnknownFiles;
+import brut.androlib.src.DecoderLogger;
 import brut.directory.ExtFile;
 import brut.androlib.res.xml.ResXmlPatcher;
 import brut.androlib.src.SmaliBuilder;
@@ -32,7 +33,6 @@ import brut.util.BrutIO;
 import brut.util.OS;
 import java.io.*;
 import java.util.*;
-import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import java.util.zip.CRC32;
 import java.util.zip.ZipEntry;
@@ -819,7 +819,8 @@ public class Androlib {
         mAndRes.close();
     }
 
-    private final static Logger LOGGER = Logger.getLogger(Androlib.class.getName());
+//    private final static Logger LOGGER = Logger.getLogger(Androlib.class.getName());
+    private final static DecoderLogger LOGGER = DecoderLogger.getFakerLogger();
 
     private final static String SMALI_DIRNAME = "smali";
     private final static String APK_DIRNAME = "build/apk";

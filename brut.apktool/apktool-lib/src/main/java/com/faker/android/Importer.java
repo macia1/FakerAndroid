@@ -1,7 +1,9 @@
 package com.faker.android;
 
+import brut.androlib.AndrolibException;
 import brut.androlib.meta.MetaInfo;
 import brut.common.BrutException;
+import brut.directory.DirectoryException;
 import com.googlecode.d2j.reader.DexFileReader;
 import com.googlecode.dex2jar.tools.BaksmaliBaseDexExceptionHandler;
 import com.luhuiguo.chinese.ChineseUtils;
@@ -15,12 +17,18 @@ import java.util.TreeMap;
 
 public class Importer extends IImporter {
 
-    public Importer(XSrcTarget xSrcTarget, SourceCode sourceCode) {
-        super(xSrcTarget, sourceCode);
+    public Importer(XSrcTarget xSrcTarget, SourceCode sourceCode,ILogCat iLogCat) {
+        super(xSrcTarget, sourceCode,iLogCat);
     }
     @Override
     boolean unZipTarget() {
-        return xSrcTarget.decode();
+        try {
+            return xSrcTarget.decode();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Logger.sendLog(iLogCat,e.toString());
+            return false;
+        }
     }
 
     @Override
@@ -145,19 +153,19 @@ public class Importer extends IImporter {
 
     @Override
     boolean makeCppScaffolding (XSrcTarget xSrcTarget) throws IOException {
-        System.out.println("checking or making il2cpp scaffolding...");
+        Logger.sendLog(iLogCat,"checking or making il2cpp scaffolding...");
         exportCppScaffolding(xSrcTarget);
 
         File scaffolding_ARM = new File(xSrcTarget.getCpp(),"Il2cpp-Scaffolding-ARM");
         formatScaffolding(scaffolding_ARM);
         if(scaffolding_ARM.exists()){
-            System.out.println("abi armeabi-v7a il2cpp scaffolding have generated.");
+            Logger.sendLog(iLogCat,"abi armeabi-v7a il2cpp scaffolding have generated.");
         }
 
         File Scaffolding_ARM64 = new File(xSrcTarget.getCpp(),"Il2cpp-Scaffolding-ARM64");
         formatScaffolding(Scaffolding_ARM64);
         if(Scaffolding_ARM64.exists()){
-            System.out.println("abi arme64-v8a il2cpp scaffolding have generated.");
+            Logger.sendLog(iLogCat,"abi arme64-v8a il2cpp scaffolding have generated.");
         }
 
 //        File file1 = new File(xSrcTarget.getDecodeDir(),"kotlin");
@@ -175,7 +183,7 @@ public class Importer extends IImporter {
 
     @Override
     boolean makeJavaScaffolding(SourceCode sourceCode, XSrcTarget xSrcTarget) throws IOException {
-        System.out.println("java scaffolding is generateding...");
+        Logger.sendLog(iLogCat,"java scaffolding is generateding...");
 //        File file = xSrcTarget.getJavaScaffoding();
 //        if(!file.exists()){
 //            file.mkdir();
@@ -219,10 +227,10 @@ public class Importer extends IImporter {
                         .skipDebug(false).optimizeSynchronized(false).printIR(false)
                         .noCode(false).skipExceptions(false).to(outPath.toPath());
             }
-            System.out.println("java scaffolding lib jar "+outPath.getName()+" has been generated success...");
+            Logger.sendLog(iLogCat,"java scaffolding lib jar "+outPath.getName()+" has been generated success...");
 
         }catch (Exception e){
-            System.err.println("javascaffoding lib genertion failed");
+            Logger.sendLog(iLogCat,"javascaffoding lib genertion failed");
         }
 
         return true;
@@ -290,14 +298,14 @@ public class Importer extends IImporter {
         func(fileRes,fileRes);
         return true;
     }
-    private static void func(File res, File file){
+    private void func(File res, File file){
         File[] fs = file.listFiles();
         for(File f:fs){
             if(f.isDirectory())	//
                 func(res,f);
             if(f.isFile()){
                 if(f.getName().startsWith("$")){
-                    System.out.println("fix res name"+f.getAbsolutePath());
+                    Logger.sendLog(iLogCat,"fix res name"+f.getAbsolutePath());
                     File fixName = new File(f.getParent(),f.getName().replace("$",""));
                     funcRe(res,getFileNameNoEx(f.getName()),getFileNameNoEx(fixName.getName()));
                     f.renameTo(fixName);
@@ -384,7 +392,7 @@ public class Importer extends IImporter {
         file.delete();
     }
 
-    public static void exportCppScaffolding (XSrcTarget xSrcTarget) {
+    public void exportCppScaffolding (XSrcTarget xSrcTarget) {
 
         File fileScaffoldingHelper =  new File(xSrcTarget.getCpp(),"ScaffoldingHelper");
         fileScaffoldingHelper.mkdir();
@@ -406,10 +414,10 @@ public class Importer extends IImporter {
             //执行exe  cmd
             Process p = Runtime.getRuntime().exec(cmd);
             String line = null;
-            br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            br = new BufferedReader(new InputStreamReader(p.getInputStream(),"utf-8"));
             brError = new BufferedReader(new InputStreamReader(p.getErrorStream()));
             while ((line = br.readLine()) != null  || (line = brError.readLine()) != null) {
-                System.out.println(line);
+                Logger.sendLog(iLogCat,line);
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -26,6 +26,7 @@ import brut.androlib.res.data.*;
 import brut.androlib.res.decoder.*;
 import brut.androlib.res.decoder.ARSCDecoder.ARSCData;
 import brut.androlib.res.decoder.ARSCDecoder.FlagsOffset;
+import brut.androlib.src.DecoderLogger;
 import brut.directory.*;
 import brut.androlib.res.util.ExtMXSerializer;
 import brut.androlib.res.util.ExtXmlSerializer;
@@ -38,7 +39,6 @@ import org.xmlpull.v1.XmlSerializer;
 
 import java.io.*;
 import java.util.*;
-import java.util.logging.Logger;
 import java.util.zip.CRC32;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
@@ -1037,7 +1037,8 @@ final public class AndrolibResources {
     // TODO: dirty static hack. I have to refactor decoding mechanisms.
     public static boolean sKeepBroken = false;
 
-    private final static Logger LOGGER = Logger.getLogger(AndrolibResources.class.getName());
+//    private final static Logger LOGGER = Logger.getLogger(AndrolibResources.class.getName());
+    private final static DecoderLogger LOGGER = DecoderLogger.getFakerLogger();
 
     private File mFrameworkDirectory = null;
 

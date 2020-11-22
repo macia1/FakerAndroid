@@ -107,7 +107,7 @@ public class Main {
     }
 
     private static void cmdFakeProject(CommandLine cli) {
-        System.out.println("You are using FakerAndroid(Doc or help github https://github.com/Efaker/FakerAndroid) to fake a stantard Android project...");
+//        System.out.println("You are using FakerAndroid(Doc or help github https://github.com/Efaker/FakerAndroid) to fake a stantard Android project...");
 //        System.out.println("你正在使用 FakerAndroid (文档或帮助 吾爱破解 https://www.52pojie.cn/) 来生成一个标准的AndroidStudio 工程");
         int paraCount = cli.getArgList().size();
         String apkName = cli.getArgList().get(paraCount - 1);
@@ -126,7 +126,7 @@ public class Main {
         if(cli.hasOption("o") || cli.hasOption("output")){
             outDir =  cli.getOptionValue("o");
         }
-        FakerTransfer.translate(apkName,outDir);
+        FakerTransfer.translate(apkName,outDir,null);
     }
 
     private static void cmdDecode(CommandLine cli) throws AndrolibException {

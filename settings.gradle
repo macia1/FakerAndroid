@@ -3,4 +3,5 @@ include 'brut.j.common',
         'brut.j.dir',
         'brut.apktool:apktool-lib',
         'brut.apktool:apktool-cli',
-        'brut.apktool:FakerAndroid-cli'
+        'brut.apktool:FakerAndroid-cli',
+        'brut.apktool:FakerAndroid-gui'

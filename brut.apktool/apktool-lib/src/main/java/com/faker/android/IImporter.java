@@ -7,6 +7,8 @@ public abstract class IImporter {
 
 	protected SourceCode sourceCode;
 
+	protected ILogCat iLogCat;
+
 	//处理DEX
 	abstract boolean unZipTarget();
 
@@ -27,9 +29,10 @@ public abstract class IImporter {
 	abstract boolean fixRes(SourceCode sourceCode,XSrcTarget xSrcTarget) throws IOException;
 
 	//TODO
-	protected IImporter(XSrcTarget xSrcTarget,SourceCode sourceCode) {
+	protected IImporter(XSrcTarget xSrcTarget,SourceCode sourceCode,ILogCat iLogCat) {
 		this.xSrcTarget = xSrcTarget;
 		this.sourceCode = sourceCode;
+		this.iLogCat = iLogCat;
 	}
 
 	public void doImport() throws IOException {
@@ -61,8 +64,8 @@ public abstract class IImporter {
 		if(!fixRes(sourceCode,xSrcTarget)){
 			return;
 		}
-
-
 		System.out.println("you have faked a android project from a apk file the path is "+xSrcTarget.getProjectDir());
+		Logger.sendLog(iLogCat,"you have faked a android project from a apk file the path is "+xSrcTarget.getProjectDir());
+		Logger.sendLog(iLogCat,"------------------------------------------------------------------------------------------");
 	}
 }

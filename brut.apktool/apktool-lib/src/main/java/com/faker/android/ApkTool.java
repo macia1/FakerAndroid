@@ -1,9 +1,13 @@
 package com.faker.android;
 
 import brut.androlib.Androlib;
+import brut.androlib.AndrolibException;
 import brut.androlib.ApkDecoder;
 import brut.common.BrutException;
+import brut.directory.DirectoryException;
+
 import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 
 public class ApkTool {
@@ -26,21 +30,16 @@ public class ApkTool {
         }
     }
 
-    public static boolean decodeSrc(File targetApkPath, File ouputDir) {
+    public static boolean decodeSrc(File targetApkPath, File ouputDir) throws AndrolibException, IOException, DirectoryException {
         ApkDecoder decoder = new ApkDecoder();
-        try {
-            decoder.setBaksmaliDebugMode(false);
-            decoder.setOutDir(ouputDir);
-            decoder.setForceDelete(true);
-            decoder.setDecodeSources(ApkDecoder.DECODE_SOURCES_SMALI_ONLY_MAIN_CLASSES);
-            decoder.setDecodeToolModel(ApkDecoder.DECODE_TOOL_MODEL_FAKER_ANDROID);
-            decoder.setApkFile(targetApkPath);
-            decoder.decode();
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
+        decoder.setBaksmaliDebugMode(false);
+        decoder.setOutDir(ouputDir);
+        decoder.setForceDelete(true);
+        decoder.setDecodeSources(ApkDecoder.DECODE_SOURCES_SMALI_ONLY_MAIN_CLASSES);
+        decoder.setDecodeToolModel(ApkDecoder.DECODE_TOOL_MODEL_FAKER_ANDROID);
+        decoder.setApkFile(targetApkPath);
+        decoder.decode();
+        return true;
     }
 
     /**

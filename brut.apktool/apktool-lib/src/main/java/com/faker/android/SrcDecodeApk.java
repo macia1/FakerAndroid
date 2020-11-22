@@ -1,9 +1,12 @@
 package com.faker.android;
 
+import brut.androlib.AndrolibException;
+import brut.directory.DirectoryException;
 import com.luhuiguo.chinese.ChineseUtils;
 import com.luhuiguo.chinese.pinyin.PinyinFormat;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -182,7 +185,7 @@ public class SrcDecodeApk {
         File file = new File(getGameDir(),"libs");
         return  file;
     }
-    public boolean decode(){
+    public boolean decode() throws DirectoryException, IOException, AndrolibException {
         return ApkTool.decodeSrc(getOriginalApkFile(),getDecodeDir());
     }
 }
