@@ -18,7 +18,7 @@ A tool translate apk file to common android project and support so hook and incl
 - Debug知道直接定位为到Java伪代码
 - 对于il2cpp的游戏apk,标准的Jni对原有il2cpp脚本的编码提示
 - 无限的可能性和扩展性,能干啥你说了算~
-- Dex折叠，对敏感已经存在或植入代码进行隐藏规避静态分析
+- Dex折叠，对敏感已经存在或后续接入的代码进行隐藏规避静态分析
 ### 运行环境
 - Java
 - il2cpp游戏Apk，非windows暂时无法生成il2cpp c++脚手架
