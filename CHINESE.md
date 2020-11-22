@@ -10,7 +10,7 @@ A tool translate apk file to common android project and support so hook and incl
 - 提供so函数Hook Api
 - 对于il2cpp的游戏apk直接生成il2cpp c++脚手架
 - Java层标准的对原有Java api的AndroidStudio编码提示
-- smali文件修改后运行或打包时自动回编译（AndroidStudio project 文件树模式下可以直接找到smali文件，支持对smali修改，最小文件数增量编译）
+- Smali文件修改后运行或打包时自动回编译（AndroidStudio project 文件树模式下可以直接找到smali文件，支持对smali修改，最小文件数增量编译）
 - 对于il2cpp的游戏apk,标准的Jni对原有il2cpp脚本的编码提示
 - 无限的可能性和扩展性,能干啥你说了算~
 - Dex折叠，对敏感已经存在或后续接入的代码进行隐藏规避静态分析
