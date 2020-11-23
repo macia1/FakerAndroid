@@ -37,7 +37,7 @@ public class FakerUnityActivity extends com.unity3d.player.UnityPlayerActivity i
         super.onCreate(savedInstanceState);
         registerCallBack(this);
         imageView = new ImageView(this);
-        imageView.setImageResource(R.drawable.splash);
+        imageView.setImageResource(R.drawable.faker_android_v_splash);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         mUnityPlayer.addViewToPlayer(imageView,false);
         new Handler().postDelayed(new Runnable() {

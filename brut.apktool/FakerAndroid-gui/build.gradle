@@ -17,6 +17,7 @@ apply plugin: 'com.github.johnrengelman.shadow'
 
 dependencies {
     implementation depends.commons_cli
+    implementation 'com.luhuiguo:chinese-utils:1.0'
     implementation project(':brut.apktool:apktool-lib')
 }
 
@@ -35,7 +36,7 @@ buildscript {
 
 jar {
     manifest {
-        attributes 'Main-Class' : 'Filechooser'
+        attributes 'Main-Class' : 'FakerAndroidGui'
     }
 }
 

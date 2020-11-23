@@ -2,6 +2,8 @@ import com.faker.android.FakerTransfer;
 import com.faker.android.ILogCat;
 import com.faker.android.PatchManger;
 import com.faker.android.TextUtil;
+import com.luhuiguo.chinese.ChineseUtils;
+import com.luhuiguo.chinese.pinyin.PinyinFormat;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -65,7 +67,7 @@ public class FilechooserController {
         apkDirCache = new File(System.getProperty("java.io.tmpdir"),"apkDirCach.tmp");
         outProjectCache = new File(System.getProperty("java.io.tmpdir"),"outProjectCache.tmp");
     }
-
+    File apkFile;
     @FXML
     void btn01OnAction(ActionEvent event) {
         FileChooser fch = new FileChooser();
@@ -76,14 +78,13 @@ public class FilechooserController {
         fch.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("Apk", "*.apk")
         );
-        File file = fch.showOpenDialog(this.stage);
-        if (file != null) {
+        apkFile = fch.showOpenDialog(this.stage);
+        if (apkFile != null) {
             this.apkPathTextField.clear();
-            this.apkPathTextField.setText(file.getPath());
-            cacheApkInitialDirectory(apkDirCache,file);
-            if(TextUtil.isEmpty(projectPathTextField.getText())){
-                this.projectPathTextField.setText(file.getParent());
-            }
+            this.apkPathTextField.setText(apkFile.getPath());
+            cacheApkInitialDirectory(apkDirCache,apkFile);
+            File projectDir = new File(apkFile.getParent(), ChineseUtils.toPinyin(apkFile.getName().replace(".apk",""), PinyinFormat.TONELESS_PINYIN_FORMAT).replace(" ","-"));
+            this.projectPathTextField.setText(projectDir.getAbsolutePath());
         }
     }
     ExecutorService executor = Executors.newCachedThreadPool();
@@ -106,7 +107,7 @@ public class FilechooserController {
             return;
         }
         File dirFile = new File(dirPath);
-        if(!dirFile.exists()){
+        if(!dirFile.getParentFile().exists()){
             showPopupMessage("Dir !exists !",stage);
             return;
         }
@@ -136,12 +137,19 @@ public class FilechooserController {
     void btn02OnAction(ActionEvent event) {
         DirectoryChooser fch = new DirectoryChooser();
         fch.setTitle("Select File !!");
+        if(apkFile==null||!apkFile.exists()){
+            showPopupMessage("Please choose a apk first!",stage);
+            return;
+        }
         setOutProjectInitialDirectory(fch,outProjectCache);
         File file = fch.showDialog(this.stage);
         if (file != null) {
+        if(apkFile!=null&&apkFile.exists()){
+            File projectDir = new File(file, ChineseUtils.toPinyin(apkFile.getName().replace(".apk",""), PinyinFormat.TONELESS_PINYIN_FORMAT).replace(" ","-"));
             this.projectPathTextField.clear();
-            this.projectPathTextField.setText(file.getPath());
-            cacheOutProjectInitialDirectory(outProjectCache,file);
+            this.projectPathTextField.setText(projectDir.getAbsolutePath());
+        }
+        cacheOutProjectInitialDirectory(outProjectCache,file);
         }
     }
 
