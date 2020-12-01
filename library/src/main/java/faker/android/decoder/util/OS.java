@@ -82,7 +82,7 @@ public class OS {
         cpdir(new File(src), new File(dest));
     }
 
-    public static void exec(String[] cmd) throws FakerAndroidException {
+    public static void exec(String[] cmd) throws Exception {
         Process ps = null;
         int exitValue = -99;
         try {

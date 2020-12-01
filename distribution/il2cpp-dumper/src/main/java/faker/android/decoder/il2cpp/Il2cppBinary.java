@@ -51,9 +51,9 @@ public class Il2cppBinary {
         il2cppBinaryCommad.add("-o");
         il2cppBinaryCommad.add(new File(il2cppScaffoldingHelper,"help.json").getAbsolutePath());
 
-        OS.exec(il2cppBinaryCommad.toArray(new String[0]));
-        try {
 
+        try {
+            OS.exec(il2cppBinaryCommad.toArray(new String[0]));
             File scaffolding_ARM = new File(out,"Il2cpp-Scaffolding-ARM");
             if(scaffolding_ARM.exists()){
                 formatScaffolding(scaffolding_ARM);
@@ -62,8 +62,8 @@ public class Il2cppBinary {
             if(Scaffolding_ARM64.exists()){
                 formatScaffolding(Scaffolding_ARM64);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            //
         }
     }
     private static void  formatScaffolding(File scaffolding) throws IOException {

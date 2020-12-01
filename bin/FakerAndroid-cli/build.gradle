@@ -1,16 +1,19 @@
 plugins {
     id 'java'
 }
-
+apply plugin: 'com.github.johnrengelman.shadow'
 group 'faker.android'
 version '1.0-SNAPSHOT'
-
 repositories {
     google()
     jcenter()
     mavenCentral()
 }
-
+jar {
+    manifest {
+        attributes 'Main-Class' : 'faker.android.decoder.Main'
+    }
+}
 dependencies {
     implementation 'com.luhuiguo:chinese-utils:1.0'
     implementation project(':controller')
