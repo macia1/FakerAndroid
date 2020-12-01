@@ -1,7 +1,5 @@
 # Gradle
 .gradle/
-bin/
-
 # Build
 **/build/
 
@@ -21,6 +19,5 @@ bin/
 *.iml
 .idea/*
 **/out/
-
 # Patches
 *.patch

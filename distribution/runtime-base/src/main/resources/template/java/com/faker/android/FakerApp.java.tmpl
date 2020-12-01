@@ -1,0 +1,26 @@
+package com.faker.android;
+import android.app.Application;
+import android.content.Context;
+
+public class FakerApp extends {APPLICATION_NAME} {
+
+    static {
+        System.loadLibrary("native-lib");
+    }
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        fakeDex(base);
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        fakeApp(this);
+    }
+
+    private native void fakeApp(Application application);
+
+    private native void fakeDex(Context base);
+
+}

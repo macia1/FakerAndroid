@@ -1,0 +1,20 @@
+dependencies {
+    implementation 'com.luhuiguo:chinese-utils:1.0'
+    implementation(project(':library'))
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+    }
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class' : 'FakerAndroidGui'
+    }
+}
