@@ -19,7 +19,14 @@ public class Transfer {
         TransformManager transformManager = new TransformManager(transformInvocation);
         Apk apk = new Apk(in);
         AndroidProject androidProject = new AndroidProject(out);
-
+        System.out.println(apk.getApkFile().getAbsolutePath());
+        if(!in.exists()){
+            transformInvocation.callBack("In file not exist..");
+            return;
+        }
+        if(!in.getAbsolutePath().endsWith(".apk")){
+            transformInvocation.callBack("not a apk file..");
+        }
         //Decoder
         transformManager.addTransform(new ResourceProcesser(apk,androidProject));
         transformManager.addTransform(new DexToSmali(apk,androidProject));
@@ -30,7 +37,7 @@ public class Transfer {
         transformManager.addTransform(new RuntimeBaseMerge(apk,androidProject));
         transformManager.addTransform(new RuntimeIl2cppMerge(apk,androidProject));
 
-        //fixproject
+        //fix
         transformManager.addTransform(new Project(apk,androidProject));
         transformManager.action();
     }
