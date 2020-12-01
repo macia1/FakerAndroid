@@ -2,8 +2,8 @@ package faker.android.decoder.transforms;
 
 import brut.androlib.meta.MetaInfo;
 import faker.android.decoder.apktool.Resources;
-import faker.android.decoder.pipeline.AndroidProject;
-import faker.android.decoder.pipeline.Apk;
+import faker.android.decoder.api.AndroidProject;
+import faker.android.decoder.api.Apk;
 import faker.android.decoder.pipeline.Transform;
 import faker.android.decoder.pipeline.TransformInvocation;
 import faker.android.decoder.util.FileUtils;

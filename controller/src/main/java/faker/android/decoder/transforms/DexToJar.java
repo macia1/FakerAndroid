@@ -1,5 +1,7 @@
 package faker.android.decoder.transforms;
 
+import faker.android.decoder.api.AndroidProject;
+import faker.android.decoder.api.Apk;
 import faker.android.decoder.dex2jar.Dex2jar;
 import faker.android.decoder.pipeline.*;
 

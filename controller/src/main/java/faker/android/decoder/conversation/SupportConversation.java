@@ -1,7 +1,7 @@
 package faker.android.decoder.conversation;
 
-import faker.android.decoder.pipeline.AndroidProject;
-import faker.android.decoder.pipeline.Apk;
+import faker.android.decoder.api.AndroidProject;
+import faker.android.decoder.api.Apk;
 import faker.android.decoder.pipeline.Context;
 import faker.android.decoder.pipeline.Conversation;
 import faker.android.decoder.transforms.DexToJar;

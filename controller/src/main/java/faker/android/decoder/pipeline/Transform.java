@@ -1,6 +1,7 @@
 package faker.android.decoder.pipeline;
 
-import faker.android.decoder.smali.DexToSmaliException;
+import faker.android.decoder.api.AndroidProject;
+import faker.android.decoder.api.Apk;
 
 public abstract class Transform {
     protected Apk apk;

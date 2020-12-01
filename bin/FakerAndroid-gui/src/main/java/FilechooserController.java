@@ -1,5 +1,6 @@
 import com.luhuiguo.chinese.ChineseUtils;
 import com.luhuiguo.chinese.pinyin.PinyinFormat;
+import faker.android.decoder.api.Transfer;
 import faker.android.decoder.util.TextUtil;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -127,6 +128,7 @@ public class FilechooserController {
 //                    textArea.appendText(tring+"\r\n");
 //                }
 //            });
+            new Transfer(apkPath,outPath).translate();
             triggerButton.setDisable(false);
         }
     }

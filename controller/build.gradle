@@ -1,7 +1,6 @@
 plugins {
     id 'java'
 }
-
 group 'faker.android'
 version '1.0-SNAPSHOT'
 
@@ -13,7 +12,6 @@ dependencies {
     implementation 'org.dom4j:dom4j:2.1.1'
     implementation 'commons-io:commons-io:2.4'
     implementation(project(':library'))
-    implementation(project(':distribution:jadx-core'))
     implementation(project(':distribution:il2cpp-dumper'))
     implementation(project(':distribution:smali'))
     implementation(project(':distribution:dex2jar'))

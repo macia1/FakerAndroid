@@ -1,5 +1,8 @@
 package faker.android.decoder.pipeline;
 
+import faker.android.decoder.api.AndroidProject;
+import faker.android.decoder.api.Apk;
+
 import java.util.List;
 import java.util.logging.Logger;
 

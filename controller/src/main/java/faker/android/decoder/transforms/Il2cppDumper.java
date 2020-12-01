@@ -3,8 +3,8 @@ package faker.android.decoder.transforms;
 import faker.android.decoder.exception.BinaryException;
 import faker.android.decoder.exception.FakerAndroidException;
 import faker.android.decoder.il2cpp.Il2cppBinary;
-import faker.android.decoder.pipeline.AndroidProject;
-import faker.android.decoder.pipeline.Apk;
+import faker.android.decoder.api.AndroidProject;
+import faker.android.decoder.api.Apk;
 import faker.android.decoder.pipeline.Transform;
 import faker.android.decoder.pipeline.TransformInvocation;
 

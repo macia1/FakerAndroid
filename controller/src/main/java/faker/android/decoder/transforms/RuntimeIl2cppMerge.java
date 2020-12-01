@@ -1,13 +1,11 @@
 package faker.android.decoder.transforms;
 
-import faker.android.decoder.pipeline.AndroidProject;
-import faker.android.decoder.pipeline.Apk;
+import faker.android.decoder.api.AndroidProject;
+import faker.android.decoder.api.Apk;
 import faker.android.decoder.pipeline.Transform;
 import faker.android.decoder.pipeline.TransformInvocation;
-import faker.android.decoder.runtime.base.RuntimeBase;
 import faker.android.decoder.rutime.il2cpp.RuntimeIl2cpp;
 import faker.android.decoder.util.FileUtils;
-import faker.android.decoder.util.TextUtil;
 
 import java.io.File;
 import java.io.IOException;

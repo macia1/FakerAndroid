@@ -1,4 +1,5 @@
 dependencies {
+    implementation project(':controller')
     implementation 'com.luhuiguo:chinese-utils:1.0'
     implementation(project(':library'))
 }

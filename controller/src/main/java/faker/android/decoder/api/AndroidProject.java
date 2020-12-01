@@ -1,4 +1,4 @@
-package faker.android.decoder.pipeline;
+package faker.android.decoder.api;
 
 import java.io.File;
 import java.util.HashMap;

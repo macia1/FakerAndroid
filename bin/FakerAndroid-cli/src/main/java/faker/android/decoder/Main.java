@@ -23,6 +23,9 @@ import brut.androlib.err.OutDirExistsException;
 import brut.common.BrutException;
 import brut.directory.DirectoryException;
 import brut.util.AaptManager;
+import com.luhuiguo.chinese.ChineseUtils;
+import com.luhuiguo.chinese.pinyin.PinyinFormat;
+import faker.android.decoder.api.Transfer;
 import org.apache.commons.cli.*;
 
 import java.io.File;
@@ -113,7 +116,10 @@ public class Main {
         if(cli.hasOption("o") || cli.hasOption("output")){
             outDir =  cli.getOptionValue("o");
         }
-      //  FakerTransfer.translate(apkName,outDir,null);
+        if(outDir==null){
+            outDir = ChineseUtils.toPinyin(apkName.replace(".apk",""), PinyinFormat.TONELESS_PINYIN_FORMAT).replace(" ","-");
+        }
+        new Transfer(apkName,outDir).translate();
     }
 
     private static void cmdDecode(CommandLine cli) throws AndrolibException {
