@@ -27,7 +27,7 @@ public class ResourceProcesser extends Transform {
 
     @Override
     public void transform(TransformInvocation transformInvocation) {
-        transformInvocation.callBack("ResourceProcesser");
+        transformInvocation.callBack("Deocoding the apk file...");
         File out = androidProject.getMain();
         if(out.exists()){
             FileUtils.deleteDir(out);

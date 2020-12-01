@@ -9,16 +9,14 @@ import java.io.File;
 public class Transfer {
     private File in;
     private File out;
-    public Transfer(String inPath,String outPath){
+    TransformInvocation transformInvocation;
+    public Transfer(String inPath,String outPath,TransformInvocation transformInvocation){
         in = new File(inPath);
         out = new File(outPath);
+        this.transformInvocation = transformInvocation;
     }
     public void translate(){
-        TransformManager transformManager = new TransformManager(new TransformInvocation() {
-            @Override
-            public void callBack(String msg) {
-            }
-        });
+        TransformManager transformManager = new TransformManager(transformInvocation);
         Apk apk = new Apk(in);
         AndroidProject androidProject = new AndroidProject(out);
 
@@ -32,7 +30,7 @@ public class Transfer {
         transformManager.addTransform(new RuntimeBaseMerge(apk,androidProject));
         transformManager.addTransform(new RuntimeIl2cppMerge(apk,androidProject));
 
-        //fix
+        //fixproject
         transformManager.addTransform(new Project(apk,androidProject));
         transformManager.action();
     }

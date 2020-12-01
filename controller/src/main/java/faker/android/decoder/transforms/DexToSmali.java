@@ -17,7 +17,7 @@ public class DexToSmali extends Transform {
     }
     @Override
     public void transform(TransformInvocation transformInvocation) {
-        transformInvocation.callBack("dexToSmali");
+        transformInvocation.callBack("Translating dexes to smali files....");
         List<String> names = (List<String>) androidProject.getIntermediate(AndroidProject.INTERMEDIATE_DEX_NAMES);
         AndroidProject.ManifestInfo s = (AndroidProject.ManifestInfo) androidProject.getIntermediate(AndroidProject.INTERMEDIATE_MANIFESTINFO);
         LOG.info(s.toString());

@@ -16,8 +16,11 @@ public class Project extends Transform {
     }
     @Override
     public void transform(TransformInvocation transformInvocation) {
+        transformInvocation.callBack("Android studio project fomarting....");
         PatchUtil.copyDirFromJar("/project",androidProject.getProject().getAbsolutePath());
         fixProject(androidProject);
+        transformInvocation.callBack("You have faked a android studio project from apk!");
+        transformInvocation.callBack("Generated project path:"+androidProject.getProject().getAbsolutePath()+".");
     }
 
     private void fixProject(AndroidProject androidProject){

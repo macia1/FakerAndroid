@@ -26,6 +26,7 @@ import brut.util.AaptManager;
 import com.luhuiguo.chinese.ChineseUtils;
 import com.luhuiguo.chinese.pinyin.PinyinFormat;
 import faker.android.decoder.api.Transfer;
+import faker.android.decoder.pipeline.TransformInvocation;
 import org.apache.commons.cli.*;
 
 import java.io.File;
@@ -117,7 +118,12 @@ public class Main {
             File projectFile = new File(originalFile.getParent(), ChineseUtils.toPinyin(originalFile.getName().replace(".apk",""), PinyinFormat.TONELESS_PINYIN_FORMAT).replace(" ","-"));
             outDir = projectFile.getAbsolutePath();
         }
-        new Transfer(apkName,outDir).translate();
+        new Transfer(apkName, outDir, new TransformInvocation() {
+            @Override
+            public void callBack(String msg) {
+                Logger.getLogger(Transfer.class.getName()).info(msg);
+            }
+        }).translate();
     }
 
     private static void cmdDecode(CommandLine cli) throws AndrolibException {

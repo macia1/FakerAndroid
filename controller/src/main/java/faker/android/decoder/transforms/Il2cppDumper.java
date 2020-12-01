@@ -15,7 +15,7 @@ public class Il2cppDumper extends Transform  {
 
     @Override
     public void transform(TransformInvocation transformInvocation) {
-        transformInvocation.callBack("il2cpp dumper");
+        transformInvocation.callBack("Checking or generating il2cppscafoding...");
         try {
             Il2cppBinary.dumpIl2cpp(apk.getApkFile(),androidProject.getCpp());
         } catch (BinaryException e) {

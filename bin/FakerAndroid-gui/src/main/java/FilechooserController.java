@@ -1,6 +1,7 @@
 import com.luhuiguo.chinese.ChineseUtils;
 import com.luhuiguo.chinese.pinyin.PinyinFormat;
 import faker.android.decoder.api.Transfer;
+import faker.android.decoder.pipeline.TransformInvocation;
 import faker.android.decoder.util.TextUtil;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -122,13 +123,12 @@ public class FilechooserController {
         }
         public void run() {
             triggerButton.setDisable(true);
-//            FakerTransfer.translate(apkPath, outPath, new ILogCat() {
-//                @Override
-//                public void callLog(String tring) {
-//                    textArea.appendText(tring+"\r\n");
-//                }
-//            });
-            new Transfer(apkPath,outPath).translate();
+            new Transfer(apkPath, outPath, new TransformInvocation() {
+                @Override
+                public void callBack(String msg) {
+                    textArea.appendText(msg+"\r\n");
+                }
+            }).translate();
             triggerButton.setDisable(false);
         }
     }
