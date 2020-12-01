@@ -1,6 +1,0 @@
-
-dependencies {
-  implementation project(':brut.j.common'),
-                 depends.commons_io
-  testImplementation depends.junit
-}
