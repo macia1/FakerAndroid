@@ -9,6 +9,7 @@ repositories {
 }
 
 dependencies {
+    implementation 'com.luhuiguo:chinese-utils:1.0'
     implementation 'org.dom4j:dom4j:2.1.1'
     implementation 'commons-io:commons-io:2.4'
     implementation(project(':library'))

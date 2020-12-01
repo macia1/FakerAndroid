@@ -6,7 +6,6 @@ import faker.android.decoder.pipeline.Transform;
 import faker.android.decoder.pipeline.TransformInvocation;
 import faker.android.decoder.rutime.il2cpp.RuntimeIl2cpp;
 import faker.android.decoder.util.FileUtils;
-
 import java.io.File;
 import java.io.IOException;
 
@@ -18,7 +17,6 @@ public class RuntimeIl2cppMerge extends Transform {
 
     @Override
     public void transform(TransformInvocation transformInvocation) {
-
         File il2cppScaffoldingARM = new File(androidProject.getCpp(),"Il2cpp-Scaffolding-ARM");
         File il2cppScaffoldingARM64 = new File(androidProject.getCpp(),"Il2cpp-Scaffolding-ARM64");
         if(!il2cppScaffoldingARM.exists()&&!il2cppScaffoldingARM64.exists()){

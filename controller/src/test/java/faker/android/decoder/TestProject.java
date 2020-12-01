@@ -1,7 +1,10 @@
 package faker.android.decoder;
 
+import com.luhuiguo.chinese.ChineseUtils;
+import com.luhuiguo.chinese.pinyin.PinyinFormat;
 import faker.android.decoder.api.AndroidProject;
 import faker.android.decoder.api.Apk;
+import faker.android.decoder.api.Transfer;
 import faker.android.decoder.pipeline.TransformInvocation;
 import faker.android.decoder.pipeline.TransformManager;
 import faker.android.decoder.transforms.*;
@@ -9,14 +12,12 @@ import faker.android.decoder.util.TestUtils;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.File;
 import java.io.IOException;
 
 public class TestProject {
     private static final Logger LOG = LoggerFactory.getLogger(TestProject.class);
 //    static File in = TestUtils.getFileFromSampleDir("app-with-fake-dex.apk");
-
     static File in = TestUtils.getFileFromSampleDir("waiwai.apk");
 
     @Test
@@ -40,8 +41,36 @@ public class TestProject {
         transformManager.addTransform(new RuntimeBaseMerge(apk,androidProject));
         transformManager.addTransform(new RuntimeIl2cppMerge(apk,androidProject));
 
+        //fix
         transformManager.addTransform(new Project(apk,androidProject));
 
         transformManager.action();
+    }
+
+    @Test
+    public void batchFakeWithApi() {
+        func(new File("D:\\Apk"));
+    }
+
+    private static void func(File file){
+        File[] fs = file.listFiles();
+        for(File f:fs){
+            if(f.isDirectory()){
+                func(f);
+            }else if(f.isFile()) {
+                if(f.getName().endsWith(".apk")){
+                    TransformInvocation transformInvocation = new TransformInvocation() {
+                        @Override
+                        public void callBack(String msg) {
+                            LOG.info("call back -----------"+msg);
+                        }
+                    };
+                    File outs = new File("D:\\Outs");
+                    File projectFile = new File(outs, ChineseUtils.toPinyin(f.getName().replace(".apk",""), PinyinFormat.TONELESS_PINYIN_FORMAT).replace(" ","-"));
+                    String outDir = projectFile.getAbsolutePath();
+                    new Transfer(f.getAbsolutePath(),outDir,transformInvocation).translate();
+                }
+            }
+        }
     }
 }

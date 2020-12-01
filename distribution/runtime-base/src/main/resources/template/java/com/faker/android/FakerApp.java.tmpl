@@ -8,7 +8,7 @@ public class FakerApp extends {APPLICATION_NAME} {
         System.loadLibrary("native-lib");
     }
     @Override
-    protected void attachBaseContext(Context base) {
+    public void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         fakeDex(base);
     }

@@ -1,5 +1,4 @@
 package faker.android.decoder.api;
-
 import faker.android.decoder.pipeline.TransformInvocation;
 import faker.android.decoder.pipeline.TransformManager;
 import faker.android.decoder.transforms.*;
