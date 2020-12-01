@@ -3,6 +3,7 @@ apply plugin: 'faker.android.application'
 dependencies {
     compileOnly fileTree(dir: 'javaScaffoding', include: ['*.jar'])
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //Below you can custom your dependencies
 }
 
 android {
@@ -63,9 +64,7 @@ android {
     }
     //TODO NOTE This is a FakerAndroid feature for hiding sensitive code avoid static dex analysis like passing a appstore checker
     sensitiveOptions {//when build type debuggable is false this feature working only and with this feature working building speed will slow down ,you can make it working when building a release apk
-
         //collapseToAssetFile 'dex' //keep this string same as c++ fakeDex method last param
-
         /**confing packages or classe with no ext but this cant include application class or application ref classes **/
         //collapsePackage 'com.google'
         //collapsePackage 'com.vungle'
@@ -73,7 +72,6 @@ android {
         //collapsePackage 'com.adcolony'
         //collapsePackage 'com.applovin'
         //collapsePackage 'com.chartboost'
-
     }
     packagingOptions {
         doNotStrip '*/armeabi-v7a/*.so'
