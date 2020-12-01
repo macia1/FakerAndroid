@@ -14,6 +14,7 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -36,6 +37,7 @@ public class ResourceProcesser extends Transform {
         project(androidProject);
         discard(androidProject);
         meta(androidProject);
+        fixRes(androidProject);
     }
 
     private void meta(AndroidProject androidProject) {
@@ -99,6 +101,53 @@ public class ResourceProcesser extends Transform {
         File originalResources = new File(resources,"original");
         if(originalResources.exists()){
             originalResources.renameTo(new File(androidProject.getAssets(),"original"));
+        }
+    }
+    void fixRes(AndroidProject androidProject) {
+        try {
+            File fileRes = androidProject.getRes();
+            func(fileRes,fileRes);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    private void func(File res, File file){
+        File[] fs = file.listFiles();
+        for(File f:fs){
+            if(f.isDirectory())	//
+                func(res,f);
+            if(f.isFile()){
+                if(f.getName().startsWith("$")){
+                    File fixName = new File(f.getParent(),f.getName().replace("$",""));
+                    funcRe(res,getFileNameNoEx(f.getName()),getFileNameNoEx(fixName.getName()));
+                    f.renameTo(fixName);
+                }
+            }
+        }
+    }
+    public static String getFileNameNoEx(String filename) {
+        if ((filename != null) && (filename.length() > 0)) {
+            int dot = filename.lastIndexOf('.');
+            if ((dot >-1) && (dot < (filename.length()))) {
+                return filename.substring(0, dot);
+            }
+        }
+        return filename;
+    }
+    private static void funcRe(File file, String oStr, String nStr){
+        File[] fs = file.listFiles();
+        for(File f:fs){
+            if(f.isDirectory())	//
+                funcRe(f,oStr,nStr);
+            if(f.isFile()){
+                try {
+                    if(f.getName().endsWith(".xml")){
+                        FileUtils.autoReplaceStr(f,oStr,nStr);
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }

@@ -113,7 +113,9 @@ public class Main {
             outDir =  cli.getOptionValue("o");
         }
         if(outDir==null){
-            outDir = ChineseUtils.toPinyin(apkName.replace(".apk",""), PinyinFormat.TONELESS_PINYIN_FORMAT).replace(" ","-");
+            File originalFile = new File(apkName);
+            File projectFile = new File(originalFile.getParent(), ChineseUtils.toPinyin(originalFile.getName().replace(".apk",""), PinyinFormat.TONELESS_PINYIN_FORMAT).replace(" ","-"));
+            outDir = projectFile.getAbsolutePath();
         }
         new Transfer(apkName,outDir).translate();
     }
