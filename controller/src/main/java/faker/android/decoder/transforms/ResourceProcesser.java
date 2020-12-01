@@ -93,6 +93,7 @@ public class ResourceProcesser extends Transform {
         if(libResources.exists()){
             libResources.renameTo(androidProject.getjniLibs());
         }
+
         File unknownResources = new File(resources,"unknown");
         if(unknownResources.exists()){
             unknownResources.renameTo(androidProject.getResources());
@@ -100,7 +101,11 @@ public class ResourceProcesser extends Transform {
 
         File originalResources = new File(resources,"original");
         if(originalResources.exists()){
-            originalResources.renameTo(new File(androidProject.getAssets(),"original"));
+            File assets = androidProject.getAssets();
+            if(!assets.exists()){
+                assets.mkdirs();
+            }
+            originalResources.renameTo(new File(assets,"original"));
         }
     }
     void fixRes(AndroidProject androidProject) {
