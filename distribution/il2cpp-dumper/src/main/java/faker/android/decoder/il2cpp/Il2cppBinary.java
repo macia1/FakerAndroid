@@ -65,6 +65,10 @@ public class Il2cppBinary {
             if(Scaffolding_ARM64.exists()){
                 formatScaffolding(Scaffolding_ARM64);
             }
+            File il2cppScaffoldingx86 = new File(out,"Il2cpp-Scaffolding-x86");
+            if(il2cppScaffoldingx86.exists()){
+                delete(il2cppScaffoldingx86);
+            }
         } catch (Exception e) {
             //
         }
