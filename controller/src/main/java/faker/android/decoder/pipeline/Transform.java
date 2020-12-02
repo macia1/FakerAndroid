@@ -10,5 +10,5 @@ public abstract class Transform {
         this.apk = apk;
         this.androidProject = androidProject;
     }
-    public abstract void transform(TransformInvocation transformInvocation);
+    public abstract boolean transform(TransformInvocation transformInvocation);
 }

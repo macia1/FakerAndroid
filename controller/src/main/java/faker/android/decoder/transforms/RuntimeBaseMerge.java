@@ -17,13 +17,14 @@ public class RuntimeBaseMerge extends Transform {
     }
 
     @Override
-    public void transform(TransformInvocation transformInvocation) {
+    public boolean transform(TransformInvocation transformInvocation) {
         transformInvocation.callBack("Rumtime base mereging...");
         RuntimeBase.mergeRuntimeLibsJava(androidProject.getLibs());
         RuntimeBase.mergeRuntimeLibsCpp(androidProject.getCppLibs());
         RuntimeBase.mergeRuntimeJavaCode(androidProject.getJava());
         RuntimeBase.mergeRuntimeCppCode(androidProject.getCpp());
         fixTmplCode(androidProject);
+        return true;
     }
 
     private void fixTmplCode(AndroidProject androidProject) {

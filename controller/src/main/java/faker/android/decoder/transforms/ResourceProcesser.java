@@ -26,7 +26,7 @@ public class ResourceProcesser extends Transform {
     }
 
     @Override
-    public void transform(TransformInvocation transformInvocation) {
+    public boolean transform(TransformInvocation transformInvocation) {
         transformInvocation.callBack("Deocoding the apk file...");
         File out = androidProject.getMain();
         if(out.exists()){
@@ -38,6 +38,7 @@ public class ResourceProcesser extends Transform {
         discard(androidProject);
         meta(androidProject);
         fixRes(androidProject);
+        return true;
     }
 
     private void meta(AndroidProject androidProject) {

@@ -14,7 +14,7 @@ public class Il2cppDumper extends Transform  {
     }
 
     @Override
-    public void transform(TransformInvocation transformInvocation) {
+    public boolean transform(TransformInvocation transformInvocation) {
         transformInvocation.callBack("Checking or generating il2cppscafoding...");
         try {
             Il2cppBinary.dumpIl2cpp(apk.getApkFile(),androidProject.getCpp());
@@ -23,5 +23,6 @@ public class Il2cppDumper extends Transform  {
         } catch (FakerAndroidException e) {
             e.printStackTrace();
         }
+        return true;
     }
 }

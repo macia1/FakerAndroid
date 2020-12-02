@@ -25,9 +25,11 @@ public class TransformManager {
           transforms.add(transform);
      }
      public void action() {
-
         for (Transform transform:transforms){
-             transform.transform(transformInvocation);
+             if(!transform.transform(transformInvocation)) {
+                  transformInvocation.callBack("finish on "+transform.getClass().getName());
+                  return;
+             }
         }
      }
 }
