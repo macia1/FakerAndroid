@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import {R};
 /**
  * TODO NOTE:this is a demo act if you want run it you should mode the manifest,if the app's main act extends com.unity3d.player.UnityPlayerActivity
- * else you can make this to main
+ * TODO NOTE: else you can make this to main
  * TODO NOTE: you can extend the original main act
  */
 public class FakerActivity extends com.unity3d.player.UnityPlayerActivity implements JniBridge {
@@ -36,16 +36,18 @@ public class FakerActivity extends com.unity3d.player.UnityPlayerActivity implem
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         registerCallBack(this);
-        imageView = new ImageView(this);
-        imageView.setImageResource(R.drawable.faker_android_v_splash);
-        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        mUnityPlayer.addViewToPlayer(imageView,false);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                mUnityPlayer.removeViewFromPlayer(imageView);
-            }
-        },3000);
+
+        //TODO NOTE: this is a simple to call UnityPlayer java api
+        //imageView = new ImageView(this);
+        //imageView.setImageResource(R.drawable.faker_android_v_splash);
+        //imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        //mUnityPlayer.addViewToPlayer(imageView,false);
+        //new Handler().postDelayed(new Runnable() {
+        //  @Override
+        //    public void run() {
+        //        mUnityPlayer.removeViewFromPlayer(imageView);
+        //    }
+        //},3000);
     }
 
     @Override
