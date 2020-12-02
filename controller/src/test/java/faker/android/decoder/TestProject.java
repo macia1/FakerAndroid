@@ -18,8 +18,7 @@ import java.io.IOException;
 public class TestProject {
     private static final Logger LOG = LoggerFactory.getLogger(TestProject.class);
 //    static File in = TestUtils.getFileFromSampleDir("app-with-fake-dex.apk");
-    static File in = TestUtils.getFileFromSampleDir("waiwai.apk");
-
+    static File in = TestUtils.getFileFromSampleDir("niuzai.apk");
     @Test
     public void fakeRroject() throws IOException {
         File out = TestUtils.getFileOutSampleDir("fakeRroject","niuzai");

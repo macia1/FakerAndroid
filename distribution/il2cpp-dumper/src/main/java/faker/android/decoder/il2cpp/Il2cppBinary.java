@@ -51,6 +51,9 @@ public class Il2cppBinary {
         il2cppBinaryCommad.add("-o");
         il2cppBinaryCommad.add(new File(il2cppScaffoldingHelper,"help.json").getAbsolutePath());
 
+        il2cppBinaryCommad.add("--cpp-compiler");
+        il2cppBinaryCommad.add("GCC");
+
 
         try {
             OS.exec(il2cppBinaryCommad.toArray(new String[0]));
