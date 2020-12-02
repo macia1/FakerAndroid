@@ -64,10 +64,11 @@ resources.arsc decode 兼容，目前混淆某些大型 apk Res decoder有问题
 
 ##### 7、兼容性
 1、目前某些大型的apk资做过资源文件混淆的会有问题！  
-2、加固Apk需要先脱壳后才能,暴漏java api  
-3、有自校验的Apk,须项目运行起来后自行检查破解  
-4、Defalut Activity Not found，请先将AndroidManifest.xml中Application节点下非启动Activity标签注释掉后做一次运行，再还原试试  
-5、暂时不支持x86，pc模拟器是x86
+2、Google play 90% 游戏apk可以一马平川  
+3、加固Apk需要先脱壳后才能,暴漏java api  
+4、有自校验的Apk,须项目运行起来后自行检查破解  
+5、Manifest莫名奇妙的问题，可以先尝试注释掉异常代码，逐步还原试试  
+6、暂时不支持x86，pc模拟器是x86
 ## 实例(过时，稍后补充新的)
 - 一夜之间来了这么多的star好慌张，全是问怎么用的，请原谅我只会写代码不会写文档啊！！！  
 - 因为是il2cpp 游戏apk，里面包含了原游戏安装包和生成的代码项目所以比较大，下载的话得时间稍微长一点，如果github实在下不下来的话，直接QQ我索要
