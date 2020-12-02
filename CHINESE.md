@@ -64,8 +64,8 @@ resources.arsc decode 兼容，目前混淆某些大型 apk Res decoder有问题
 
 ##### 7、兼容性
 1、目前某些大型的apk资做过资源文件混淆的会有问题！  
-2、Google play 90% 游戏apk可以一马平川
-3、加固Apk需要先脱壳后才能,暴漏java api
+2、Google play 90% 游戏apk可以一马平川  
+3、加固Apk需要先脱壳后才能,暴漏java api  
 4、有自校验的Apk,须项目运行起来后自行检查破解  
 5、Manifest莫名奇妙的问题，可以先尝试注释掉异常代码，逐步还原试试
 6、暂时不支持x86，pc模拟器是x86
