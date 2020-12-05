@@ -21,10 +21,6 @@ import java.util.List;
 
 public class ResourceProcesser extends Transform {
     private static final Logger LOG = LoggerFactory.getLogger(ResourceProcesser.class);
-    public ResourceProcesser(Apk apk, AndroidProject androidProject) {
-        super(apk, androidProject);
-    }
-
     @Override
     public boolean transform(TransformInvocation transformInvocation) {
         transformInvocation.callBack("Deocoding the apk file...");
@@ -39,6 +35,10 @@ public class ResourceProcesser extends Transform {
         meta(androidProject);
         fixRes(androidProject);
         return true;
+    }
+
+    public ResourceProcesser(Apk apk, AndroidProject androidProject) {
+        super(apk, androidProject);
     }
 
     private void meta(AndroidProject androidProject) {

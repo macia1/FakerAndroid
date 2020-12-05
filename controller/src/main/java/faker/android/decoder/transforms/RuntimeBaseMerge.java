@@ -6,7 +6,10 @@ import faker.android.decoder.pipeline.Transform;
 import faker.android.decoder.pipeline.TransformInvocation;
 import faker.android.decoder.runtime.base.RuntimeBase;
 import faker.android.decoder.util.FileUtils;
+import faker.android.decoder.util.ManifestEditor;
 import faker.android.decoder.util.TextUtil;
+import org.dom4j.DocumentException;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -49,6 +52,16 @@ public class RuntimeBaseMerge extends Transform {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+
+        File manifest = androidProject.getAndroidManifest();
+        ManifestEditor manifestEditor = null;
+        try {
+            manifestEditor = new ManifestEditor(manifest);
+            manifestEditor.modApplication("com.faker.android.FakerApp");//
+            manifestEditor.save();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
