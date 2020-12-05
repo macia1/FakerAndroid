@@ -7,7 +7,7 @@ A tool translate apk file to common android project and support so hook and incl
 - 将痛苦的逆向环境，转化为舒服的开发环境，告别汇编，告别二进制，还有啥好说的~~ 
 ## 特点
 
-- 提供Java层代码覆盖及继承替换的脚手架
+- 提供Java层代码覆盖及继承替换的脚手架，实现java与smali混编
 - 提供so函数Hook Api
 - 对于il2cpp的游戏apk直接生成il2cpp c++脚手架
 - Java层标准的对原有Java api的AndroidStudio编码提示
