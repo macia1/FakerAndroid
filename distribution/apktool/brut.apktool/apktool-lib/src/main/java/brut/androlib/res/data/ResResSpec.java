@@ -19,6 +19,8 @@ package brut.androlib.res.data;
 import brut.androlib.AndrolibException;
 import brut.androlib.err.UndefinedResObjectException;
 import java.util.*;
+import java.util.regex.Pattern;
+
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -26,7 +28,7 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class ResResSpec {
     private final ResID mId;
-    private final String mName;
+    private String mName;
     private final ResPackage mPackage;
     private final ResTypeSpec mType;
     private final Map<ResConfigFlags, ResResource> mResources = new LinkedHashMap<ResConfigFlags, ResResource>();
@@ -37,9 +39,9 @@ public class ResResSpec {
 
         ResResSpec resResSpec = type.getResSpecUnsafe(name);
         if (resResSpec != null) {
-            cleanName = name + "_APKTOOL_DUPLICATENAME_" + id.toString();
+            cleanName = name + "_apktool_duplicatename_" + id.toString();
         } else {
-            cleanName = ((name == null || name.isEmpty()) ? ("APKTOOL_DUMMYVAL_" + id.toString()) : name);
+            cleanName = ((name == null || name.isEmpty()) ? ("apktool_dummyval_" + id.toString()) : name);
         }
         
         this.mName = cleanName;
@@ -126,6 +128,10 @@ public class ResResSpec {
     public void removeResource(ResResource res) throws AndrolibException {
         ResConfigFlags flags = res.getConfig().getFlags();
         mResources.remove(flags);
+    }
+
+    public void setName(String mName) {
+        this.mName = mName;
     }
 
     @Override
