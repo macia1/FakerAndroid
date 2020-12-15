@@ -102,12 +102,11 @@ Java_com_faker_android_FakerApp_fakeApp(JNIEnv *env, jobject thiz, jobject appli
     LOGE("baseIamgeAddr : %ld",base);
     init_il2cpp(base);
     //fakeCpp((void *) Behaviour_get_isActiveAndEnabled, (void *)HookedBehaviour_get_isActiveAndEnabled ,reinterpret_cast<void **>(&Behaviour_get_isActiveAndEnabled));
-
 }
 extern "C"
 JNIEXPORT void JNICALL
 Java_com_faker_android_FakerApp_fakeDex(JNIEnv *env, jobject thiz, jobject base) {
-    fakeDex(env,base,"dex");//安装DEX
+    fakeDex(env,base,"dex");//dex collapse feature support
 }
 
 extern "C"
