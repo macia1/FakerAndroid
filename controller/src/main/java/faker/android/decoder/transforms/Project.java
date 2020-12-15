@@ -68,12 +68,12 @@ public class Project extends Transform {
         //buildconfig
 
         try {
-            FileUtils.autoReplaceStr(appBuild,"{versionCode}",manifestInfo.getVersionCode());
+            FileUtils.autoReplaceStr(appBuild,"{versionCode}",manifestInfo.getVersionCode()!=null?manifestInfo.getVersionCode():"1");
         } catch (IOException e) {
             e.printStackTrace();
         }
         try {
-            FileUtils.autoReplaceStr(appBuild,"{versionName}",manifestInfo.getVersionName());
+            FileUtils.autoReplaceStr(appBuild,"{versionName}",manifestInfo.getVersionName()!=null?manifestInfo.getVersionName():"0.01");
         } catch (IOException e) {
             e.printStackTrace();
         }
