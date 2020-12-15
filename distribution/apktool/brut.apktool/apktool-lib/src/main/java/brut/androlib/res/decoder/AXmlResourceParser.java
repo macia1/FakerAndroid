@@ -356,7 +356,7 @@ public class AXmlResourceParser implements XmlResourceParser {
                 }
             } catch (AndrolibException | NullPointerException e) { }
         } else {
-            if (m_resourceIDs.length > name){
+            if (m_resourceIDs!=null&&m_resourceIDs.length > name){
                 int resourceID = m_resourceIDs[name];
                 if (resourceID >> 24 == 0x7f){
                     try {
