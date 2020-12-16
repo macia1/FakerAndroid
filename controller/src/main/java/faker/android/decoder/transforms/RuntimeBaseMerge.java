@@ -58,7 +58,9 @@ public class RuntimeBaseMerge extends Transform {
         ManifestEditor manifestEditor = null;
         try {
             manifestEditor = new ManifestEditor(manifest);
+
             manifestEditor.modApplication("com.faker.android.FakerApp");//
+            manifestEditor.extractNativeLibs();
             manifestEditor.save();
         } catch (Exception e) {
             e.printStackTrace();

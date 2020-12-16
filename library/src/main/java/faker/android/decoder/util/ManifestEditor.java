@@ -127,6 +127,10 @@ public class ManifestEditor {
         return applicationElement.attributeValue("name");
     }
 
+    public String getAextractNativeLibs() {
+        return applicationElement.attributeValue("extractNativeLibs");
+    }
+
     public String getApplicationDebuggable() {
         return applicationElement.attributeValue("debuggable");
     }
@@ -511,6 +515,16 @@ public class ManifestEditor {
             applicationElement.addAttribute("android:debuggable", "true");
         } else {
             Attribute isSelfAttr = applicationElement.attribute("debuggable");
+            isSelfAttr.setValue("true");
+        }
+    }
+
+    public void extractNativeLibs() {
+        String applicationName = getAextractNativeLibs();
+        if (null == applicationName) {
+            applicationElement.addAttribute("android:extractNativeLibs", "true");
+        } else {
+            Attribute isSelfAttr = applicationElement.attribute("extractNativeLibs");
             isSelfAttr.setValue("true");
         }
     }
