@@ -28,6 +28,10 @@ public class Il2cppBinary {
     public static void dumpIl2cpp(File in,File out) throws BinaryException, FakerAndroidException {
         List<String> il2cppBinaryCommad = new ArrayList<>();
         File il2cppBinary = getIl2cppBinary();
+        if(il2cppBinary==null){
+            return;
+        }
+
         il2cppBinaryCommad.add(il2cppBinary.getAbsolutePath());
 
         il2cppBinaryCommad.add("-i");
