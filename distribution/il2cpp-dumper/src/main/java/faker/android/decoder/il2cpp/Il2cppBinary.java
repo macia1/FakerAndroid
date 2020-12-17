@@ -25,13 +25,12 @@ public class Il2cppBinary {
         return il2cppBinary;
     }
 
-    public static void dumpIl2cpp(File in,File out) throws BinaryException, FakerAndroidException {
+    public static void dumpIl2cpp(File in,File out) throws Exception {
         List<String> il2cppBinaryCommad = new ArrayList<>();
         File il2cppBinary = getIl2cppBinary();
         if(il2cppBinary==null){
-            return;
+            throw  new RuntimeException("null il2cppBinary file");
         }
-
         il2cppBinaryCommad.add(il2cppBinary.getAbsolutePath());
 
         il2cppBinaryCommad.add("-i");
