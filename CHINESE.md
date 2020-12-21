@@ -50,7 +50,7 @@ A tool translate apk file to common android project and support so hook and incl
 - il2cpp unity游戏脚本二次开发  
   借助il2cpp Scaffolding 和FakeCpp,使用jni对原il2cpp游戏脚本进行Hook调用
 - Dex折叠  
-  build.gradle 配置sensitiveOptions用于隐藏敏感的dex代码，以规避静态分析
+  build.gradle 配置sensitiveOptions用于隐藏敏感的dex代码，以规避静态分析，（Dex缓存原因在app版本号不变的情况使用第一次缓存，配置项调试请卸载后运行）
   
   
 ##### 4、正在路上
