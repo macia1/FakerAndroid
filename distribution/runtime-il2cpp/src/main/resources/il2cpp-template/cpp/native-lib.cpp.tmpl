@@ -41,6 +41,13 @@ const char* coverIl2cppString2Char(Il2CppString *str){
     return s;
 }
 
+
+MonoString* coverChar2Il2cppString(const char *c){
+    MonoString *monoString =  new MonoString();
+    monoString->setMonoString(c);
+    return monoString;
+}
+
 static jobject callBack;
 /**
  * in your replace_call method you can call this method to call java
