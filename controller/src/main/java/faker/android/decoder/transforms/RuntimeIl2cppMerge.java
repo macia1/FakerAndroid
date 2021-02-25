@@ -19,7 +19,7 @@ public class RuntimeIl2cppMerge extends Transform {
     public boolean transform(TransformInvocation transformInvocation) {
         File il2cppScaffoldingARM = new File(androidProject.getCpp(),"Il2cpp-Scaffolding-ARM");
         File il2cppScaffoldingARM64 = new File(androidProject.getCpp(),"Il2cpp-Scaffolding-ARM64");
-        if(!il2cppScaffoldingARM.exists()&&!il2cppScaffoldingARM64.exists()){
+        if(!il2cppScaffoldingARM.exists()&&!il2cppScaffoldingARM64.exists()) {
             return true;
         }
         transformInvocation.callBack("Runtime il2cpp merging...");

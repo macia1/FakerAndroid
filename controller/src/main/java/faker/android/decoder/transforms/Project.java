@@ -60,11 +60,26 @@ public class Project extends Transform {
         if(!jniLibsARMV7A.exists()&&!jniLibsARM64V8A.exists()&&!armeabi.exists()){
             abiStr = "'armeabi-v7a','arm64-v8a'";
         }
+        File jniLibsX86 = new File(targetjniLibs,"x86");
+
+        if(jniLibsX86.exists()){
+            abiStr = abiStr+",'x86'";
+        }
+
+        File jniLibsX86_64 = new File(targetjniLibs,"x86_64");
+        if(jniLibsX86_64.exists()){
+            abiStr = abiStr+",'x86_64'";
+        }
+
         try {
             FileUtils.autoReplaceStr(appBuild,"{abi}",abiStr);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+
+
         //buildconfig
 
         try {

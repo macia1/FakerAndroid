@@ -41,7 +41,6 @@ public class TestDistribution {
         Il2cppBinary.dumpIl2cpp(in,out);
     }
 
-
     @Test
     public void testMergeJavaLib() throws IOException, BinaryException, FakerAndroidException {
         File out = TestUtils.getFileOutSampleDir("testMergeJavaLib","niuzai");
