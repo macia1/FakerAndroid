@@ -46,7 +46,6 @@ A tool translate a apk file to stantard android project include so hook api and 
   resources.arsc decode format compat 
 ##### 5、Issues
 - [Issues](https://github.com/Efaker/FakerAndroid/issues)
-- discus QQ Group:901157034
 - custom version QQ 1404774249
 ##### 6、Give me a star?free!           
 ## Demo 

@@ -54,8 +54,7 @@ A tool translate apk file to common android project and support so hook and incl
 resources.arsc decode 兼容，目前混淆某些大型 apk Res decoder有问题  
 各种不理想情况兼容
 ##### 5、遇到问题了？兄弟别走肯定能用，而且是你最佳的解决方案，咨询探讨
-- QQ群:901157034
-- 休闲单机定制版:QQ 1404774249
+- 咨询:QQ 1404774249
 - [问题反馈](https://github.com/Efaker/FakerAndroid/issues)
 ##### 6、给个star?免费的           
 
@@ -65,6 +64,7 @@ resources.arsc decode 兼容，目前混淆某些大型 apk Res decoder有问题
 3、加固Apk需要先脱壳后才能,暴漏java api  
 4、有自校验的Apk,须项目运行起来后自行检查破解  
 5、Manifest莫名奇妙的问题，可以先尝试注释掉异常代码，逐步还原试试  
+6、[Java OOM issue](https://github.com/Efaker/FakerAndroid/issues/17)
 ## 实例
 - 一夜之间来了这么多的star好慌张，全是问怎么用的，请原谅我只会写代码不会写文档啊！！！  
 - 因为是il2cpp 游戏apk，里面包含了原游戏安装包和生成的代码项目所以比较大，下载的话得时间稍微长一点，如果github实在下不下来的话，直接QQ我索要
