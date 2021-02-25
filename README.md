@@ -25,7 +25,7 @@ A tool translate a apk file to stantard android project include so hook api and 
 ### Secondary development course
 ##### 1、Open the project
 - By Android studio File->open->```<generated project root>```
-- keep the root dir build.gradle file depends com.android.tools.build:gradle:3.4.0,don't upgrate or modify it
+- Keep the root dir build.gradle file depends com.android.tools.build:gradle:3.4.0,don't upgrate or modify it
 - Set project ndk base version 21 best
 - A little modification will be needed by yourself when the res or AndroidManifest.xml can't pass the compiler 
 ##### 2、Debug or run the project
