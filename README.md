@@ -36,7 +36,7 @@ A tool translate a apk file to stantard android project include so hook api and 
 - Original java class replacement      
   Write java code in moudle app（app/src/main/java）,keep the class name and package name corresponding same as the original class
 - Smali increament building  
-  when there is a smali files mod,there is a least files builing 
+  When there is a smali files mod,there is a least files builing 
 - So Hook  
   With the help of fakeCpp api use jni hook the so method
 - Il2cpp unity script development  
