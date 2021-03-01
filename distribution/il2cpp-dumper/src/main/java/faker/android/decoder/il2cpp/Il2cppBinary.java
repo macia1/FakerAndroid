@@ -16,9 +16,7 @@ public class Il2cppBinary {
         File il2cppBinary=null;
         if (OSDetection.isMacOSX()) {
 
-
         } else if (OSDetection.isUnix()) {
-
 
         } else if (OSDetection.isWindows()) {
             il2cppBinary = Jar.getResourceAsFile("/prebuilt/windows/"+"il2cpp.exe", Il2cppBinary.class);
@@ -74,7 +72,11 @@ public class Il2cppBinary {
             }
             File il2cppScaffoldingx86 = new File(out,"Il2cpp-Scaffolding-x86");
             if(il2cppScaffoldingx86.exists()){
-                delete(il2cppScaffoldingx86);
+                formatScaffolding(il2cppScaffoldingx86);
+            }
+            File il2cppScaffoldingx64 = new File(out,"Il2cpp-Scaffolding-x64");
+            if(il2cppScaffoldingx64.exists()){
+                formatScaffolding(il2cppScaffoldingx64);
             }
         } catch (Exception e) {
             //
@@ -91,7 +93,6 @@ public class Il2cppBinary {
             }
             File userDir = new File(scaffolding,"user");
             delete(userDir);
-
             File frameworkDir = new File(scaffolding,"framework");
             delete(frameworkDir);
             File appdataDir = new File(scaffolding,"appdata");

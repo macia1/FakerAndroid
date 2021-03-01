@@ -1,5 +1,4 @@
 package faker.android.decoder;
-
 import com.luhuiguo.chinese.ChineseUtils;
 import com.luhuiguo.chinese.pinyin.PinyinFormat;
 import faker.android.decoder.api.AndroidProject;
@@ -10,23 +9,19 @@ import faker.android.decoder.pipeline.TransformManager;
 import faker.android.decoder.transforms.*;
 import faker.android.decoder.util.TestUtils;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.IOException;
 
 public class TestProject {
-    private static final Logger LOG = LoggerFactory.getLogger(TestProject.class);
 //    static File in = TestUtils.getFileFromSampleDir("app-with-fake-dex.apk");
     static File in = TestUtils.getFileFromSampleDir("niuzai.apk");
     @Test
     public void fakeRroject() throws IOException {
         File out = TestUtils.getFileOutSampleDir("fakeRroject","niuzai");
-        LOG.info("today to finish--");
         TransformManager transformManager = new TransformManager(new TransformInvocation() {
             @Override
             public void callBack(String msg) {
-                LOG.info("call back -----------"+msg);
+                System.out.println(msg);
             }
         });
         Apk apk = new Apk(in);
@@ -61,7 +56,7 @@ public class TestProject {
                     TransformInvocation transformInvocation = new TransformInvocation() {
                         @Override
                         public void callBack(String msg) {
-                            LOG.info("call back -----------"+msg);
+                            System.out.println(msg);
                         }
                     };
                     File outs = new File("D:\\Outs");

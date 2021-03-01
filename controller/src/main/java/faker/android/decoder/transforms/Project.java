@@ -76,10 +76,6 @@ public class Project extends Transform {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-
-
         //buildconfig
 
         try {
