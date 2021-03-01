@@ -25,7 +25,7 @@ A tool translate a apk file to stantard android project include so hook api and 
 ### Secondary development course
 ##### 1、Open the project
 - By Android studio File->open->```<generated project root>```
-- keep the root dir build.gradle file depends com.android.tools.build:gradle:3.4.0,don't upgrate or modify it
+- Keep the root dir build.gradle file depends com.android.tools.build:gradle:3.4.0,don't upgrate or modify it
 - Set project ndk base version 21 best
 - A little modification will be needed by yourself when the res or AndroidManifest.xml can't pass the compiler 
 ##### 2、Debug or run the project
@@ -36,7 +36,7 @@ A tool translate a apk file to stantard android project include so hook api and 
 - Original java class replacement      
   Write java code in moudle app（app/src/main/java）,keep the class name and package name corresponding same as the original class
 - Smali increament building  
-  when there is a smali files mod,there is a least files builing 
+  When there is a smali files mod,there is a least files builing 
 - So Hook  
   With the help of fakeCpp api use jni hook the so method
 - Il2cpp unity script development  
