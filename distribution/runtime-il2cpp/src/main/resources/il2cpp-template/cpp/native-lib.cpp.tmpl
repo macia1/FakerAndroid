@@ -13,6 +13,12 @@
 #elif defined(__arm__)
 #include "Il2cpp-Scaffolding-ARM/il2cpp-init.h"
 #include "Il2cpp-Scaffolding-ARM/il2cpp-appdata.h"
+#elif defined(__i386__)
+#include "Il2cpp-Scaffolding-x86/il2cpp-init.h"
+#include "Il2cpp-Scaffolding-x86/il2cpp-appdata.h"
+#elif defined(__x86_64__)
+#include "Il2cpp-Scaffolding-x86_64/il2cpp-init.h"
+#include "Il2cpp-Scaffolding-x86_64/il2cpp-appdata.h"
 #endif
 #include "include/faker.h"
 using namespace app;

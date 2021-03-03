@@ -6,7 +6,7 @@ import java.io.File;
 
 public class RuntimeBase {
     public static void mergeRuntimeLibsCpp(File out){
-        PatchUtil.copyDirFromJar("/libs/cpp",out.getAbsolutePath());
+//        PatchUtil.copyDirFromJar("/libs/cpp",out.getAbsolutePath());
     }
 
     public static void mergeRuntimeLibsJava(File out){
