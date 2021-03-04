@@ -17,7 +17,7 @@ A tool translate apk file to common android project and support so hook and incl
 - Dex折叠，对敏感已经存在或后续接入的代码进行隐藏规避静态分析
 ### 运行环境
 - Java
-- il2cpp游戏Apk，非windows暂时无法生成il2cpp c++脚手架
+- Il2cpp游戏ApkC++脚手架生成需要.Net环境支持（[MAC和Linux用户需要自己手动安装](https://dotnet.microsoft.com/download/dotnet/5.0)）
 ### 使用方式
 - 下载[FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases)(2020/11/15/16:53:00)
 - cmd命令行 ```cd <FakerAndroid.jar平级目录>``` 
