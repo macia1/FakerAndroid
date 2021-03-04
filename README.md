@@ -16,7 +16,7 @@ A tool translate a apk file to stantard android project include so hook api and 
 - Unlimited possibilities and expansibility. You has the final say
 ### Environment
 - Java
-- Il2cpp Game Apk unable to generate il2cpp C++ scaffolding for non windows
+- For Il2cpp Game Apk to generate il2cpp C++ scaffolding .Net environment needed ([Mac&Linux users handle it by yourself](https://dotnet.microsoft.com/download/dotnet/5.0)) 
 ### Usage
 - Download [FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases)(2020/11/15/16:52:00)
 - cmd ```cd <FakerAndroid.jar base dir>``` 
