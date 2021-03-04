@@ -32,13 +32,13 @@ public class RuntimeBaseMerge extends Transform {
 
     private void fixTmplCode(AndroidProject androidProject) {
         AndroidProject.ManifestInfo manifestInfo = (AndroidProject.ManifestInfo) androidProject.getIntermediate(AndroidProject.INTERMEDIATE_MANIFESTINFO);
-        File fakerActivityFile = new File(androidProject.getJava(),"com/faker/android/FakerActivity.java");
+        File fakerActivityFile = new File(androidProject.getJava(),"faker/android/boot/FakerActivity.java");
         try {
             FileUtils.autoReplaceStr(fakerActivityFile,"{R}",manifestInfo.getPakcageName()+".R");
         } catch (IOException e) {
             e.printStackTrace();
         }
-        File file  = new File(androidProject.getJava(),"com/faker/android/FakerApp.java");
+        File file  = new File(androidProject.getJava(),"faker/android/boot/FakerApp.java");
         String applicationName = manifestInfo.getApplicationName();
         if(!TextUtil.isEmpty(applicationName)) {
             try {
@@ -59,7 +59,7 @@ public class RuntimeBaseMerge extends Transform {
         try {
             manifestEditor = new ManifestEditor(manifest);
 
-            manifestEditor.modApplication("com.faker.android.FakerApp");//
+            manifestEditor.modApplication("faker.android.boot.FakerApp");//
             manifestEditor.extractNativeLibs();
             manifestEditor.save();
         } catch (Exception e) {

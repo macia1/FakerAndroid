@@ -31,7 +31,7 @@ public class RuntimeIl2cppMerge extends Transform {
 
     private void fixTmplCode(AndroidProject androidProject) {
         AndroidProject.ManifestInfo manifestInfo = (AndroidProject.ManifestInfo) androidProject.getIntermediate(AndroidProject.INTERMEDIATE_MANIFESTINFO);
-        File fakerActivityFile = new File(androidProject.getJava(),"com/faker/android/FakerActivity.java");
+        File fakerActivityFile = new File(androidProject.getJava(),"faker/android/boot/FakerActivity.java");
         try {
             FileUtils.autoReplaceStr(fakerActivityFile,"{R}",manifestInfo.getPakcageName()+".R");
         } catch (IOException e) {
