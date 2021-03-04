@@ -15,7 +15,7 @@ public class Il2cppBinary {
     private static  File getIl2cppBinary() throws BinaryException {
         File il2cppBinary=null;
         if (OSDetection.isMacOSX()) {
-
+            il2cppBinary = Jar.getResourceAsFile("/prebuilt/macosx/"+"il2cpp", Il2cppBinary.class);
         } else if (OSDetection.isUnix()) {
 
         } else if (OSDetection.isWindows()) {
