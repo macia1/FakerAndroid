@@ -21,3 +21,4 @@
 **/out/
 # Patches
 *.patch
+/controller/src/test/resources/test-samples/

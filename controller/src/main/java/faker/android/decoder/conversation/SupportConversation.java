@@ -16,7 +16,6 @@ public class SupportConversation extends Conversation {
     }
     @Override
     public void converse() {
-        //获取到环境变量
         Apk apk = context.getApks().iterator().next();
         AndroidProject  androidProject = context.getAndroidProject();
 
