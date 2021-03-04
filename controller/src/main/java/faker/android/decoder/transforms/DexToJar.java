@@ -16,12 +16,16 @@ public class DexToJar extends Transform  {
     @Override
     public boolean transform(TransformInvocation transformInvocation) {
         transformInvocation.callBack("Translating dexes to java scaffodding jar....");
-        File javaScaffoding = androidProject.getJavaScaffoding();
-        if(javaScaffoding.exists()){
-            javaScaffoding.delete();
+        try {
+            File javaScaffoding = androidProject.getJavaScaffoding();
+            if(javaScaffoding.exists()){
+                javaScaffoding.delete();
+            }
+            javaScaffoding.mkdirs();
+            Dex2jar.toJar(apk.getApkFile(),javaScaffoding);
+        }catch (Exception e){
+            transformInvocation.callBack("Translating dexes to java scaffodding jar happen exception....");
         }
-        javaScaffoding.mkdirs();
-        Dex2jar.toJar(apk.getApkFile(),javaScaffoding);
         return true;
     }
 }
