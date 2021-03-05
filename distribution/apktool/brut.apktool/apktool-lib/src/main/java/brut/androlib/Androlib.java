@@ -272,8 +272,7 @@ public class Androlib {
 
     public void build(ExtFile appDir, File outFile)
             throws BrutException {
-        LOGGER.info("Using Apktool " + Androlib.getVersion());
-
+//        LOGGER.info("Using Apktool " + Androlib.getVersion());
         MetaInfo meta = readMetaFile(appDir);
         apkOptions.isFramework = meta.isFrameworkApk;
         apkOptions.resourcesAreCompressed = meta.compressionType;
