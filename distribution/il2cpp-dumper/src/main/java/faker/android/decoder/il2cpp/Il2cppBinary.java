@@ -17,7 +17,7 @@ public class Il2cppBinary {
         if (OSDetection.isMacOSX()) {
             il2cppBinary = Jar.getResourceAsFile("/prebuilt/macosx/"+"il2cpp", Il2cppBinary.class);
         } else if (OSDetection.isUnix()) {
-
+            il2cppBinary = Jar.getResourceAsFile("/prebuilt/linux/"+"il2cpp", Il2cppBinary.class);
         } else if (OSDetection.isWindows()) {
             il2cppBinary = Jar.getResourceAsFile("/prebuilt/windows/"+"il2cpp.exe", Il2cppBinary.class);
         }
