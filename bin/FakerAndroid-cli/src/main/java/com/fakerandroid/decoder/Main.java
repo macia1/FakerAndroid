@@ -14,7 +14,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package faker.android.decoder;
+package com.fakerandroid.decoder;
 
 import brut.androlib.*;
 import brut.androlib.err.CantFindFrameworkResException;
@@ -23,10 +23,10 @@ import brut.androlib.err.OutDirExistsException;
 import brut.common.BrutException;
 import brut.directory.DirectoryException;
 import brut.util.AaptManager;
+import com.fakerandroid.decoder.api.Transfer;
 import com.luhuiguo.chinese.ChineseUtils;
 import com.luhuiguo.chinese.pinyin.PinyinFormat;
-import faker.android.decoder.api.Transfer;
-import faker.android.decoder.pipeline.TransformInvocation;
+import com.fakerandroid.decoder.pipeline.TransformInvocation;
 import org.apache.commons.cli.*;
 
 import java.io.File;

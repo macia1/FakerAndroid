@@ -13,11 +13,12 @@ import java.io.File;
 import java.io.IOException;
 
 public class TestProject {
-//    static File in = TestUtils.getFileFromSampleDir("app-with-fake-dex.apk");
-    static File in = TestUtils.getFileFromSampleDir("niuzai.apk");
+    static File in = TestUtils.getFileFromSampleDir("test.apk");
+//    static File in = TestUtils.getFileFromSampleDir("niuzai.apk");
     @Test
     public void fakeRroject() throws IOException {
-        File out = TestUtils.getFileOutSampleDir("fakeRroject","niuzai");
+        File out = TestUtils.getFileOutSampleDir("fakeRroject","test");
+        //File out = TestUtils.getFileOutSampleDir("fakeRroject","niuzai");
         TransformManager transformManager = new TransformManager(new TransformInvocation() {
             @Override
             public void callBack(String msg) {

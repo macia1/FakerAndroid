@@ -1,8 +1,8 @@
 import com.luhuiguo.chinese.ChineseUtils;
 import com.luhuiguo.chinese.pinyin.PinyinFormat;
-import faker.android.decoder.api.Transfer;
-import faker.android.decoder.pipeline.TransformInvocation;
-import faker.android.decoder.util.TextUtil;
+import com.fakerandroid.decoder.api.Transfer;
+import com.fakerandroid.decoder.pipeline.TransformInvocation;
+import com.fakerandroid.decoder.util.TextUtil;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
