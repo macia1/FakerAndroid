@@ -7,7 +7,6 @@
 #include <fstream>
 #include <sstream>
 #include "include/faker.h"
-
 JavaVM *global_jvm;
 JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved) {
     JNIEnv *env;
@@ -17,8 +16,8 @@ JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved) {
         LOGI("JNI_OnLoad %s","erro");
     }
     global_jvm = vm;
-    onJniLoad(vm,reserved);
-    return JNI_VERSION_1_6;
+
+    return onJniLoad(vm,reserved);
 }
 
 
@@ -44,9 +43,7 @@ void callJava(const char *event) {
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_faker_android_boot_FakerApp_fakeApp(JNIEnv *env, jobject thiz, jobject application) {
-    fakeApp(env,application);
-
+Java_com_fakerandroid_boot_FakerApp_fakeApp(JNIEnv *env, jobject thiz, jobject application) {
     /**
      * you can do yor hook work here
      * below  is demo code demo code hook libil2cpp.so
@@ -60,13 +57,13 @@ Java_faker_android_boot_FakerApp_fakeApp(JNIEnv *env, jobject thiz, jobject appl
 }
 extern "C"
 JNIEXPORT void JNICALL
-Java_faker_android_boot_FakerApp_fakeDex(JNIEnv *env, jobject thiz, jobject base) {
+Java_com_fakerandroid_boot_FakerApp_fakeDex(JNIEnv *env, jobject thiz, jobject base) {
     fakeDex(env,base,"dex");//安装DEX
 }
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_faker_android_boot_FakerActivity_registerCallBack(JNIEnv *env, jobject thiz,jobject object) {
+Java_com_fakerandroid_boot_FakerActivity_registerCallBack(JNIEnv *env, jobject thiz,jobject object) {
     /**
      * init the callback global for other c++ method to call
      */

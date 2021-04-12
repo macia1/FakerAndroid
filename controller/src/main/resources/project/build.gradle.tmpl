@@ -3,17 +3,19 @@ allprojects {
     buildscript {
         repositories {
             google()
+            mavenCentral()
             jcenter()
         }
 
         dependencies {
-            classpath 'faker.android.tools.build:gradle:1.0.5'
+            classpath 'com.fakerandroid.tools.build:gradle:1.0.30'
             //classpath 'com.android.tools.build:gradle:4.1.0' // if you happen a plugin problem when uese thirdpart gradle plugin oppen this
         }
     }
 
     repositories {
         google()
+        mavenCentral()
         jcenter()
     }
 }
