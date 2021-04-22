@@ -1,4 +1,4 @@
-# FakerAndroid ([FakerAndroid.jar1.0.1 ](https://github.com/Efaker/FakerAndroid/releases))
+# FakerAndroid ([FakerAndroid.jar](https://github.com/Efaker/FakerAndroid/releases))
 
 # FakerAndroid ([中文文档](https://github.com/Efaker/FakerAndroid/blob/main/CHINESE.md))
 A tool translate a apk file to stantard android project include so hook api and il2cpp c++ scaffolding when apk is a unity il2cpp game.
@@ -45,7 +45,7 @@ A tool translate a apk file to stantard android project include so hook api and 
   resources.arsc decode format compat 
 ##### 5、Issues
 - [Issues](https://github.com/Efaker/FakerAndroid/issues)
-- custom version QQ 1404774249
+- Custom version QQ 1404774249
 ##### 6、Give me a star?free!           
 ## Demo 
 - [Demo Download](https://github.com/Efaker/FakerAndroid-Demos/releases/tag/BasicDemo1)
