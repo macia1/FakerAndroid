@@ -9,8 +9,6 @@ import com.fakerandroid.decoder.pipeline.TransformInvocation;
 import com.fakerandroid.decoder.util.FileUtils;
 import com.fakerandroid.decoder.util.ManifestEditor;
 import org.dom4j.DocumentException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -20,7 +18,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ResourceProcesser extends Transform {
-    private static final Logger LOG = LoggerFactory.getLogger(ResourceProcesser.class);
     @Override
     public boolean transform(TransformInvocation transformInvocation) {
         transformInvocation.callBack("Deocoding the apk file...");

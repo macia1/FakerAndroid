@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 
 public class DexToSmali extends Transform {
-    private static final Logger LOG = LoggerFactory.getLogger(DexToSmali.class);
 
     public DexToSmali(Apk apk, AndroidProject androidProject) {
         super(apk, androidProject);
@@ -20,7 +19,6 @@ public class DexToSmali extends Transform {
         transformInvocation.callBack("Translating dexes to smali files....");
         List<String> names = (List<String>) androidProject.getIntermediate(AndroidProject.INTERMEDIATE_DEX_NAMES);
         AndroidProject.ManifestInfo s = (AndroidProject.ManifestInfo) androidProject.getIntermediate(AndroidProject.INTERMEDIATE_MANIFESTINFO);
-        LOG.info(s.toString());
         for (String name:names) {
             try {
                 SmaliDecoder.decode(apk.getApkFile(),androidProject.getSmali(),name,true,Integer.valueOf(s.getMinSdkVersion()));

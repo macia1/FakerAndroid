@@ -45,7 +45,6 @@ public class PatchUtil {
         }
     }
     /**
-     * 当前运行环境资源文件是在jar里面的
      *
      * @param jarURLConnection
      * @throws IOException
