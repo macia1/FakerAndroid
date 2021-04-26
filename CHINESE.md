@@ -68,7 +68,7 @@ resources.arsc decode 兼容，目前混淆某些大型 apk Res decoder有问题
 3、加固Apk需要先脱壳后才能,暴漏java api  
 4、有自校验的Apk,须项目运行起来后自行检查破解  
 5、Manifest莫名奇妙的问题，可以先尝试注释掉异常代码，逐步还原试试  
-6、[Java OOM issue](https://github.com/Efaker/FakerAndroid/issues/17)
+6、[Java OOM issue](https://github.com/Efaker/FakerAndroid/issues/17)  
 7、AS 打不开，试试Help->Change Memery Settings(搞大点)
 ## 实例
 - 一夜之间来了这么多的star好慌张，全是问怎么用的，请原谅我只会写代码不会写文档啊！！！  
