@@ -23,7 +23,11 @@ A tool translate apk file to common android project and support so hook and incl
 - cmd命令行 ```cd <FakerAndroid.jar平级目录>``` 
 - cmd命令行 ```java -jar FakerAndroid.jar fk <apkpath>``` (项目生成路径与apk文件平级) 或 ```java -jar FakerAndroid.jar fk <apkpath> -o <outdir>```
 - 例：```java -jar FakerAndroid.jar fk D:\apk\test.apk``` 或 ```java -jar FakerAndroid.jar fk D:\apk\test.apk -o D:\test```
-- 或下载[FakerAndroid-gui.jar](https://github.com/Efaker/FakerAndroid/releases)(2020/11/15/16:53:00)可视化版本
+
+### 或者使用方式
+- 下载[FakerAndroid-AS.zip](https://github.com/Efaker/FakerAndroid/releases)(2020/11/15/16:53:00)
+- AS->File-Settings->Plugin->SettingIcon->InstallPlugin Plugin From Disk->重启AndroidStudio
+- AS->File->FakerAndroid->选择目标Apk文件
 
 ### 生成的Android项目二次开发教程(<a href="https://blog.csdn.net/easy6798/article/details/109404325" target="_blank">图文教程</a>)
 ##### 1、打开项目
@@ -64,7 +68,8 @@ resources.arsc decode 兼容，目前混淆某些大型 apk Res decoder有问题
 3、加固Apk需要先脱壳后才能,暴漏java api  
 4、有自校验的Apk,须项目运行起来后自行检查破解  
 5、Manifest莫名奇妙的问题，可以先尝试注释掉异常代码，逐步还原试试  
-6、[Java OOM issue](https://github.com/Efaker/FakerAndroid/issues/17)
+6、[Java OOM issue](https://github.com/Efaker/FakerAndroid/issues/17)  
+7、AS 打不开，试试Help->Change Memery Settings(搞大点)
 ## 实例
 - 一夜之间来了这么多的star好慌张，全是问怎么用的，请原谅我只会写代码不会写文档啊！！！  
 - 因为是il2cpp 游戏apk，里面包含了原游戏安装包和生成的代码项目所以比较大，下载的话得时间稍微长一点，如果github实在下不下来的话，直接QQ我索要
