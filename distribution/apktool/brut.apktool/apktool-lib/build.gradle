@@ -16,7 +16,7 @@
 import org.apache.tools.ant.filters.*
 
 apply plugin: 'java-library'
-
+apply plugin: 'kotlin'
 
 dependencies {
     testImplementation("junit:junit:4.10") {
