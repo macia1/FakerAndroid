@@ -1,8 +1,8 @@
 <idea-plugin>
-  <id>com.fakerandroid.as</id>
-  <name>FakerAndroid-AS</name>
+  <id>com.fakerandroid.as.plugin</id>
+  <name>FakerAndroid</name>
   <version>patched</version>
-  <vendor email="fakerandrolid@gmail.com" url="https://github.com/ollide">ollide</vendor>
+  <vendor email="fakerandrolid@gmail.com" url="https://github.com/Efaker/FakerAndroid">Efaker</vendor>
   <description><![CDATA[
      Base FakerAndroid intellij plugin for androidStudio
       ]]></description>

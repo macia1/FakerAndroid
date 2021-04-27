@@ -35,7 +35,7 @@ intellij {
     version = 'IC-2020.1'
     downloadSources false
     updateSinceUntilBuild false
-    pluginName 'FakerAndroid-AS'
+    pluginName 'FakerAndroid'
     sandboxDirectory = project.rootDir.canonicalPath + '/.sandbox'
     publishPlugin {
         token = System.getenv("ORG_GRADLE_PROJECT_intellijPublishToken")
