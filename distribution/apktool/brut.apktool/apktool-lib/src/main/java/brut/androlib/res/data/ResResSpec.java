@@ -43,7 +43,12 @@ public class ResResSpec {
         } else {
             cleanName = ((name == null || name.isEmpty()) ? ("apktool_dummyval_" + id.toString()) : name);
         }
-        
+        /**
+         * Only Check Self Package 's Name
+         */
+        if (pkg.getId() == 0x7f && !UnicodeUtilsKt.isValidResourceEntryName(cleanName) || UnicodeUtilsKt.isJavaReversedKeywords(cleanName)){
+            cleanName = "apktool_validate_name_" + id.toString();
+        }
         this.mName = cleanName;
         this.mPackage = pkg;
         this.mType = type;
