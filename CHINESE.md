@@ -53,7 +53,6 @@ A tool translate apk file to common android project and support so hook and incl
 - Dex折叠  
   build.gradle 配置sensitiveOptions用于隐藏敏感的dex代码，以规避静态分析，（Dex缓存原因在app版本号不变的情况使用第一次缓存，配置项调试请卸载后运行）
   
-  
 ##### 4、正在路上
 resources.arsc decode 兼容，目前混淆某些大型 apk Res decoder有问题  
 各种不理想情况兼容
