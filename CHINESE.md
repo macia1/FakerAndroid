@@ -24,7 +24,7 @@ A tool translate apk file to common android project and support so hook and incl
 - cmd命令行 ```java -jar FakerAndroid.jar fk <apkpath>``` (项目生成路径与apk文件平级) 或 ```java -jar FakerAndroid.jar fk <apkpath> -o <outdir>```
 - 例：```java -jar FakerAndroid.jar fk D:\apk\test.apk``` 或 ```java -jar FakerAndroid.jar fk D:\apk\test.apk -o D:\test```
 
-### 或者使用方式(BUG修复中)
+### 或者使用方式
 - 下载[FakerAndroid-AS.zip](https://github.com/Efaker/FakerAndroid/releases)(2020/11/15/16:53:00)
 - AS->File-Settings->Plugin->SettingIcon->InstallPlugin Plugin From Disk->重启AndroidStudio
 - AS->File->FakerAndroid->选择目标Apk文件
@@ -52,7 +52,6 @@ A tool translate apk file to common android project and support so hook and incl
   借助il2cpp Scaffolding 和FakeCpp,使用jni对原il2cpp游戏脚本进行Hook调用
 - Dex折叠  
   build.gradle 配置sensitiveOptions用于隐藏敏感的dex代码，以规避静态分析，（Dex缓存原因在app版本号不变的情况使用第一次缓存，配置项调试请卸载后运行）
-  
   
 ##### 4、正在路上
 resources.arsc decode 兼容，目前混淆某些大型 apk Res decoder有问题  
