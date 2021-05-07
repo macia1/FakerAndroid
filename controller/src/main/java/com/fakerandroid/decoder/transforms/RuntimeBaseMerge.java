@@ -19,12 +19,26 @@ public class RuntimeBaseMerge extends Transform {
     }
 
     @Override
-    public boolean transform(TransformInvocation transformInvocation) {
+    public boolean transform(TransformInvocation transformInvocation)  {
         transformInvocation.callBack("Rumtime base mereging...");
-        RuntimeBase.mergeRuntimeLibsJava(androidProject.getLibs());
+        try {
+            RuntimeBase.mergeRuntimeLibsJava(androidProject.getLibs());
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
         RuntimeBase.mergeRuntimeLibsCpp(androidProject.getCppLibs());
-        RuntimeBase.mergeRuntimeJavaCode(androidProject.getJava());
-        RuntimeBase.mergeRuntimeCppCode(androidProject.getCpp());
+        try {
+            RuntimeBase.mergeRuntimeJavaCode(androidProject.getJava());
+        } catch (IOException e) {
+            return false;
+        }
+        try {
+            RuntimeBase.mergeRuntimeCppCode(androidProject.getCpp());
+        } catch (IOException e) {
+            return false;
+        }
+
         fixTmplCode(androidProject);
         return true;
     }
@@ -57,7 +71,6 @@ public class RuntimeBaseMerge extends Transform {
         ManifestEditor manifestEditor = null;
         try {
             manifestEditor = new ManifestEditor(manifest);
-
             manifestEditor.modApplication("com.fakerandroid.boot.FakerApp");//
             manifestEditor.extractNativeLibs();
             manifestEditor.save();

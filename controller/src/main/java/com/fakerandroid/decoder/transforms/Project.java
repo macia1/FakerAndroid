@@ -4,6 +4,7 @@ import com.fakerandroid.decoder.api.AndroidProject;
 import com.fakerandroid.decoder.api.Apk;
 import com.fakerandroid.decoder.pipeline.Transform;
 import com.fakerandroid.decoder.pipeline.TransformInvocation;
+import com.fakerandroid.decoder.project.ProjectMerge;
 import com.fakerandroid.decoder.util.FileUtils;
 import com.fakerandroid.decoder.util.PatchUtil;
 import com.fakerandroid.decoder.util.TextUtil;
@@ -17,7 +18,12 @@ public class Project extends Transform {
     @Override
     public boolean transform(TransformInvocation transformInvocation) {
         transformInvocation.callBack("Android studio project fomarting....");
-        PatchUtil.copyDirFromJar("/project",androidProject.getProject().getAbsolutePath());
+        try {
+            ProjectMerge.copyProject(androidProject.getProject());
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
         fixProject(androidProject);
         transformInvocation.callBack("You have faked a android studio project from apk!");
         transformInvocation.callBack("Generated project path:"+androidProject.getProject().getAbsolutePath()+".");

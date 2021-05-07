@@ -10,12 +10,8 @@ import java.util.jar.JarFile;
 public class PatchUtil {
 
     //平行拷贝目录
-    public static void copyDirFromJar(String folderPath,String toFolderPath){
-        try {
-            loadRecourseFromJarByFolder(folderPath,toFolderPath, PatchUtil.class,null);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public static void copyDirFromJar(String folderPath,String toFolderPath) throws IOException {
+        loadRecourseFromJarByFolder(folderPath,toFolderPath, PatchUtil.class,null);
     }
     public static void loadRecourseFromJarByFolder(String folderPath,String targetFolderPath ,Class clazz,String basePath) throws IOException {
         URL url = clazz.getResource(folderPath);
