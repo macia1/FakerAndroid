@@ -27,7 +27,7 @@ A tool translate apk file to common android project and support so hook and incl
 - AS->File-Settings->Plugin->SettingIcon->InstallPlugin Plugin From Disk->重启AndroidStudio
 - AS->File->FakerAndroid->选择目标Apk文件
 
-### 生成的Android项目二次开发教程(<a href="https://blog.csdn.net/easy6798/article/details/109404325" target="_blank">图文教程</a>)
+### 生成的Android项目二次开发教程(<a href="https://www.52pojie.cn/forum.php?mod=viewthread&tid=1293297" target="_blank">图文教程</a>)
 ##### 1、打开项目
 - Android studio直接打开工具生成的Android项目
 - 保持跟目录build.gradle中依赖固定，请勿配置AndroidGradlePlugin，且项目配置NDk版本为21
