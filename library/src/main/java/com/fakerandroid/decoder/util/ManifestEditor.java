@@ -510,13 +510,13 @@ public class ManifestEditor {
             isSelfAttr.setValue(name);
         }
 
-        String applicationDebuggable = getApplicationDebuggable();
-        if (null == applicationDebuggable) {
-            applicationElement.addAttribute("android:debuggable", "true");
-        } else {
-            Attribute isSelfAttr = applicationElement.attribute("debuggable");
-            isSelfAttr.setValue("true");
-        }
+//        String applicationDebuggable = getApplicationDebuggable();
+//        if (null == applicationDebuggable) {
+//            applicationElement.addAttribute("android:debuggable", "true");
+//        } else {
+//            Attribute isSelfAttr = applicationElement.attribute("debuggable");
+//            isSelfAttr.setValue("true");
+//        }
     }
 
     public void extractNativeLibs() {
