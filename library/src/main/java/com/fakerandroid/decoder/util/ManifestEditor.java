@@ -595,24 +595,7 @@ public class ManifestEditor {
 
 
     public static void main(String[] args) {
-        try {
-            ManifestEditor manifestMod = new ManifestEditor(new File("AndroidManifest.xml"));
-            String appName = manifestMod.getAppName();
-            String packageName = manifestMod.getPackagenName();
-            String applicationName = manifestMod.getApplicationName();
-            String lancherActivity = manifestMod.getLancherActivityName();
-            manifestMod.insertMeta("mybatis/mybatis-config.xml", "100");
-            manifestMod.insertMeta("y", "200");
-            manifestMod.insertUsesPermission("fuck");
-            manifestMod.modApplication("comn.xdada.mybatis-config.xml");
-            manifestMod.insertActivity("xxx", "landscape", "@android:style/Theme.NoTitleBar.Fullscreen", "keyboardHidden|orientation|screenSize", ":gsdk");
-            manifestMod.insertActivityVivoWithFilter("com.vivo.unionsdk.ui.UnionActivity", "landscape", "@android:style/Theme.NoTitleBar.Fullscreen", "keyboardHidden|orientation|screenSize", ":gsdk");
-            manifestMod.insertService("com.qq.e.comm.DownloadService", null, null, "false");
-            manifestMod.insertProvider("android.support.v4.content.FileProvider", "com.qq.e.union.demo.fileprovider", "false", "true", null, null);
-            manifestMod.save();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
     }
 
     public void save() throws IOException {
