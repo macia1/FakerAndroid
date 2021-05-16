@@ -55,7 +55,7 @@ A tool translate apk file to common android project and support so hook and incl
 resources.arsc decode 兼容，目前混淆某些大型 apk Res decoder有问题  
 各种不理想情况兼容
 ##### 5、遇到问题了？兄弟别走肯定能用，而且是你最佳的解决方案，咨询探讨
-- 咨询、放单、接单、定制 QQ: 1404774249
+- 咨询、招学徒、放单、接单、定制 QQ: 1404774249
 - [问题反馈](https://github.com/Efaker/FakerAndroid/issues)
 ##### 6、给个star?免费的           
 
