@@ -67,6 +67,7 @@ resources.arsc decode 兼容，目前混淆某些大型 apk Res decoder有问题
 5、Manifest莫名奇妙的问题，可以先尝试注释掉异常代码，逐步还原试试  
 6、[Java OOM issue](https://github.com/Efaker/FakerAndroid/issues/17)  
 7、AS打不开，试试Help->Change Memery Settings(搞大点)
+
 ## 实例
 - 一夜之间来了这么多的star好慌张，全是问怎么用的，请原谅我只会写代码不会写文档啊！！！  
 - 因为是il2cpp 游戏apk，里面包含了原游戏安装包和生成的代码项目所以比较大，下载的话得时间稍微长一点，如果github实在下不下来的话，直接QQ我索要
